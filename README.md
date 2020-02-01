@@ -5,17 +5,12 @@ Hey there! My name is Darky and welcome to **Darky's Achievements and Upgrades B
 ## What is Darky's Achievements and Upgrades Batch?
 
 As already mentioned, *Darky's Achievements and Upgrades Batch* is a *bundle* mod containing *Darky's Achievement Package* and *Darky's Armful Collection of Upgrades* and when loaded into Cookie Clicker will give you a lot of new custom achievements and upgrades for the game! And yes, **those achievements add to your milk!**
+
 If you like to spoil yourself on all the new achievements and upgrades in this Batch, then go over to this little wiki.
 
 ## Current version
 
 Check the [releases page](https://github.com/DarkSoul1800/DarkysBatch/releases) for a full history of all versions of both the Package and the Collection.
-
-## Where can i find the seperate mods?
-
-*Darky's Achievement Package* can be found [here](https://github.com/DarkSoul1800/DarkysBatch/blob/master/Darkys_Achievement_Package.js).
-
-*Darky's Armful Collection of Upgrades* can be found [here](https://github.com/DarkSoul1800/DarkysBatch/blob/master/Darkys_Armful_Collection_of_Upgrades.js).
 
 # How do i load these mods?
 
