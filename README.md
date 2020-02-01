@@ -12,7 +12,7 @@ If you like to spoil yourself on all the new achievements and upgrades in this B
 
 Check the [releases page](https://github.com/DarkSoul1800/DarkysBatch/releases) for a full history of all versions of both the Package and the Collection.
 
-# How do i load these mods?
+# How do I load these mods?
 
 There are a few ways to load these mods:
 
