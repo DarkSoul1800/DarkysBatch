@@ -26,7 +26,7 @@ There are a few ways to load these mods:
 
 ```javascript
 javascript: (function () {
-	Game.LoadMod('https://raw.githubusercontent.com/DarkSoul1800/DarkysBatch/master/Darkys_Achievement_Package.js');
+	Game.LoadMod('https://darksoul1800.github.io/DarkysBatch/Darkys_Achievement_Package.js');
 }());
 ```
 
@@ -34,7 +34,7 @@ javascript: (function () {
 
 ```javascript
 javascript: (function () {
-	Game.LoadMod('https://raw.githubusercontent.com/DarkSoul1800/DarkysBatch/master/Darkys_Armful_Collection_of_Upgrades.js');
+	Game.LoadMod('https://darksoul1800.github.io/DarkysBatch/Darkys_Armful_Collection_of_Upgrades.js');
 }());
 ```
 
@@ -42,7 +42,7 @@ javascript: (function () {
 
 ```javascript
 javascript: (function () {
-	Game.LoadMod('https://raw.githubusercontent.com/DarkSoul1800/DarkysBatch/master/Darkys_Achievements_and_Upgrades_Batch.js');
+	Game.LoadMod('https://darksoul1800.github.io/DarkysBatch/Darkys_Achievements_and_Upgrades_Batch.js');
 }());
 ```
 
@@ -64,7 +64,7 @@ Want the mods to be loaded automatically everytime you open the game? Well for t
 var code = "(" + (function() {
     var checkReady = setInterval(function() {
         if (typeof Game.ready !== 'undefined' && Game.ready) {
-            Game.LoadMod('https://raw.githubusercontent.com/DarkSoul1800/DarkysBatch/master/Darkys_Achievement_Package.js');
+            Game.LoadMod('https://darksoul1800.github.io/DarkysBatch/Darkys_Achievement_Package.js');
             clearInterval(checkReady);
         }
     }, 1000);
@@ -88,7 +88,7 @@ window.eval(code);
 var code = "(" + (function() {
     var checkReady = setInterval(function() {
         if (typeof Game.ready !== 'undefined' && Game.ready) {
-            Game.LoadMod('https://raw.githubusercontent.com/DarkSoul1800/DarkysBatch/master/Darkys_Armful_Collection_of_Upgrades.js');
+            Game.LoadMod('https://darksoul1800.github.io/DarkysBatch/Darkys_Armful_Collection_of_Upgrades.js');
             clearInterval(checkReady);
         }
     }, 1000);
@@ -112,7 +112,7 @@ window.eval(code);
 var code = "(" + (function() {
     var checkReady = setInterval(function() {
         if (typeof Game.ready !== 'undefined' && Game.ready) {
-            Game.LoadMod('https://raw.githubusercontent.com/DarkSoul1800/DarkysBatch/master/Darkys_Achievements_and_Upgrades_Batch.js');
+            Game.LoadMod('https://darksoul1800.github.io/DarkysBatch/Darkys_Achievements_and_Upgrades_Batch.js');
             clearInterval(checkReady);
         }
     }, 1000);
