@@ -426,6 +426,4 @@
 	Game.Win("Third-party")
 	Game.Notify("Darky's Achievement Package", " <b>71</b> new Achievements have been added, enjoy and thank you for using my mod!", [17, 26, "https://i.imgur.com/3jNJJNw.png"]);
 	PlaySound("https://freesound.org/data/previews/203/203121_777645-lq.mp3");
-	Game.Notify('Freshly out the oven!', ' <b>Darky\'s Armful Collection of Upgrades</b> is now available to get <a target="_blank" rel="noopener noreferrer" href="https://pastebin.com/eFPWvzga">here!</a>', [27, 7]);
-	Game.Notify('2 in 1', '  <b>Darky\'s Achievements and Upgrades Batch</b> features both Achievement and Upgrade mods in one, get it <a target="_blank" rel="noopener noreferrer" href="https://pastebin.com/mPi1uXvG">here!</a>', [3, 4, "https://i.imgur.com/Fn7YXtZ.png"]);
 }
