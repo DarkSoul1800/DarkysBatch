@@ -2,7 +2,7 @@
 
 Hey there! My name is Darky and welcome to **Darky's Achievements and Upgrades Batch**, a *bundle* of 2 mods i made for the popular and Father of Idle Games: [Cookie Clicker](https://cookieclicker.eu/cookieclicker/). Those 2 mods in question are: *Darky's Achievement Package* and *Darky's Armful Collection of Upgrades*.
 
-**As of Cookie Clicker 2.028, both ***Darky's Armful Collection of Upgrades*** **and ***Darky's Achievements and Upgrades Batch*** **have not been updated to be compatible with 2.028 since it now uses the before unused Upgrade tiers, therefore by loading the Upgrades mod, you basically have the same upgrades twice but just with a different name. For the time being, these two mods in question won't be updated until there is a way to add custom Upgrades without relying on unused tiers.**
+**As of Cookie Clicker 2.028, both ***Darky's Armful Collection of Upgrades*** and ***Darky's Achievements and Upgrades Batch*** have not been updated to be compatible with 2.028 since it now uses the before unused Upgrade tiers, therefore by loading the Upgrades mod, you basically have the same upgrades twice but just with a different name. For the time being, these two mods in question won't be updated until there is a way to add custom Upgrades without relying on unused tiers.**
 
 ## What is Darky's Achievements and Upgrades Batch?
 
