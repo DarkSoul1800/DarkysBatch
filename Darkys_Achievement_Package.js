@@ -431,6 +431,6 @@
 	//-------------------------------------------------------------------
 
 	Game.Win("Third-party")
-	Game.Notify("Darky's Achievement Package", " <b>73</b> new Achievements have been added, enjoy and thank you for using my mod!", [17, 26, "https://i.imgur.com/3jNJJNw.png"]);
+	Game.Notify("Darky's Achievement Package 1.6", " <b>73</b> new Achievements have been added, enjoy and thank you for using my mod!", [17, 26, "https://i.imgur.com/3jNJJNw.png"]);
 	PlaySound("https://freesound.org/data/previews/203/203121_777645-lq.mp3");
 }
