@@ -38,29 +38,42 @@
 	}
 
 	//-------------------------------------------------------------------
+	
+	function changeAchievementIcon(me,iconURL,pos) {
+	pos = typeof pos !== 'undefined' ? pos : [0,0];
+	pos.push(iconURL);
+	me.icon=pos;
+	Game.RebuildUpgrades()
+	}
+	
+	changeAchievementIcon(Game.Achievements["Grand design"],'https://i.imgur.com/GGrHHrA.png',[1,0])
+	changeAchievementIcon(Game.Achievements["Ecumenopolis"],'https://i.imgur.com/RWbOLsf.png',[5,0])
+	
+	//-------------------------------------------------------------------
 
 	if(!Game.customCrate) Game.customCrate = []
 	Game.customCrate = Game.customCrate.concat([
 
 		// ~ ~ ~ X OF BUILDINGS ~ ~ ~ 
 
-		new Achievement("Squeak goes the mouse", "Have <b>800</b> cursors.", [0, 18], 1),
+		new Achievement("Squeak goes the mouse", "Have <b>900</b> cursors.", [0, 19], 1),
 		new Achievement("I'm too old for this", "Have <b>650</b> grandmas.", [1, 21], 1),
-		new Achievement("Gorden garden", "Have <b>600</b> farms.", [2, 31], 1),
-		new Achievement("A fine mine you got there", "Have <b>600</b> mines.", [3, 31], 1),
-		new Achievement("Working 24/7", "Have <b>600</b> factories.", [4, 31], 1),
-		new Achievement("Bank on it", "Have <b>600</b> banks.", [15, 31], 1),
-		new Achievement("Temple pun", "Have <b>600</b> temples.", [16, 31], 1),
-		new Achievement("It's magic, Joel!", "Have <b>600</b> wizard towers.", [17, 31], 1),
-		new Achievement("My shipment arrives in the morning", "Have <b>600</b> shipments.", [5, 31], 1),
-		new Achievement("Turning cookies into gold since 2013", "Have <b>600</b> alchemy labs.", [6, 31], 1),
-		new Achievement("A portal inside of a portal", "Have <b>600</b> portals.", [7, 31], 1),
-		new Achievement("It all began on the 8th of August, 2013", "Have <b>600</b> time machines.", [8, 31], 1),
-		new Achievement("AntimatterCon", "Have <b>600</b> antimatter condensers.", [13, 31], 1),
-		new Achievement("Stop being a prissm", "Have <b>600</b> prisms.", [14, 31], 1),
-		new Achievement("And yet you probably never got a blab", "Have <b>600</b> chancemakers.", [19, 31], 1),
-		new Achievement("Gouchnox", "Have <b>600</b> fractal engines.<q>69</q>", [20, 31], 1),
-		new Achievement("Follow the javascript", "Have <b>600</b> javascript consoles.", [32, 31], 1),
+		new Achievement("Gorden garden", "Have <b>650</b> farms.", [2, 21], 1),
+		new Achievement("A fine mine you got there", "Have <b>650</b> mines.", [3, 21], 1),
+		new Achievement("Working 24/7", "Have <b>650</b> factories.", [4, 21], 1),
+		new Achievement("Bank on it", "Have <b>650</b> banks.", [15, 21], 1),
+		new Achievement("Temple pun", "Have <b>650</b> temples.", [16, 21], 1),
+		new Achievement("It's magic, Joel!", "Have <b>650</b> wizard towers.", [17, 21], 1),
+		new Achievement("My shipment arrives in the morning", "Have <b>650</b> shipments.", [5, 21], 1),
+		new Achievement("Turning cookies into gold since 2013", "Have <b>650</b> alchemy labs.", [6, 21], 1),
+		new Achievement("A portal inside of a portal", "Have <b>650</b> portals.", [7, 21], 1),
+		new Achievement("It all began on the 8th of August, 2013", "Have <b>650</b> time machines.", [8, 21], 1),
+		new Achievement("AntimatterCon", "Have <b>650</b> antimatter condensers.", [13, 21], 1),
+		new Achievement("Stop being a prissm", "Have <b>650</b> prisms.", [14, 21], 1),
+		new Achievement("And yet you probably never got a blab", "Have <b>650</b> chancemakers.", [19, 21], 1),
+		new Achievement("Gouchnox", "Have <b>650</b> fractal engines.<q>69</q>", [20, 21], 1),
+		new Achievement("Follow the javascript", "Have <b>650</b> javascript consoles.", [32, 21], 1),
+		new Achievement("Don't call them fanverses, you fool", "Have <b>650</b> idleverses.", [33, 21], 1),
 
 		// ~ ~ ~ COOKIES FROM CLICKING ~ ~ ~ 
 
@@ -79,23 +92,24 @@
 		// ~ ~ ~ BUILDINGS ~ ~ ~ 
 
 		new Achievement("Owner of Buildings", "Own <b>3000</b> buildings.", [0, 0, "https://i.imgur.com/GGrHHrA.png"], 1),
-		new Achievement("Build up", "Own <b>4000</b> buildings.", [1, 0, "https://i.imgur.com/GGrHHrA.png"], 1),
+		//new Achievement("Build up", "Own <b>4000</b> buildings.", [1, 0, "https://i.imgur.com/GGrHHrA.png"], 1),
 		new Achievement("World-dominating company", "Own <b>5000</b> buildings.", [2, 0, "https://i.imgur.com/GGrHHrA.png"], 1),
 		new Achievement("Creator of the Cookieverse", "Own <b>6000</b> buildings.", [3, 0, "https://i.imgur.com/GGrHHrA.png"], 1),
 		new Achievement("Build until you can't build anymore", "Own <b>7000</b> buildings.", [4, 0, "https://i.imgur.com/GGrHHrA.png"], 1),
-		new Achievement("You built the guilt", "Own <b>8000</b> buildings.", [5, 0, "https://i.imgur.com/RWbOLsf.png"], 1),
-		new Achievement("Overlord", "Own <b>9000</b> buildings.", [6, 0, "https://i.imgur.com/S5BnOGU.png"], 1),
-		new Achievement("That's enough, boss", "Own <b>10000</b> buildings.", [7, 0, "https://i.imgur.com/Qi5DPKy.png"], 1),
+		//new Achievement("You built the guilt", "Own <b>8000</b> buildings.", [5, 0, "https://i.imgur.com/RWbOLsf.png"], 1),
+		new Achievement("Overlord", "Own <b>9000</b> buildings.", [4, 4, "https://i.imgur.com/AWmeHiO.png"], 1),
+		new Achievement("That's enough, boss", "Own <b>10000</b> buildings.", [6, 0, "https://i.imgur.com/S5BnOGU.png"], 1),
 
 		// ~ ~ ~ UPGRADES ~ ~ ~ 
 
-		new Achievement("Purchaser of Upgrades", "Purchase <b>300</b> upgrades.", [0, 1, "https://i.imgur.com/GGrHHrA.png"], 1),
-		new Achievement("Grade up", "Purchase <b>400</b> upgrades.", [1, 1, "https://i.imgur.com/GGrHHrA.png"], 1),
+		//new Achievement("Purchaser of Upgrades", "Purchase <b>300</b> upgrades.", [0, 1, "https://i.imgur.com/GGrHHrA.png"], 1),
+		//new Achievement("Grade up", "Purchase <b>400</b> upgrades.", [1, 1, "https://i.imgur.com/GGrHHrA.png"], 1),
 		new Achievement("Earth-shattering association", "Purchase <b>500</b> upgrades.", [2, 1, "https://i.imgur.com/S5BnOGU.png"], 1),
+		new Achievement("Maker of the Idleverse", "Purchase <b>600</b> upgrades.", [3, 1, "https://i.imgur.com/AWmeHiO.png"], 1),
 
 		// ~ ~ ~ X OF EVERYTHING ~ ~ ~ 
 
-		new Achievement("Sexcentennial", "Have at least <b>600 of everything</b>.<q>Yes I just did that.</q>", [1, 3, "https://i.imgur.com/Qi5DPKy.png"], 1),
+		new Achievement("Sexcentennial and a half", "Have at least <b>650 of everything</b>.<q>Yes I just did that.</q>", [1, 3, "https://i.imgur.com/Qi5DPKy.png"], 1),
 
 		// ~ ~ ~ BIG COOKIE CLICKS ~ ~ ~ 
 
@@ -128,6 +142,7 @@
 		new Achievement("Bake me, maybe?", "Purchase <b>all maybe cookies</b>.", [25, 29], 1),
 		new Achievement("Burger Clicker", "Purchase <b>all not cookies</b>.<q>Shoutout to the old Idle Game Maker!</q>", [26, 29], 1),
 		new Achievement("Collecting these is like growing plants", "Purchase <b>all plant upgrades</b>.<q>It takes a looooong time.</q>", [24, 25], 1),
+		new Achievement("Spike the dragon", "Purchase <b>all dragon upgrades</b>.<q>Keep an eye on your gems.</q>", [30, 12], 1),
 
 		// ~ ~ ~ BUILDING LEVEL ~ ~ ~ 
 
@@ -146,10 +161,10 @@
 
 		new Achievement("Mod-God complex", "Name yourself <b>Darky</b>.<q>Ducky.</q>", [2, 12], 1), Game.last.pool = "shadow",
 		new Achievement("Golden Jackpot", "Click <b>77,777 golden cookies</b>.", [0, 3, "https://i.imgur.com/GGrHHrA.png"], 1), Game.last.pool = "shadow",
-		new Achievement("I like playing supportive characters", "Dashnet reached <b>10</b> heralds.", [21, 29], 1), Game.last.pool = "shadow",
-		new Achievement("That's a lot of money", "Dashnet reached <b>25</b> heralds.", [21, 29], 1), Game.last.pool = "shadow",
-		new Achievement("You really want us to make games for you, huh?", "Dashnet reached <b>50</b> heralds.", [21, 29], 1), Game.last.pool = "shadow",
-		new Achievement("Thank you guys so much!", "Dashnet reached <b>100</b> heralds.", [21, 29], 1), Game.last.pool = "shadow",
+		//new Achievement("I like playing supportive characters", "Dashnet reached <b>10</b> heralds.", [21, 29], 1), Game.last.pool = "shadow",
+		//new Achievement("That's a lot of money", "Dashnet reached <b>25</b> heralds.", [21, 29], 1), Game.last.pool = "shadow",
+		//new Achievement("You really want us to make games for you, huh?", "Dashnet reached <b>50</b> heralds.", [21, 29], 1), Game.last.pool = "shadow",
+		//new Achievement("Thank you guys so much!", "Dashnet reached <b>100</b> heralds.", [21, 29], 1), Game.last.pool = "shadow",
 	])
 
 	//-------------------------------------------------------------------
@@ -159,15 +174,19 @@
 		Achievements[achievement.name] = achievement
 	})
 
-	Achievements["Polymath"].order = 6008
-	Achievements["Renaissance baker"].order = 6009
-	Achievements["The elder scrolls"].order = 6010
+	Achievements["Polymath"].order = 6010
+	Achievements["Renaissance baker"].order = 6011
+	Achievements["The elder scrolls"].order = 6012
 	Achievements["Sacrifice"].order = 30015
 	Achievements["Oblivion"].order = 30016
 	Achievements["From scratch"].order = 30017
 	Achievements["Third-party"].order = 30202
 	Achievements["Tabloid addiction"].order = 11003
 	Achievements["Olden days"].order = 11002
+	Achievements["Grand design"].order = 5011
+	Achievements["Ecumenopolis"].order = 5015
+	Achievements["Seven horseshoes"].order = 10000
+	Achievements["Four-leaf cookie"].order = 10002
 
 	Achievements["Squeak goes the mouse"].order = 1060
 	Achievements["I'm too old for this"].order = 1110
@@ -186,6 +205,7 @@
 	Achievements["And yet you probably never got a blab"].order = 2110
 	Achievements["Gouchnox"].order = 2210
 	Achievements["Follow the javascript"].order = 2310
+	Achievements["Don't call them fanverses, you fool"].order = 2410
 
 	Achievements["Stop it, it clickles"].order = 1010
 	Achievements["Keep up the click"].order = 1011
@@ -200,19 +220,20 @@
 	Achievements["My strange clicking addiction"].order = 1019
 
 	Achievements["Owner of Buildings"].order = 5010
-	Achievements["Build up"].order = 5011
+	//Achievements["Build up"].order = 5011
 	Achievements["World-dominating company"].order = 5012
 	Achievements["Creator of the Cookieverse"].order = 5013
 	Achievements["Build until you can't build anymore"].order = 5014
-	Achievements["You built the guilt"].order = 5015
+	//Achievements["You built the guilt"].order = 5015
 	Achievements["Overlord"].order = 5016
 	Achievements["That's enough, boss"].order = 5017
 
-	Achievements["Purchaser of Upgrades"].order = 6001
-	Achievements["Grade up"].order = 6002
+	//Achievements["Purchaser of Upgrades"].order = 6001
+	//Achievements["Grade up"].order = 6002
 	Achievements["Earth-shattering association"].order = 6003
+	Achievements["Maker of the Idleverse"].order = 6004
 
-	Achievements["Sexcentennial"].order = 7003
+	Achievements["Sexcentennial and a half"].order = 7004
 
 	Achievements["Heavenly"].order = 30010
 	Achievements["Transcendent"].order = 30011
@@ -234,21 +255,23 @@
 	Achievements["Bake me, maybe?"].order = 21106
 	Achievements["Burger Clicker"].order = 21107
 	Achievements["Collecting these is like growing plants"].order = 21108
+	Achievements["Spike the dragon"].order = 21109
 
 	Achievements["Level 1 complete!"].order = 5017
 	Achievements["Five Hive"].order = 5018
 	Achievements["This took forever"].order = 5019
 
-	Achievements["Pretty prestige"].order = 6003
-	Achievements["Live and learn"].order = 6004
-	Achievements["We will stay with you forever"].order = 6005
+	Achievements["Pretty prestige"].order = 6005
+	Achievements["Live and learn"].order = 6006
+	Achievements["We will stay with you forever"].order = 6007
 
 	Achievements["Purrfect Perfection"].order = 10001
-	Achievements["It's sweet, sweet, sweet Synergy"].order = 6006
-	Achievements["Out of Energy? Get Synergy!"].order = 6007
+	Achievements["It's sweet, sweet, sweet Synergy"].order = 6008
+	Achievements["Out of Energy? Get Synergy!"].order = 6009
 	Achievements["All you had to do was ask"].order = 11001
 
 	Achievements["Mod-God complex"].order = 30201
+	Achievements["Golden Jackpot"].order = 10001
 
 	Object.values(Achievements).forEach(achievement => {
 		Game.AchievementsById[achievement.id] = achievement
@@ -274,26 +297,27 @@
 
 	//-------------------------------------------------------------------
 
-	Game.customChecks = Game.customChecks.concat([
+	Game.registerHook('check',[
 		function () { var count = 0; for (var i in Game.UpgradesById) { var me = Game.UpgradesById[i]; if (me.bought && me.pool == "prestige") count++; } Darky.prestigeUpgradesOwned = count; },
 
-		function () { if (Game.Objects["Cursor"].amount >= 800) Win("Squeak goes the mouse") },
+		function () { if (Game.Objects["Cursor"].amount >= 900) Win("Squeak goes the mouse") },
 		function () { if (Game.Objects["Grandma"].amount >= 650) Win("I'm too old for this") },
-		function () { if (Game.Objects["Farm"].amount >= 600) Win("Gorden garden") },
-		function () { if (Game.Objects["Mine"].amount >= 600) Win("A fine mine you got there") },
-		function () { if (Game.Objects["Factory"].amount >= 600) Win("Working 24/7") },
-		function () { if (Game.Objects["Bank"].amount >= 600) Win("Bank on it") },
-		function () { if (Game.Objects["Temple"].amount >= 600) Win("Temple pun") },
-		function () { if (Game.Objects["Wizard tower"].amount >= 600) Win("It's magic, Joel!") },
-		function () { if (Game.Objects["Shipment"].amount >= 600) Win("My shipment arrives in the morning") },
-		function () { if (Game.Objects["Alchemy lab"].amount >= 600) Win("Turning cookies into gold since 2013") },
-		function () { if (Game.Objects["Portal"].amount >= 600) Win("A portal inside of a portal") },
-		function () { if (Game.Objects["Time machine"].amount >= 600) Win("It all began on the 8th of August, 2013") },
-		function () { if (Game.Objects["Antimatter condenser"].amount >= 600) Win("AntimatterCon") },
-		function () { if (Game.Objects["Prism"].amount >= 600) Win("Stop being a prissm") },
-		function () { if (Game.Objects["Chancemaker"].amount >= 600) Win("And yet you probably never got a blab") },
-		function () { if (Game.Objects["Fractal engine"].amount >= 600) Win("Gouchnox") },
-		function () { if (Game.Objects["Javascript console"].amount >= 600) Win("Follow the javascript") },
+		function () { if (Game.Objects["Farm"].amount >= 650) Win("Gorden garden") },
+		function () { if (Game.Objects["Mine"].amount >= 650) Win("A fine mine you got there") },
+		function () { if (Game.Objects["Factory"].amount >= 650) Win("Working 24/7") },
+		function () { if (Game.Objects["Bank"].amount >= 650) Win("Bank on it") },
+		function () { if (Game.Objects["Temple"].amount >= 650) Win("Temple pun") },
+		function () { if (Game.Objects["Wizard tower"].amount >= 650) Win("It's magic, Joel!") },
+		function () { if (Game.Objects["Shipment"].amount >= 650) Win("My shipment arrives in the morning") },
+		function () { if (Game.Objects["Alchemy lab"].amount >= 650) Win("Turning cookies into gold since 2013") },
+		function () { if (Game.Objects["Portal"].amount >= 650) Win("A portal inside of a portal") },
+		function () { if (Game.Objects["Time machine"].amount >= 650) Win("It all began on the 8th of August, 2013") },
+		function () { if (Game.Objects["Antimatter condenser"].amount >= 650) Win("AntimatterCon") },
+		function () { if (Game.Objects["Prism"].amount >= 650) Win("Stop being a prissm") },
+		function () { if (Game.Objects["Chancemaker"].amount >= 650) Win("And yet you probably never got a blab") },
+		function () { if (Game.Objects["Fractal engine"].amount >= 650) Win("Gouchnox") },
+		function () { if (Game.Objects["Javascript console"].amount >= 650) Win("Follow the javascript") },
+		function () { if (Game.Objects["Idleverse"].amount >= 650) Win("Don't call them fanverses, you fool") },
 		function () { if (Game.handmadeCookies >= 100000000000000000000000000000) Win("Stop it, it clickles") },
 		function () { if (Game.handmadeCookies >= 10000000000000000000000000000000) Win("Keep up the click") },
 		function () { if (Game.handmadeCookies >= 1000000000000000000000000000000000) Win("Clicking is the new booping") },
@@ -306,17 +330,18 @@
 		function () { if (Game.handmadeCookies >= 100000000000000000000000000000000000000000000000) Win("Hand-made cookies are still the best") },
 		function () { if (Game.handmadeCookies >= 10000000000000000000000000000000000000000000000000) Win("My strange clicking addiction") },
 		function () { if (getTotalBuildings() >= 3000) Win("Owner of Buildings") },
-		function () { if (getTotalBuildings() >= 4000) Win("Build up") },
+		//function () { if (getTotalBuildings() >= 4000) Win("Build up") },
 		function () { if (getTotalBuildings() >= 5000) Win("World-dominating company") },
 		function () { if (getTotalBuildings() >= 6000) Win("Creator of the Cookieverse") },
 		function () { if (getTotalBuildings() >= 7000) Win("Build until you can't build anymore") },
-		function () { if (getTotalBuildings() >= 8000) Win("You built the guilt") },
+		//function () { if (getTotalBuildings() >= 8000) Win("You built the guilt") },
 		function () { if (getTotalBuildings() >= 9000) Win("Overlord") },
 		function () { if (getTotalBuildings() >= 10000) Win("That's enough, boss") },
-		function () { if (Game.UpgradesOwned >= 300) Win("Purchaser of Upgrades") },
-		function () { if (Game.UpgradesOwned >= 400) Win("Grade up") },
+		//function () { if (Game.UpgradesOwned >= 300) Win("Purchaser of Upgrades") },
+		//function () { if (Game.UpgradesOwned >= 400) Win("Grade up") },
 		function () { if (Game.UpgradesOwned >= 500) Win("Earth-shattering association") },
-		function () { if (getMinimalBuildingAmount() >= 600) Win("Sexcentennial") },
+		function () { if (Game.UpgradesOwned >= 600) Win("Maker of the Idleverse") },
+		function () { if (getMinimalBuildingAmount() >= 650) Win("Sexcentennial and a half") },
 		function () { if (Game.cookieClicks >= 1000) Win("Clicker") },
 		function () { if (Game.cookieClicks >= 10000) Win("Advanced Clicker") },
 		function () { if (Game.cookieClicks >= 25000) Win("Expert Clicker") },
@@ -326,30 +351,31 @@
 		function () { if (Game.prestige >= 100000000) Win("Omniverse") },
 		function () { if (Game.prestige >= 10000000000) Win("The Ascendant") },
 		function () { if (Game.Has("Lucky digit") && Game.Has("Lucky number") && Game.Has("Lucky payout")) Win("Secret fortune") },
-		function () { if (Game.Has("Caramoas") && Game.Has("Sagalongs") && Game.Has("Shortfoils") && Game.Has("Win mints") && Game.Has("Fig gluttons") && Game.Has("Loreols") && Game.Has("Jaffa cakes") && Game.Has("Grease's cups") && Game.Has("Digits") && Game.Has("Bastenaken cookies") && Game.Has("Festivity loops") && Game.Has("Havabreaks") && Game.Has("Zilla wafers") && Game.Has("Dim Dams")) Win("You wanna be popular?") },
-		function () { if (Game.Has("Rose macarons") && Game.Has("Lemon macarons") && Game.Has("Chocolate macarons") && Game.Has("Pistachio macarons") && Game.Has("Hazelnut macarons") && Game.Has("Violet macarons") && Game.Has("Caramel macarons") && Game.Has("Licorice macarons")) Win("Emmanuel Macaron") },
+		function () { if (Game.Has("Caramoas") && Game.Has("Sagalongs") && Game.Has("Shortfoils") && Game.Has("Win mints") && Game.Has("Fig gluttons") && Game.Has("Loreols") && Game.Has("Jaffa cakes") && Game.Has("Grease's cups") && Game.Has("Digits") && Game.Has("Bastenaken cookies") && Game.Has("Festivity loops") && Game.Has("Havabreaks") && Game.Has("Zilla wafers") && Game.Has("Dim Dams") && Game.Has("Pokey")) Win("You wanna be popular?") },
+		function () { if (Game.Has("Rose macarons") && Game.Has("Lemon macarons") && Game.Has("Chocolate macarons") && Game.Has("Pistachio macarons") && Game.Has("Hazelnut macarons") && Game.Has("Violet macarons") && Game.Has("Caramel macarons") && Game.Has("Licorice macarons") && Game.Has("Earl Grey macarons")) Win("Emmanuel Macaron") },
 		function () { if (Game.Has("British tea biscuits") && Game.Has("Chocolate british tea biscuits") && Game.Has("Round british tea biscuits") && Game.Has("Round chocolate british tea biscuits") && Game.Has("Round british tea biscuits with heart motif") && Game.Has("Round chocolate british tea biscuits with heart motif")) Win("Getting fancy") },
 		function () { if (Game.Has("Butter horseshoes") && Game.Has("Butter pucks") && Game.Has("Butter knots") && Game.Has("Butter slabs") && Game.Has("Butter swirls")) Win("Rich butterfingers") },
 		function () { if (Game.Has("Profiteroles") && Game.Has("Jelly donut") && Game.Has("Glazed donut") && Game.Has("Chocolate cake") && Game.Has("Strawberry cake") && Game.Has("Apple pie") && Game.Has("Lemon meringue pie") && Game.Has("Butter croissant")) Win("Pastries from the past") },
 		function () { if (Game.Has("Cookie dough") && Game.Has("Burnt cookie") && Game.Has("A chocolate chip cookie but with the chips picked off for some reason") && Game.Has("Flavor text cookie") && Game.Has("High-definition cookie") && Game.Has("Crackers")) Win("Bake me, maybe?") },
 		function () { if (Game.Has("Toast") && Game.Has("Peanut butter & jelly") && Game.Has("Wookies") && Game.Has("Cheeseburger") && Game.Has("One lone chocolate chip") && Game.Has("Pizza") && Game.Has("Candy")) Win("Burger Clicker") },
 		function () { if (Game.Has("Elderwort biscuits") && Game.Has("Bakeberry cookies") && Game.Has("Wheat slims") && Game.Has("Duketater cookies") && Game.Has("Green yeast digestives") && Game.Has("Fern tea") && Game.Has("Ichor syrup")) Win("Collecting these is like growing plants") },
-		function () { if (Game.Objects["Cursor"].level && Game.Objects["Grandma"].level && Game.Objects["Farm"].level && Game.Objects["Factory"].level && Game.Objects["Mine"].level && Game.Objects["Bank"].level && Game.Objects["Temple"].level && Game.Objects["Wizard tower"].level && Game.Objects["Shipment"].level && Game.Objects["Alchemy lab"].level && Game.Objects["Portal"].level && Game.Objects["Time machine"].level && Game.Objects["Antimatter condenser"].level && Game.Objects["Prism"].level && Game.Objects["Chancemaker"] && Game.Objects["Fractal engine"].level && Game.Objects["Javascript console"].level >= 1) Win("Level 1 complete!") },
-		function () { if (Game.Objects["Cursor"].level && Game.Objects["Grandma"].level && Game.Objects["Farm"].level && Game.Objects["Factory"].level && Game.Objects["Mine"].level && Game.Objects["Bank"].level && Game.Objects["Temple"].level && Game.Objects["Wizard tower"].level && Game.Objects["Shipment"].level && Game.Objects["Alchemy lab"].level && Game.Objects["Portal"].level && Game.Objects["Time machine"].level && Game.Objects["Antimatter condenser"].level && Game.Objects["Prism"].level && Game.Objects["Chancemaker"] && Game.Objects["Fractal engine"].level && Game.Objects["Javascript console"].level >= 5) Win("Five Hive") },
-		function () { if (Game.Objects["Cursor"].level && Game.Objects["Grandma"].level && Game.Objects["Farm"].level && Game.Objects["Factory"].level && Game.Objects["Mine"].level && Game.Objects["Bank"].level && Game.Objects["Temple"].level && Game.Objects["Wizard tower"].level && Game.Objects["Shipment"].level && Game.Objects["Alchemy lab"].level && Game.Objects["Portal"].level && Game.Objects["Time machine"].level && Game.Objects["Antimatter condenser"].level && Game.Objects["Prism"].level && Game.Objects["Chancemaker"] && Game.Objects["Fractal engine"].level && Game.Objects["Javascript console"].level >= 10) Win("This took forever") },
+		function () { if (Game.Has("Dragon scale") && Game.Has("Dragon claw") && Game.Has("Dragon fang") && Game.Has("Dragon teddy bear")) Win("Spike the dragon") },
+		function () { if (Game.Objects["Cursor"].level && Game.Objects["Grandma"].level && Game.Objects["Farm"].level && Game.Objects["Factory"].level && Game.Objects["Mine"].level && Game.Objects["Bank"].level && Game.Objects["Temple"].level && Game.Objects["Wizard tower"].level && Game.Objects["Shipment"].level && Game.Objects["Alchemy lab"].level && Game.Objects["Portal"].level && Game.Objects["Time machine"].level && Game.Objects["Antimatter condenser"].level && Game.Objects["Prism"].level && Game.Objects["Chancemaker"] && Game.Objects["Fractal engine"].level && Game.Objects["Javascript console"].level && Game.Objects["Idleverse"].level >= 1) Win("Level 1 complete!") },
+		function () { if (Game.Objects["Cursor"].level && Game.Objects["Grandma"].level && Game.Objects["Farm"].level && Game.Objects["Factory"].level && Game.Objects["Mine"].level && Game.Objects["Bank"].level && Game.Objects["Temple"].level && Game.Objects["Wizard tower"].level && Game.Objects["Shipment"].level && Game.Objects["Alchemy lab"].level && Game.Objects["Portal"].level && Game.Objects["Time machine"].level && Game.Objects["Antimatter condenser"].level && Game.Objects["Prism"].level && Game.Objects["Chancemaker"] && Game.Objects["Fractal engine"].level && Game.Objects["Javascript console"].level && Game.Objects["Idleverse"].level >= 5) Win("Five Hive") },
+		function () { if (Game.Objects["Cursor"].level && Game.Objects["Grandma"].level && Game.Objects["Farm"].level && Game.Objects["Factory"].level && Game.Objects["Mine"].level && Game.Objects["Bank"].level && Game.Objects["Temple"].level && Game.Objects["Wizard tower"].level && Game.Objects["Shipment"].level && Game.Objects["Alchemy lab"].level && Game.Objects["Portal"].level && Game.Objects["Time machine"].level && Game.Objects["Antimatter condenser"].level && Game.Objects["Prism"].level && Game.Objects["Chancemaker"] && Game.Objects["Fractal engine"].level && Game.Objects["Javascript console"].level && Game.Objects["Idleverse"].level >= 10) Win("This took forever") },
 		function () { if (Darky.prestigeUpgradesOwned >= 15) Win("Pretty prestige") },
 		function () { if (Darky.prestigeUpgradesOwned >= 30) Win("Live and learn") },
 		function () { if (Darky.prestigeUpgradesOwned >= 60) Win("We will stay with you forever") },
 		function () { if (Game.Has("Kitten helpers") && Game.Has("Kitten workers") && Game.Has("Kitten engineers") && Game.Has("Kitten overseers") && Game.Has("Kitten managers") && Game.Has("Kitten accountants") && Game.Has("Kitten specialists") && Game.Has("Kitten experts") && Game.Has("Kitten consultants") && Game.Has("Kitten assistants to the regional manager") && Game.Has("Kitten marketeers") && Game.Has("Kitten analysts") && Game.Has("Kitten executives") && Game.Has("Fortune #103") && Game.Has("Kitten angels")) Win("Purrfect Perfection") },
-		function () { if (Game.Has("Future almanacs") && Game.Has("Seismic magic") && Game.Has("Quantum electronics") && Game.Has("Contracts from beyond") && Game.Has("Paganism") && Game.Has("Arcane knowledge") && Game.Has("Fossil fuels") && Game.Has("Primordial ores") && Game.Has("Infernal crops") && Game.Has("Relativistic parsec-skipping") && Game.Has("Extra physics funding") && Game.Has("Light magic") && Game.Has("Gemmed talismans") && Game.Has("Recursive mirrors") && Game.Has("Script grannies")) Win("It's sweet, sweet, sweet Synergy") },
-		function () { if (Game.Has("Rain prayer") && Game.Has("Asteroid mining") && Game.Has("Temporal overclocking") && Game.Has("Printing presses") && Game.Has("God particle") && Game.Has("Magical botany") && Game.Has("Shipyards") && Game.Has("Gold fund") && Game.Has("Abysmal glimmer") && Game.Has("Primeval glow") && Game.Has("Chemical proficiency") && Game.Has("Mystical energies") && Game.Has("Charm quarks") && Game.Has("Mice clicking mice") && Game.Has("Tombola computing")) Win("Out of Energy? Get Synergy!") },
+		function () { if (Game.Has("Future almanacs") && Game.Has("Seismic magic") && Game.Has("Quantum electronics") && Game.Has("Contracts from beyond") && Game.Has("Paganism") && Game.Has("Arcane knowledge") && Game.Has("Fossil fuels") && Game.Has("Primordial ores") && Game.Has("Infernal crops") && Game.Has("Relativistic parsec-skipping") && Game.Has("Extra physics funding") && Game.Has("Light magic") && Game.Has("Gemmed talismans") && Game.Has("Recursive mirrors") && Game.Has("Script grannies") && Game.Has("Perforated mille-feuille cosmos")) Win("It's sweet, sweet, sweet Synergy") },
+		function () { if (Game.Has("Rain prayer") && Game.Has("Asteroid mining") && Game.Has("Temporal overclocking") && Game.Has("Printing presses") && Game.Has("God particle") && Game.Has("Magical botany") && Game.Has("Shipyards") && Game.Has("Gold fund") && Game.Has("Abysmal glimmer") && Game.Has("Primeval glow") && Game.Has("Chemical proficiency") && Game.Has("Mystical energies") && Game.Has("Charm quarks") && Game.Has("Mice clicking mice") && Game.Has("Tombola computing") && Game.Has("Infraverses and superverses")) Win("Out of Energy? Get Synergy!") },
 
 		function () { if (Game.goldenClicks >= 77777) Win("Golden Jackpot") },
 		function () { if (name == "darky") Win("Mod-God complex") },
-		function () { if (Game.heralds >= 10) Win("I like playing supportive characters") },
-		function () { if (Game.heralds >= 25) Win("That's a lot of money") },
-		function () { if (Game.heralds >= 50) Win("You really want us to make games for you, huh?") },
-		function () { if (Game.heralds >= 100) Win("Thank you guys so much!") },
+		//function () { if (Game.heralds >= 10) Win("I like playing supportive characters") },
+		//function () { if (Game.heralds >= 25) Win("That's a lot of money") },
+		//function () { if (Game.heralds >= 50) Win("You really want us to make games for you, huh?") },
+		//function () { if (Game.heralds >= 100) Win("Thank you guys so much!") },
 	])
 
 	//-------------------------------------------------------------------
@@ -431,6 +457,6 @@
 	//-------------------------------------------------------------------
 
 	Game.Win("Third-party")
-	Game.Notify("Darky's Achievement Package 1.6", " <b>73</b> new Achievements have been added, enjoy and thank you for using my mod!", [17, 26, "https://i.imgur.com/3jNJJNw.png"]);
+	Game.Notify("Darky's Achievement Package 1.7", " <b>68</b> new Achievements have been added, enjoy and thank you for using my mod!", [17, 26, "https://i.imgur.com/3jNJJNw.png"]);
 	PlaySound("https://freesound.org/data/previews/203/203121_777645-lq.mp3");
 }
