@@ -51,15 +51,9 @@
 
     // -------------------------------------------------------------------
 
-    const changeAchievementIcon = (me, iconURL, pos) => {
-        pos = pos || [0, 0];
-        pos.push(iconURL);
-        me.icon = pos;
-        Game.RebuildUpgrades();
-    };
-
-    changeAchievementIcon(Game.Achievements['Grand design'], 'https://i.imgur.com/GGrHHrA.png', [1, 0]);
-    changeAchievementIcon(Game.Achievements.Ecumenopolis, 'https://i.imgur.com/RWbOLsf.png', [5, 0]);
+    Game.Achievements['Grand design'].icon = [1, 0, 'https://i.imgur.com/RWbOLsf.png'];
+    Game.Achievements.Ecumenopolis.icon = [5, 0, 'https://i.imgur.com/RWbOLsf.png'];
+    Game.RebuildUpgrades();
 
     // -------------------------------------------------------------------
 
