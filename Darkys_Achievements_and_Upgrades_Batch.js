@@ -17,7 +17,7 @@
 
     const Unlock = what => {
         Game.Unlock(what);
-        if (typeof Game.Upgrades[what] !== 'undefined' && Game.Upgrades[what].darky === 1) {
+        if (Game.Upgrades[what] && Game.Upgrades[what].darky === 1) {
             DarkySave.Upgrades[what].unlocked = 1;
             DarkyUpgradesSaveConfig();
         }
@@ -383,7 +383,7 @@
 
     const Win = what => {
         Game.Win(what);
-        if (typeof Game.Achievements[what] !== 'undefined' && Game.Achievements[what].darky === 1) {
+        if (Game.Achievements[what] && Game.Achievements[what].darky === 1) {
             DarkySave.Achievements[what] = 1;
             DarkyAchievSaveConfig();
         }
@@ -1309,7 +1309,7 @@
         for (const i in Game.Achievements) {
             const me = Game.Achievements[i];
             if (me.darky === 1) {
-                if (typeof DarkySave[me.name] !== 'undefined') {
+                if (DarkySave[me.name]) {
                     DarkySave.Achievements[me.name] = DarkySave[me.name];
                     if (DarkySave[me.name]) {
                         Win(me.name);

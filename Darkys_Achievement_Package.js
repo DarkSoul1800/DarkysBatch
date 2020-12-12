@@ -20,7 +20,7 @@
 
     const Win = what => {
         Game.Win(what);
-        if (typeof Game.Achievements[what] !== 'undefined' && Game.Achievements[what].darky === 1) {
+        if (Game.Achievements[what] && Game.Achievements[what].darky === 1) {
             DarkySave.Achievements[what] = 1;
             DarkyAchievSaveConfig();
         }
@@ -53,7 +53,7 @@
     // -------------------------------------------------------------------
 
     const changeAchievementIcon = (me, iconURL, pos) => {
-        pos = typeof pos !== 'undefined' ? pos : [0, 0];
+        pos = pos || [0, 0];
         pos.push(iconURL);
         me.icon = pos;
         Game.RebuildUpgrades();
@@ -966,7 +966,7 @@
         for (const i in Game.Achievements) {
             const me = Game.Achievements[i];
             if (me.darky === 1) {
-                if (typeof DarkySave[me.name] !== 'undefined') {
+                if (DarkySave[me.name]) {
                     DarkySave.Achievements[me.name] = DarkySave[me.name];
                     if (DarkySave[me.name]) {
                         Win(me.name);

@@ -17,7 +17,7 @@
 
     const Unlock = what => {
         Game.Unlock(what);
-        if (typeof Game.Upgrades[what] !== 'undefined' && Game.Upgrades[what].darky === 1) {
+        if (Game.Upgrades[what] && Game.Upgrades[what].darky === 1) {
             DarkySave.Upgrades[what].unlocked = 1;
             DarkyUpgradesSaveConfig();
         }
