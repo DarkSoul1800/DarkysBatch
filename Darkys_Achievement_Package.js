@@ -10,7 +10,7 @@
 		Achievements: []
 	} */
 
-    const Achievement = function Achievement(name, desc, icon) {
+    const Achievement = (name, desc, icon) => {
         const answer = new Game.Achievement(name, desc, icon);
 
         answer.darky = 1;
@@ -18,7 +18,7 @@
         return answer;
     };
 
-    const Win = function Win(what) {
+    const Win = what => {
         Game.Win(what);
         if (typeof Game.Achievements[what] !== 'undefined' && Game.Achievements[what].darky === 1) {
             DarkySave.Achievements[what] = 1;
@@ -52,12 +52,12 @@
 
     // -------------------------------------------------------------------
 
-    function changeAchievementIcon(me, iconURL, pos) {
+    const changeAchievementIcon = (me, iconURL, pos) => {
         pos = typeof pos !== 'undefined' ? pos : [0, 0];
         pos.push(iconURL);
         me.icon = pos;
         Game.RebuildUpgrades();
-    }
+    };
 
     changeAchievementIcon(Game.Achievements['Grand design'], 'https://i.imgur.com/GGrHHrA.png', [1, 0]);
     changeAchievementIcon(Game.Achievements.Ecumenopolis, 'https://i.imgur.com/RWbOLsf.png', [5, 0]);
@@ -323,7 +323,7 @@
             [2, 4, 'https://i.imgur.com/sl3FeNY.png'],
             1
         ),
-        (Game.last.clickFunction = function () {
+        (Game.last.clickFunction = () => {
             if (!Game.HasAchiev('All you had to do was ask')) {
                 PlaySound('snd/tick.mp3');
                 Win('All you had to do was ask');
@@ -481,7 +481,7 @@
     // -------------------------------------------------------------------
 
     Game.registerHook('check', [
-        function () {
+        () => {
             let count = 0;
             for (const i in Game.UpgradesById) {
                 const me = Game.UpgradesById[i];
@@ -490,157 +490,157 @@
             Darky.prestigeUpgradesOwned = count;
         },
 
-        function () {
+        () => {
             if (Game.Objects.Cursor.amount >= 900) Win('Squeak goes the mouse');
         },
-        function () {
+        () => {
             if (Game.Objects.Grandma.amount >= 650) Win("I'm too old for this");
         },
-        function () {
+        () => {
             if (Game.Objects.Farm.amount >= 650) Win('Gorden garden');
         },
-        function () {
+        () => {
             if (Game.Objects.Mine.amount >= 650) Win('A fine mine you got there');
         },
-        function () {
+        () => {
             if (Game.Objects.Factory.amount >= 650) Win('Working 24/7');
         },
-        function () {
+        () => {
             if (Game.Objects.Bank.amount >= 650) Win('Bank on it');
         },
-        function () {
+        () => {
             if (Game.Objects.Temple.amount >= 650) Win('Temple pun');
         },
-        function () {
+        () => {
             if (Game.Objects['Wizard tower'].amount >= 650) Win("It's magic, Joel!");
         },
-        function () {
+        () => {
             if (Game.Objects.Shipment.amount >= 650) Win('My shipment arrives in the morning');
         },
-        function () {
+        () => {
             if (Game.Objects['Alchemy lab'].amount >= 650) Win('Turning cookies into gold since 2013');
         },
-        function () {
+        () => {
             if (Game.Objects.Portal.amount >= 650) Win('A portal inside of a portal');
         },
-        function () {
+        () => {
             if (Game.Objects['Time machine'].amount >= 650) Win('It all began on the 8th of August, 2013');
         },
-        function () {
+        () => {
             if (Game.Objects['Antimatter condenser'].amount >= 650) Win('AntimatterCon');
         },
-        function () {
+        () => {
             if (Game.Objects.Prism.amount >= 650) Win('Stop being a prissm');
         },
-        function () {
+        () => {
             if (Game.Objects.Chancemaker.amount >= 650) Win('And yet you probably never got a blab');
         },
-        function () {
+        () => {
             if (Game.Objects['Fractal engine'].amount >= 650) Win('Gouchnox');
         },
-        function () {
+        () => {
             if (Game.Objects['Javascript console'].amount >= 650) Win('Follow the javascript');
         },
-        function () {
+        () => {
             if (Game.Objects.Idleverse.amount >= 650) Win("Don't call them fanverses, you fool");
         },
-        function () {
+        () => {
             if (Game.handmadeCookies >= 100000000000000000000000000000) Win('Stop it, it clickles');
         },
-        function () {
+        () => {
             if (Game.handmadeCookies >= 10000000000000000000000000000000) Win('Keep up the click');
         },
-        function () {
+        () => {
             if (Game.handmadeCookies >= 1000000000000000000000000000000000) Win('Clicking is the new booping');
         },
-        function () {
+        () => {
             if (Game.handmadeCookies >= 100000000000000000000000000000000000) Win('The final click');
         },
-        function () {
+        () => {
             if (Game.handmadeCookies >= 10000000000000000000000000000000000000)
                 Win('Sike, thats the wrong achievement');
         },
-        function () {
+        () => {
             if (Game.handmadeCookies >= 1000000000000000000000000000000000000000)
                 Win('How about we tap the cookie now');
         },
-        function () {
+        () => {
             if (Game.handmadeCookies >= 100000000000000000000000000000000000000000) Win('Cookie Destroyer');
         },
-        function () {
+        () => {
             if (Game.handmadeCookies >= 10000000000000000000000000000000000000000000) Win('Give it a click');
         },
-        function () {
+        () => {
             if (Game.handmadeCookies >= 1000000000000000000000000000000000000000000000)
                 Win('Clicking Frenzy: Our Lord and Saviour');
         },
-        function () {
+        () => {
             if (Game.handmadeCookies >= 100000000000000000000000000000000000000000000000)
                 Win('Hand-made cookies are still the best');
         },
-        function () {
+        () => {
             if (Game.handmadeCookies >= 10000000000000000000000000000000000000000000000000)
                 Win('My strange clicking addiction');
         },
-        function () {
+        () => {
             if (getTotalBuildings() >= 3000) Win('Owner of Buildings');
         },
-        // function () { if (getTotalBuildings() >= 4000) Win("Build up") },
-        function () {
+        // () => { if (getTotalBuildings() >= 4000) Win("Build up") },
+        () => {
             if (getTotalBuildings() >= 5000) Win('World-dominating company');
         },
-        function () {
+        () => {
             if (getTotalBuildings() >= 6000) Win('Creator of the Cookieverse');
         },
-        function () {
+        () => {
             if (getTotalBuildings() >= 7000) Win("Build until you can't build anymore");
         },
-        // function () { if (getTotalBuildings() >= 8000) Win("You built the guilt") },
-        function () {
+        // () => { if (getTotalBuildings() >= 8000) Win("You built the guilt") },
+        () => {
             if (getTotalBuildings() >= 9000) Win('Overlord');
         },
-        function () {
+        () => {
             if (getTotalBuildings() >= 10000) Win("That's enough, boss");
         },
-        // function () { if (Game.UpgradesOwned >= 300) Win("Purchaser of Upgrades") },
-        // function () { if (Game.UpgradesOwned >= 400) Win("Grade up") },
-        function () {
+        // () => { if (Game.UpgradesOwned >= 300) Win("Purchaser of Upgrades") },
+        // () => { if (Game.UpgradesOwned >= 400) Win("Grade up") },
+        () => {
             if (Game.UpgradesOwned >= 500) Win('Earth-shattering association');
         },
-        function () {
+        () => {
             if (Game.UpgradesOwned >= 600) Win('Maker of the Idleverse');
         },
-        function () {
+        () => {
             if (getMinimalBuildingAmount() >= 650) Win('Sexcentennial and a half');
         },
-        function () {
+        () => {
             if (Game.cookieClicks >= 1000) Win('Clicker');
         },
-        function () {
+        () => {
             if (Game.cookieClicks >= 10000) Win('Advanced Clicker');
         },
-        function () {
+        () => {
             if (Game.cookieClicks >= 25000) Win('Expert Clicker');
         },
-        function () {
+        () => {
             if (Game.prestige >= 100) Win('Heavenly');
         },
-        function () {
+        () => {
             if (Game.prestige >= 10000) Win('Transcendent');
         },
-        function () {
+        () => {
             if (Game.prestige >= 1000000) Win('Higher energy state');
         },
-        function () {
+        () => {
             if (Game.prestige >= 100000000) Win('Omniverse');
         },
-        function () {
+        () => {
             if (Game.prestige >= 10000000000) Win('The Ascendant');
         },
-        function () {
+        () => {
             if (Game.Has('Lucky digit') && Game.Has('Lucky number') && Game.Has('Lucky payout')) Win('Secret fortune');
         },
-        function () {
+        () => {
             if (
                 Game.Has('Caramoas') &&
                 Game.Has('Sagalongs') &&
@@ -660,7 +660,7 @@
             )
                 Win('You wanna be popular?');
         },
-        function () {
+        () => {
             if (
                 Game.Has('Rose macarons') &&
                 Game.Has('Lemon macarons') &&
@@ -674,7 +674,7 @@
             )
                 Win('Emmanuel Macaron');
         },
-        function () {
+        () => {
             if (
                 Game.Has('British tea biscuits') &&
                 Game.Has('Chocolate british tea biscuits') &&
@@ -685,7 +685,7 @@
             )
                 Win('Getting fancy');
         },
-        function () {
+        () => {
             if (
                 Game.Has('Butter horseshoes') &&
                 Game.Has('Butter pucks') &&
@@ -695,7 +695,7 @@
             )
                 Win('Rich butterfingers');
         },
-        function () {
+        () => {
             if (
                 Game.Has('Profiteroles') &&
                 Game.Has('Jelly donut') &&
@@ -708,7 +708,7 @@
             )
                 Win('Pastries from the past');
         },
-        function () {
+        () => {
             if (
                 Game.Has('Cookie dough') &&
                 Game.Has('Burnt cookie') &&
@@ -719,7 +719,7 @@
             )
                 Win('Bake me, maybe?');
         },
-        function () {
+        () => {
             if (
                 Game.Has('Toast') &&
                 Game.Has('Peanut butter & jelly') &&
@@ -731,7 +731,7 @@
             )
                 Win('Burger Clicker');
         },
-        function () {
+        () => {
             if (
                 Game.Has('Elderwort biscuits') &&
                 Game.Has('Bakeberry cookies') &&
@@ -743,7 +743,7 @@
             )
                 Win('Collecting these is like growing plants');
         },
-        function () {
+        () => {
             if (
                 Game.Has('Dragon scale') &&
                 Game.Has('Dragon claw') &&
@@ -752,7 +752,7 @@
             )
                 Win('Spike the dragon');
         },
-        function () {
+        () => {
             if (
                 Game.Objects.Cursor.level &&
                 Game.Objects.Grandma.level &&
@@ -775,7 +775,7 @@
             )
                 Win('Level 1 complete!');
         },
-        function () {
+        () => {
             if (
                 Game.Objects.Cursor.level &&
                 Game.Objects.Grandma.level &&
@@ -798,7 +798,7 @@
             )
                 Win('Five Hive');
         },
-        function () {
+        () => {
             if (
                 Game.Objects.Cursor.level &&
                 Game.Objects.Grandma.level &&
@@ -821,16 +821,16 @@
             )
                 Win('This took forever');
         },
-        function () {
+        () => {
             if (Darky.prestigeUpgradesOwned >= 15) Win('Pretty prestige');
         },
-        function () {
+        () => {
             if (Darky.prestigeUpgradesOwned >= 30) Win('Live and learn');
         },
-        function () {
+        () => {
             if (Darky.prestigeUpgradesOwned >= 60) Win('We will stay with you forever');
         },
-        function () {
+        () => {
             if (
                 Game.Has('Kitten helpers') &&
                 Game.Has('Kitten workers') &&
@@ -850,7 +850,7 @@
             )
                 Win('Purrfect Perfection');
         },
-        function () {
+        () => {
             if (
                 Game.Has('Future almanacs') &&
                 Game.Has('Seismic magic') &&
@@ -871,7 +871,7 @@
             )
                 Win("It's sweet, sweet, sweet Synergy");
         },
-        function () {
+        () => {
             if (
                 Game.Has('Rain prayer') &&
                 Game.Has('Asteroid mining') &&
@@ -893,27 +893,27 @@
                 Win('Out of Energy? Get Synergy!');
         },
 
-        function () {
+        () => {
             if (Game.goldenClicks >= 77777) Win('Golden Jackpot');
         },
-        function () {
+        () => {
             if (name === 'darky') Win('Mod-God complex');
         },
-        // function () { if (Game.heralds >= 10) Win("I like playing supportive characters") },
-        // function () { if (Game.heralds >= 25) Win("That's a lot of money") },
-        // function () { if (Game.heralds >= 50) Win("You really want us to make games for you, huh?") },
-        // function () { if (Game.heralds >= 100) Win("Thank you guys so much!") },
+        // () => { if (Game.heralds >= 10) Win("I like playing supportive characters") },
+        // () => { if (Game.heralds >= 25) Win("That's a lot of money") },
+        // () => { if (Game.heralds >= 50) Win("You really want us to make games for you, huh?") },
+        // () => { if (Game.heralds >= 100) Win("Thank you guys so much!") },
     ]);
 
     // -------------------------------------------------------------------
 
     DarkySavePrefix = 'DarkyPackage';
 
-    DarkyAchievSaveConfig = function () {
+    const DarkyAchievSaveConfig = () => {
         localStorage.setItem(DarkySavePrefix, JSON.stringify(DarkySave));
     };
 
-    DarkyAchievSaveDefault = function () {
+    const DarkyAchievSaveDefault = () => {
         if (typeof DarkySave === 'undefined') {
             DarkySave = {};
         }
@@ -928,7 +928,7 @@
         DarkyAchievSaveConfig();
     };
 
-    DarkyAchievLoadConfig = function () {
+    const DarkyAchievLoadConfig = () => {
         if (localStorage.getItem(DarkySavePrefix) != null) {
             DarkySave = JSON.parse(localStorage.getItem(DarkySavePrefix));
             if (typeof DarkySave.Achievements === 'undefined') {
@@ -952,7 +952,7 @@
 
     const oldReset = Game.HardReset;
     Game.HardReset = new Proxy(oldReset, {
-        apply: function (func, thisArg, args) {
+        apply: (func, thisArg, args) => {
             if (args[0] === 2) {
                 DarkyAchievSaveDefault();
             }
@@ -962,7 +962,7 @@
 
     DarkyAchievLoadConfig();
 
-    DarkyAchievMigrateOldSave = function () {
+    const DarkyAchievMigrateOldSave = () => {
         for (const i in Game.Achievements) {
             const me = Game.Achievements[i];
             if (me.darky === 1) {
