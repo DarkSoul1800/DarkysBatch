@@ -41,7 +41,6 @@
 
     if (typeof Darky === 'undefined') {
         const style = document.createElement('style');
-        style.type = 'text/css';
         style.textContent =
             '.darky:before{background:url(https://i.imgur.com/q8nNdkI.png);background-position:120px 0px;}';
         document.head.appendChild(style);
