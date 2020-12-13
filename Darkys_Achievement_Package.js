@@ -1,18 +1,4 @@
 {
-    // let Game = {
-    //     crate: () => {},
-    //     crateTooltip: () => {},
-    //     Achievement: class {
-    //         construction() {
-    //             Game.Achievements.push({ order: 0 });
-    //         }
-    //     },
-    //     hasAchievement: () => {},
-    //     Win: class {},
-    //     last: {},
-    //     Achievements: [],
-    // };
-
     const Achievement = (name, desc, icon) => {
         const answer = new Game.Achievement(name, desc, icon);
 
@@ -131,7 +117,6 @@
         ]),
         // ~ ~ ~ BUILDINGS ~ ~ ~
         new Achievement("Owner of Buildings", "Own <b>3000</b> buildings.", [0, 0, "https://i.imgur.com/GGrHHrA.png"]),
-        // new Achievement("Build up", "Own <b>4000</b> buildings.", [1, 0, "https://i.imgur.com/GGrHHrA.png"]),
         new Achievement("World-dominating company", "Own <b>5000</b> buildings.", [
             2,
             0,
@@ -147,7 +132,6 @@
             0,
             "https://i.imgur.com/GGrHHrA.png",
         ]),
-        // new Achievement("You built the guilt", "Own <b>8000</b> buildings.", [5, 0, "https://i.imgur.com/RWbOLsf.png"]),
         new Achievement("Overlord", "Own <b>9000</b> buildings.", [4, 4, "https://i.imgur.com/AWmeHiO.png"]),
         new Achievement("That's enough, boss", "Own <b>10000</b> buildings.", [
             6,
@@ -155,12 +139,6 @@
             "https://i.imgur.com/S5BnOGU.png",
         ]),
         // ~ ~ ~ UPGRADES ~ ~ ~
-        // new Achievement("Purchaser of Upgrades", "Purchase <b>300</b> upgrades.", [
-        //     0,
-        //     1,
-        //     "https://i.imgur.com/GGrHHrA.png",
-        // ]),
-        // new Achievement("Grade up", "Purchase <b>400</b> upgrades.", [1, 1, "https://i.imgur.com/GGrHHrA.png"]),
         new Achievement("Earth-shattering association", "Purchase <b>500</b> upgrades.", [
             2,
             1,
@@ -336,16 +314,12 @@
     Game.Achievements["My strange clicking addiction"].order = 1019;
 
     Game.Achievements["Owner of Buildings"].order = 5010;
-    // Game.Achievements["Build up"].order = 5011;
     Game.Achievements["World-dominating company"].order = 5012;
     Game.Achievements["Creator of the Cookieverse"].order = 5013;
     Game.Achievements["Build until you can't build anymore"].order = 5014;
-    // Game.Achievements["You built the guilt"].order = 5015;
     Game.Achievements["Overlord"].order = 5016;
     Game.Achievements["That's enough, boss"].order = 5017;
 
-    // Game.Achievements["Purchaser of Upgrades"].order = 6001;
-    // Game.Achievements["Grade up"].order = 6002;
     Game.Achievements["Earth-shattering association"].order = 6003;
     Game.Achievements["Maker of the Idleverse"].order = 6004;
 
@@ -498,9 +472,6 @@
         () => {
             if (Game.BuildingsOwned >= 3000) Win("Owner of Buildings");
         },
-        // () => {
-        //     if (Game.BuildingsOwned >= 4000) Win("Build up");
-        // },
         () => {
             if (Game.BuildingsOwned >= 5000) Win("World-dominating company");
         },
@@ -510,21 +481,12 @@
         () => {
             if (Game.BuildingsOwned >= 7000) Win("Build until you can't build anymore");
         },
-        // () => {
-        //     if (Game.BuildingsOwned >= 8000) Win("You built the guilt");
-        // },
         () => {
             if (Game.BuildingsOwned >= 9000) Win("Overlord");
         },
         () => {
             if (Game.BuildingsOwned >= 10000) Win("That's enough, boss");
         },
-        // () => {
-        //     if (Game.UpgradesOwned >= 300) Win("Purchaser of Upgrades");
-        // },
-        // () => {
-        //     if (Game.UpgradesOwned >= 400) Win("Grade up");
-        // },
         () => {
             if (Game.UpgradesOwned >= 500) Win("Earth-shattering association");
         },
