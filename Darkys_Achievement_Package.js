@@ -541,42 +541,37 @@
             if (Game.Objects["Idleverse"].amount >= 650) Win("Don't call them fanverses, you fool");
         },
         () => {
-            if (Game.handmadeCookies >= 100000000000000000000000000000) Win("Stop it, it clickles");
+            if (Game.handmadeCookies >= 1e29) Win("Stop it, it clickles");
         },
         () => {
-            if (Game.handmadeCookies >= 10000000000000000000000000000000) Win("Keep up the click");
+            if (Game.handmadeCookies >= 1e31) Win("Keep up the click");
         },
         () => {
-            if (Game.handmadeCookies >= 1000000000000000000000000000000000) Win("Clicking is the new booping");
+            if (Game.handmadeCookies >= 1e33) Win("Clicking is the new booping");
         },
         () => {
-            if (Game.handmadeCookies >= 100000000000000000000000000000000000) Win("The final click");
+            if (Game.handmadeCookies >= 1e35) Win("The final click");
         },
         () => {
-            if (Game.handmadeCookies >= 10000000000000000000000000000000000000)
-                Win("Sike, thats the wrong achievement");
+            if (Game.handmadeCookies >= 1e37) Win("Sike, thats the wrong achievement");
         },
         () => {
-            if (Game.handmadeCookies >= 1000000000000000000000000000000000000000)
-                Win("How about we tap the cookie now");
+            if (Game.handmadeCookies >= 1e39) Win("How about we tap the cookie now");
         },
         () => {
-            if (Game.handmadeCookies >= 100000000000000000000000000000000000000000) Win("Cookie Destroyer");
+            if (Game.handmadeCookies >= 1e41) Win("Cookie Destroyer");
         },
         () => {
-            if (Game.handmadeCookies >= 10000000000000000000000000000000000000000000) Win("Give it a click");
+            if (Game.handmadeCookies >= 1e43) Win("Give it a click");
         },
         () => {
-            if (Game.handmadeCookies >= 1000000000000000000000000000000000000000000000)
-                Win("Clicking Frenzy: Our Lord and Saviour");
+            if (Game.handmadeCookies >= 1e46) Win("Clicking Frenzy: Our Lord and Saviour");
         },
         () => {
-            if (Game.handmadeCookies >= 100000000000000000000000000000000000000000000000)
-                Win("Hand-made cookies are still the best");
+            if (Game.handmadeCookies >= 1e47) Win("Hand-made cookies are still the best");
         },
         () => {
-            if (Game.handmadeCookies >= 10000000000000000000000000000000000000000000000000)
-                Win("My strange clicking addiction");
+            if (Game.handmadeCookies >= 1e49) Win("My strange clicking addiction");
         },
         () => {
             if (getTotalBuildings() >= 3000) Win("Owner of Buildings");
@@ -628,10 +623,10 @@
             if (Game.prestige >= 1000000) Win("Higher energy state");
         },
         () => {
-            if (Game.prestige >= 100000000) Win("Omniverse");
+            if (Game.prestige >= 1e8) Win("Omniverse");
         },
         () => {
-            if (Game.prestige >= 10000000000) Win("The Ascendant");
+            if (Game.prestige >= 1e10) Win("The Ascendant");
         },
         () => {
             if (Game.Has("Lucky digit") && Game.Has("Lucky number") && Game.Has("Lucky payout")) Win("Secret fortune");
