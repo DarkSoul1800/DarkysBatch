@@ -59,241 +59,205 @@
     if (!Game.customCrate) Game.customCrate = [];
     Game.customCrate = Game.customCrate.concat([
         // ~ ~ ~ X OF BUILDINGS ~ ~ ~
-        new Achievement("Squeak goes the mouse", "Have <b>900</b> cursors.", [0, 19], 1),
-        new Achievement("I'm too old for this", "Have <b>650</b> grandmas.", [1, 21], 1),
-        new Achievement("Gorden garden", "Have <b>650</b> farms.", [2, 21], 1),
-        new Achievement("A fine mine you got there", "Have <b>650</b> mines.", [3, 21], 1),
-        new Achievement("Working 24/7", "Have <b>650</b> factories.", [4, 21], 1),
-        new Achievement("Bank on it", "Have <b>650</b> banks.", [15, 21], 1),
-        new Achievement("Temple pun", "Have <b>650</b> temples.", [16, 21], 1),
-        new Achievement("It's magic, Joel!", "Have <b>650</b> wizard towers.", [17, 21], 1),
-        new Achievement("My shipment arrives in the morning", "Have <b>650</b> shipments.", [5, 21], 1),
-        new Achievement("Turning cookies into gold since 2013", "Have <b>650</b> alchemy labs.", [6, 21], 1),
-        new Achievement("A portal inside of a portal", "Have <b>650</b> portals.", [7, 21], 1),
-        new Achievement("It all began on the 8th of August, 2013", "Have <b>650</b> time machines.", [8, 21], 1),
-        new Achievement("AntimatterCon", "Have <b>650</b> antimatter condensers.", [13, 21], 1),
-        new Achievement("Stop being a prissm", "Have <b>650</b> prisms.", [14, 21], 1),
-        new Achievement("And yet you probably never got a blab", "Have <b>650</b> chancemakers.", [19, 21], 1),
-        new Achievement("Gouchnox", "Have <b>650</b> fractal engines.<q>69</q>", [20, 21], 1),
-        new Achievement("Follow the javascript", "Have <b>650</b> javascript consoles.", [32, 21], 1),
-        new Achievement("Don't call them fanverses, you fool", "Have <b>650</b> idleverses.", [33, 21], 1),
+        new Achievement("Squeak goes the mouse", "Have <b>900</b> cursors.", [0, 19]),
+        new Achievement("I'm too old for this", "Have <b>650</b> grandmas.", [1, 21]),
+        new Achievement("Gorden garden", "Have <b>650</b> farms.", [2, 21]),
+        new Achievement("A fine mine you got there", "Have <b>650</b> mines.", [3, 21]),
+        new Achievement("Working 24/7", "Have <b>650</b> factories.", [4, 21]),
+        new Achievement("Bank on it", "Have <b>650</b> banks.", [15, 21]),
+        new Achievement("Temple pun", "Have <b>650</b> temples.", [16, 21]),
+        new Achievement("It's magic, Joel!", "Have <b>650</b> wizard towers.", [17, 21]),
+        new Achievement("My shipment arrives in the morning", "Have <b>650</b> shipments.", [5, 21]),
+        new Achievement("Turning cookies into gold since 2013", "Have <b>650</b> alchemy labs.", [6, 21]),
+        new Achievement("A portal inside of a portal", "Have <b>650</b> portals.", [7, 21]),
+        new Achievement("It all began on the 8th of August, 2013", "Have <b>650</b> time machines.", [8, 21]),
+        new Achievement("AntimatterCon", "Have <b>650</b> antimatter condensers.", [13, 21]),
+        new Achievement("Stop being a prissm", "Have <b>650</b> prisms.", [14, 21]),
+        new Achievement("And yet you probably never got a blab", "Have <b>650</b> chancemakers.", [19, 21]),
+        new Achievement("Gouchnox", "Have <b>650</b> fractal engines.<q>69</q>", [20, 21]),
+        new Achievement("Follow the javascript", "Have <b>650</b> javascript consoles.", [32, 21]),
+        new Achievement("Don't call them fanverses, you fool", "Have <b>650</b> idleverses.", [33, 21]),
         // ~ ~ ~ COOKIES FROM CLICKING ~ ~ ~
-        new Achievement("Stop it, it clickles", "Make <b>100 octillion</b> cookies from clicking.", [11, 21], 1),
-        new Achievement(
-            "Keep up the click",
-            "Make <b>10 nonillion</b> cookies from clicking.",
-            [0, 69, "https://i.imgur.com/3jNJJNw.png"],
-            1
-        ),
-        new Achievement(
-            "Clicking is the new booping",
-            "Make <b>1 decillion</b> cookies from clicking.",
-            [0, 34, "https://i.imgur.com/3jNJJNw.png"],
-            1
-        ),
+        new Achievement("Stop it, it clickles", "Make <b>100 octillion</b> cookies from clicking.", [11, 21]),
+        new Achievement("Keep up the click", "Make <b>10 nonillion</b> cookies from clicking.", [
+            0,
+            69,
+            "https://i.imgur.com/3jNJJNw.png",
+        ]),
+        new Achievement("Clicking is the new booping", "Make <b>1 decillion</b> cookies from clicking.", [
+            0,
+            34,
+            "https://i.imgur.com/3jNJJNw.png",
+        ]),
         new Achievement(
             "The final click",
             "Make <b>100 decillion</b> cookies from clicking.<q>But its never over.</q>",
-            [0, 46, "https://i.imgur.com/3jNJJNw.png"],
-            1
+            [0, 46, "https://i.imgur.com/3jNJJNw.png"]
         ),
         new Achievement(
             "Sike, thats the wrong achievement",
             "Make <b>10 undecillion</b> cookies from clicking.<q>The last achievement wasn't the final one.</q>",
-            [0, 5, "https://i.imgur.com/nv69nsg.png"],
-            1
+            [0, 5, "https://i.imgur.com/nv69nsg.png"]
         ),
         new Achievement(
             "How about we tap the cookie now",
             "Make <b>1 duodecillion</b> cookies from clicking.<q>I heard the mobile version is out now.</q>",
-            [1, 5, "https://i.imgur.com/nv69nsg.png"],
-            1
+            [1, 5, "https://i.imgur.com/nv69nsg.png"]
         ),
         new Achievement(
             "Cookie Destroyer",
             "Make <b>100 duodecillion</b> cookies from clicking.<q>Agent Johnson was here</q>",
-            [2, 5, "https://i.imgur.com/nv69nsg.png"],
-            1
+            [2, 5, "https://i.imgur.com/nv69nsg.png"]
         ),
-        new Achievement(
-            "Give it a click",
-            "Make <b>10 tredecillion</b> cookies from clicking.",
-            [3, 5, "https://i.imgur.com/nv69nsg.png"],
-            1
-        ),
+        new Achievement("Give it a click", "Make <b>10 tredecillion</b> cookies from clicking.", [
+            3,
+            5,
+            "https://i.imgur.com/nv69nsg.png",
+        ]),
         new Achievement(
             "Clicking Frenzy: Our Lord and Saviour",
             "Make <b>1 quattuordecillion</b> cookies from clicking.",
-            [4, 5, "https://i.imgur.com/nv69nsg.png"],
-            1
+            [4, 5, "https://i.imgur.com/nv69nsg.png"]
         ),
         new Achievement(
             "Hand-made cookies are still the best",
             "Make <b>100 quattuordecillion</b> cookies from clicking.",
-            [5, 5, "https://i.imgur.com/nv69nsg.png"],
-            1
+            [5, 5, "https://i.imgur.com/nv69nsg.png"]
         ),
-        new Achievement(
-            "My strange clicking addiction",
-            "Make <b>10 quindecillion</b> cookies from clicking.",
-            [6, 5, "https://i.imgur.com/nv69nsg.png"],
-            1
-        ),
+        new Achievement("My strange clicking addiction", "Make <b>10 quindecillion</b> cookies from clicking.", [
+            6,
+            5,
+            "https://i.imgur.com/nv69nsg.png",
+        ]),
         // ~ ~ ~ BUILDINGS ~ ~ ~
-        new Achievement(
-            "Owner of Buildings",
-            "Own <b>3000</b> buildings.",
-            [0, 0, "https://i.imgur.com/GGrHHrA.png"],
-            1
-        ),
-        // new Achievement("Build up", "Own <b>4000</b> buildings.", [1, 0, "https://i.imgur.com/GGrHHrA.png"], 1),
-        new Achievement(
-            "World-dominating company",
-            "Own <b>5000</b> buildings.",
-            [2, 0, "https://i.imgur.com/GGrHHrA.png"],
-            1
-        ),
-        new Achievement(
-            "Creator of the Cookieverse",
-            "Own <b>6000</b> buildings.",
-            [3, 0, "https://i.imgur.com/GGrHHrA.png"],
-            1
-        ),
-        new Achievement(
-            "Build until you can't build anymore",
-            "Own <b>7000</b> buildings.",
-            [4, 0, "https://i.imgur.com/GGrHHrA.png"],
-            1
-        ),
-        // new Achievement("You built the guilt", "Own <b>8000</b> buildings.", [5, 0, "https://i.imgur.com/RWbOLsf.png"], 1),
-        new Achievement("Overlord", "Own <b>9000</b> buildings.", [4, 4, "https://i.imgur.com/AWmeHiO.png"], 1),
-        new Achievement(
-            "That's enough, boss",
-            "Own <b>10000</b> buildings.",
-            [6, 0, "https://i.imgur.com/S5BnOGU.png"],
-            1
-        ),
+        new Achievement("Owner of Buildings", "Own <b>3000</b> buildings.", [0, 0, "https://i.imgur.com/GGrHHrA.png"]),
+        // new Achievement("Build up", "Own <b>4000</b> buildings.", [1, 0, "https://i.imgur.com/GGrHHrA.png"]),
+        new Achievement("World-dominating company", "Own <b>5000</b> buildings.", [
+            2,
+            0,
+            "https://i.imgur.com/GGrHHrA.png",
+        ]),
+        new Achievement("Creator of the Cookieverse", "Own <b>6000</b> buildings.", [
+            3,
+            0,
+            "https://i.imgur.com/GGrHHrA.png",
+        ]),
+        new Achievement("Build until you can't build anymore", "Own <b>7000</b> buildings.", [
+            4,
+            0,
+            "https://i.imgur.com/GGrHHrA.png",
+        ]),
+        // new Achievement("You built the guilt", "Own <b>8000</b> buildings.", [5, 0, "https://i.imgur.com/RWbOLsf.png"]),
+        new Achievement("Overlord", "Own <b>9000</b> buildings.", [4, 4, "https://i.imgur.com/AWmeHiO.png"]),
+        new Achievement("That's enough, boss", "Own <b>10000</b> buildings.", [
+            6,
+            0,
+            "https://i.imgur.com/S5BnOGU.png",
+        ]),
         // ~ ~ ~ UPGRADES ~ ~ ~
-        // new Achievement("Purchaser of Upgrades", "Purchase <b>300</b> upgrades.", [0, 1, "https://i.imgur.com/GGrHHrA.png"], 1),
-        // new Achievement("Grade up", "Purchase <b>400</b> upgrades.", [1, 1, "https://i.imgur.com/GGrHHrA.png"], 1),
-        new Achievement(
-            "Earth-shattering association",
-            "Purchase <b>500</b> upgrades.",
-            [2, 1, "https://i.imgur.com/S5BnOGU.png"],
-            1
-        ),
-        new Achievement(
-            "Maker of the Idleverse",
-            "Purchase <b>600</b> upgrades.",
-            [3, 1, "https://i.imgur.com/AWmeHiO.png"],
-            1
-        ),
+        // new Achievement("Purchaser of Upgrades", "Purchase <b>300</b> upgrades.", [0, 1, "https://i.imgur.com/GGrHHrA.png"]),
+        // new Achievement("Grade up", "Purchase <b>400</b> upgrades.", [1, 1, "https://i.imgur.com/GGrHHrA.png"]),
+        new Achievement("Earth-shattering association", "Purchase <b>500</b> upgrades.", [
+            2,
+            1,
+            "https://i.imgur.com/S5BnOGU.png",
+        ]),
+        new Achievement("Maker of the Idleverse", "Purchase <b>600</b> upgrades.", [
+            3,
+            1,
+            "https://i.imgur.com/AWmeHiO.png",
+        ]),
         // ~ ~ ~ X OF EVERYTHING ~ ~ ~
         new Achievement(
             "Sexcentennial and a half",
             "Have at least <b>650 of everything</b>.<q>Yes I just did that.</q>",
-            [1, 3, "https://i.imgur.com/Qi5DPKy.png"],
-            1
+            [1, 3, "https://i.imgur.com/Qi5DPKy.png"]
         ),
         // ~ ~ ~ BIG COOKIE CLICKS ~ ~ ~
-        new Achievement("Clicker", "Click on the big cookie <b>1,000</b> times.", [11, 22], 1),
-        new Achievement("Advanced Clicker", "Click on the big cookie <b>10,000</b> times.", [11, 23], 1),
-        new Achievement("Expert Clicker", "Click on the big cookie <b>25,000</b> times.", [11, 24], 1),
+        new Achievement("Clicker", "Click on the big cookie <b>1,000</b> times.", [11, 22]),
+        new Achievement("Advanced Clicker", "Click on the big cookie <b>10,000</b> times.", [11, 23]),
+        new Achievement("Expert Clicker", "Click on the big cookie <b>25,000</b> times.", [11, 24]),
         // ~ ~ ~ PRESTIGE LEVEL ~ ~ ~
-        new Achievement("Heavenly", "Reach prestige level <b>100</b>.", [19, 7], 1),
-        new Achievement("Transcendent", "Reach prestige level <b>10,000</b>.", [18, 7], 1),
-        new Achievement("Higher energy state", "Reach prestige level <b>1 million</b>.", [17, 7], 1),
-        new Achievement("Omniverse", "Reach prestige level <b>100 million</b>.", [16, 7], 1),
-        new Achievement("The Ascendant", "Reach prestige level <b>10 billion</b>.", [15, 7], 1),
+        new Achievement("Heavenly", "Reach prestige level <b>100</b>.", [19, 7]),
+        new Achievement("Transcendent", "Reach prestige level <b>10,000</b>.", [18, 7]),
+        new Achievement("Higher energy state", "Reach prestige level <b>1 million</b>.", [17, 7]),
+        new Achievement("Omniverse", "Reach prestige level <b>100 million</b>.", [16, 7]),
+        new Achievement("The Ascendant", "Reach prestige level <b>10 billion</b>.", [15, 7]),
         // ~ ~ ~ PRESTIGE UPGRADES ~ ~ ~
         new Achievement(
             "Secret fortune",
             "Purchase the <b>3 secret prestige upgrades</b>.<q>You got more than one ace up your sleeve, huh?",
-            [24, 15],
-            1
+            [24, 15]
         ),
-        new Achievement(
-            "Pretty prestige",
-            "Purchase <b>15</b> prestige upgrades.",
-            [19, 48, "https://i.imgur.com/3jNJJNw.png"],
-            1
-        ),
-        new Achievement(
-            "Live and learn",
-            "Purchase <b>30</b> prestige upgrades.<q>And never forget.",
-            [19, 47, "https://i.imgur.com/3jNJJNw.png"],
-            1
-        ),
+        new Achievement("Pretty prestige", "Purchase <b>15</b> prestige upgrades.", [
+            19,
+            48,
+            "https://i.imgur.com/3jNJJNw.png",
+        ]),
+        new Achievement("Live and learn", "Purchase <b>30</b> prestige upgrades.<q>And never forget.", [
+            19,
+            47,
+            "https://i.imgur.com/3jNJJNw.png",
+        ]),
         new Achievement(
             "We will stay with you forever",
             "Purchase <b>60</b> prestige upgrades.<q>Don't reset us.</q>",
-            [19, 46, "https://i.imgur.com/3jNJJNw.png"],
-            1
+            [19, 46, "https://i.imgur.com/3jNJJNw.png"]
         ),
         // ~ ~ ~ COOKIE UPGRADES ~ ~ ~
-        new Achievement("Getting fancy", "Purchase <b>all fancy biscuits</b>.", [21, 8], 1),
-        new Achievement("Emmanuel Macaron", "Purchase <b>all macarons</b>.", [20, 8], 1),
-        new Achievement("You wanna be popular?", "Purchase <b>all popular biscuits</b>.", [20, 9], 1),
-        new Achievement("Rich butterfingers", "Purchase <b>all rich butter cookies</b>.", [21, 9], 1),
-        new Achievement("Pastries from the past", "Purchase <b>all pastries</b>.", [27, 29], 1),
-        new Achievement("Bake me, maybe?", "Purchase <b>all maybe cookies</b>.", [25, 29], 1),
+        new Achievement("Getting fancy", "Purchase <b>all fancy biscuits</b>.", [21, 8]),
+        new Achievement("Emmanuel Macaron", "Purchase <b>all macarons</b>.", [20, 8]),
+        new Achievement("You wanna be popular?", "Purchase <b>all popular biscuits</b>.", [20, 9]),
+        new Achievement("Rich butterfingers", "Purchase <b>all rich butter cookies</b>.", [21, 9]),
+        new Achievement("Pastries from the past", "Purchase <b>all pastries</b>.", [27, 29]),
+        new Achievement("Bake me, maybe?", "Purchase <b>all maybe cookies</b>.", [25, 29]),
         new Achievement(
             "Burger Clicker",
             "Purchase <b>all not cookies</b>.<q>Shoutout to the old Idle Game Maker!</q>",
-            [26, 29],
-            1
+            [26, 29]
         ),
         new Achievement(
             "Collecting these is like growing plants",
             "Purchase <b>all plant upgrades</b>.<q>It takes a looooong time.</q>",
-            [24, 25],
-            1
+            [24, 25]
         ),
-        new Achievement(
-            "Spike the dragon",
-            "Purchase <b>all dragon upgrades</b>.<q>Keep an eye on your gems.</q>",
-            [30, 12],
-            1
-        ),
+        new Achievement("Spike the dragon", "Purchase <b>all dragon upgrades</b>.<q>Keep an eye on your gems.</q>", [
+            30,
+            12,
+        ]),
         // ~ ~ ~ BUILDING LEVEL ~ ~ ~
-        new Achievement(
-            "Level 1 complete!",
-            "Reach level <b>1</b> of every building.",
-            [0, 2, "https://i.imgur.com/GGrHHrA.png"],
-            1
-        ),
-        new Achievement(
-            "Five Hive",
-            "Reach level <b>5</b> of every building.",
-            [1, 2, "https://i.imgur.com/GGrHHrA.png"],
-            1
-        ),
-        new Achievement(
-            "This took forever",
-            "Reach level <b>10</b> of every building.",
-            [2, 2, "https://i.imgur.com/Qi5DPKy.png"],
-            1
-        ),
+        new Achievement("Level 1 complete!", "Reach level <b>1</b> of every building.", [
+            0,
+            2,
+            "https://i.imgur.com/GGrHHrA.png",
+        ]),
+        new Achievement("Five Hive", "Reach level <b>5</b> of every building.", [
+            1,
+            2,
+            "https://i.imgur.com/GGrHHrA.png",
+        ]),
+        new Achievement("This took forever", "Reach level <b>10</b> of every building.", [
+            2,
+            2,
+            "https://i.imgur.com/Qi5DPKy.png",
+        ]),
         // ~ ~ ~ OTHER ~ ~ ~
         new Achievement(
             "Purrfect Perfection",
             "Purrchase <b>every kitten upgrade</b>.<q>Are you sick of these puns yet?</q>",
-            [26, 7],
-            1
+            [26, 7]
         ),
         new Achievement(
             "It's sweet, sweet, sweet Synergy",
             "Purchase <b>all Synergy I upgrades</b>.<q>It's ours for the baking.</q>",
-            [9, 20],
-            1
+            [9, 20]
         ),
-        new Achievement("Out of Energy? Get Synergy!", "Purchase <b>all Synergy II upgrades</b>.", [9, 29], 1),
-        new Achievement(
-            "All you had to do was ask",
-            "Click this custom achievement's slot.<q>Here you go.</q>",
-            [2, 4, "https://i.imgur.com/sl3FeNY.png"],
-            1
-        ),
+        new Achievement("Out of Energy? Get Synergy!", "Purchase <b>all Synergy II upgrades</b>.", [9, 29]),
+        new Achievement("All you had to do was ask", "Click this custom achievement's slot.<q>Here you go.</q>", [
+            2,
+            4,
+            "https://i.imgur.com/sl3FeNY.png",
+        ]),
         (Game.last.clickFunction = () => {
             if (!Game.HasAchiev("All you had to do was ask")) {
                 PlaySound("snd/tick.mp3");
@@ -301,19 +265,18 @@
             }
         }),
         // ~ ~ ~ SHADOW ~ ~ ~
-        new Achievement("Mod-God complex", "Name yourself <b>Darky</b>.<q>Ducky.</q>", [2, 12], 1),
+        new Achievement("Mod-God complex", "Name yourself <b>Darky</b>.<q>Ducky.</q>", [2, 12]),
         (Game.last.pool = "shadow"),
-        new Achievement(
-            "Golden Jackpot",
-            "Click <b>77,777 golden cookies</b>.",
-            [0, 3, "https://i.imgur.com/GGrHHrA.png"],
-            1
-        ),
+        new Achievement("Golden Jackpot", "Click <b>77,777 golden cookies</b>.", [
+            0,
+            3,
+            "https://i.imgur.com/GGrHHrA.png",
+        ]),
         (Game.last.pool = "shadow"),
-        // new Achievement("I like playing supportive characters", "Dashnet reached <b>10</b> heralds.", [21, 29], 1), Game.last.pool = "shadow",
-        // new Achievement("That's a lot of money", "Dashnet reached <b>25</b> heralds.", [21, 29], 1), Game.last.pool = "shadow",
-        // new Achievement("You really want us to make games for you, huh?", "Dashnet reached <b>50</b> heralds.", [21, 29], 1), Game.last.pool = "shadow",
-        // new Achievement("Thank you guys so much!", "Dashnet reached <b>100</b> heralds.", [21, 29], 1), Game.last.pool = "shadow",
+        // new Achievement("I like playing supportive characters", "Dashnet reached <b>10</b> heralds.", [21, 29]), Game.last.pool = "shadow",
+        // new Achievement("That's a lot of money", "Dashnet reached <b>25</b> heralds.", [21, 29]), Game.last.pool = "shadow",
+        // new Achievement("You really want us to make games for you, huh?", "Dashnet reached <b>50</b> heralds.", [21, 29]), Game.last.pool = "shadow",
+        // new Achievement("Thank you guys so much!", "Dashnet reached <b>100</b> heralds.", [21, 29]), Game.last.pool = "shadow",
     ]);
     // -------------------------------------------------------------------
     const Achievements = {};
