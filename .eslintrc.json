@@ -9,7 +9,9 @@
     },
     "plugins": ["prettier"],
     "rules": {
+        "dot-notation": "off",
         "no-undef": "off",
-        "prettier/prettier": "error"
+        "prettier/prettier": "error",
+        "quotes": ["error", "double"]
     }
 }
