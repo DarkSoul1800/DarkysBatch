@@ -383,145 +383,239 @@
         },
 
         () => {
-            if (Game.Objects["Cursor"].amount >= 900) Win("Squeak goes the mouse");
+            if (Game.Objects["Cursor"].amount >= 900) {
+                Win("Squeak goes the mouse");
+            }
         },
         () => {
-            if (Game.Objects["Grandma"].amount >= 650) Win("I'm too old for this");
+            if (Game.Objects["Grandma"].amount >= 650) {
+                Win("I'm too old for this");
+            }
         },
         () => {
-            if (Game.Objects["Farm"].amount >= 650) Win("Gorden garden");
+            if (Game.Objects["Farm"].amount >= 650) {
+                Win("Gorden garden");
+            }
         },
         () => {
-            if (Game.Objects["Mine"].amount >= 650) Win("A fine mine you got there");
+            if (Game.Objects["Mine"].amount >= 650) {
+                Win("A fine mine you got there");
+            }
         },
         () => {
-            if (Game.Objects["Factory"].amount >= 650) Win("Working 24/7");
+            if (Game.Objects["Factory"].amount >= 650) {
+                Win("Working 24/7");
+            }
         },
         () => {
-            if (Game.Objects["Bank"].amount >= 650) Win("Bank on it");
+            if (Game.Objects["Bank"].amount >= 650) {
+                Win("Bank on it");
+            }
         },
         () => {
-            if (Game.Objects["Temple"].amount >= 650) Win("Temple pun");
+            if (Game.Objects["Temple"].amount >= 650) {
+                Win("Temple pun");
+            }
         },
         () => {
-            if (Game.Objects["Wizard tower"].amount >= 650) Win("It's magic, Joel!");
+            if (Game.Objects["Wizard tower"].amount >= 650) {
+                Win("It's magic, Joel!");
+            }
         },
         () => {
-            if (Game.Objects["Shipment"].amount >= 650) Win("My shipment arrives in the morning");
+            if (Game.Objects["Shipment"].amount >= 650) {
+                Win("My shipment arrives in the morning");
+            }
         },
         () => {
-            if (Game.Objects["Alchemy lab"].amount >= 650) Win("Turning cookies into gold since 2013");
+            if (Game.Objects["Alchemy lab"].amount >= 650) {
+                Win("Turning cookies into gold since 2013");
+            }
         },
         () => {
-            if (Game.Objects["Portal"].amount >= 650) Win("A portal inside of a portal");
+            if (Game.Objects["Portal"].amount >= 650) {
+                Win("A portal inside of a portal");
+            }
         },
         () => {
-            if (Game.Objects["Time machine"].amount >= 650) Win("It all began on the 8th of August, 2013");
+            if (Game.Objects["Time machine"].amount >= 650) {
+                Win("It all began on the 8th of August, 2013");
+            }
         },
         () => {
-            if (Game.Objects["Antimatter condenser"].amount >= 650) Win("AntimatterCon");
+            if (Game.Objects["Antimatter condenser"].amount >= 650) {
+                Win("AntimatterCon");
+            }
         },
         () => {
-            if (Game.Objects["Prism"].amount >= 650) Win("Stop being a prissm");
+            if (Game.Objects["Prism"].amount >= 650) {
+                Win("Stop being a prissm");
+            }
         },
         () => {
-            if (Game.Objects["Chancemaker"].amount >= 650) Win("And yet you probably never got a blab");
+            if (Game.Objects["Chancemaker"].amount >= 650) {
+                Win("And yet you probably never got a blab");
+            }
         },
         () => {
-            if (Game.Objects["Fractal engine"].amount >= 650) Win("Gouchnox");
+            if (Game.Objects["Fractal engine"].amount >= 650) {
+                Win("Gouchnox");
+            }
         },
         () => {
-            if (Game.Objects["Javascript console"].amount >= 650) Win("Follow the javascript");
+            if (Game.Objects["Javascript console"].amount >= 650) {
+                Win("Follow the javascript");
+            }
         },
         () => {
-            if (Game.Objects["Idleverse"].amount >= 650) Win("Don't call them fanverses, you fool");
+            if (Game.Objects["Idleverse"].amount >= 650) {
+                Win("Don't call them fanverses, you fool");
+            }
         },
         () => {
-            if (Game.handmadeCookies >= 1e29) Win("Stop it, it clickles");
+            if (Game.handmadeCookies >= 1e29) {
+                Win("Stop it, it clickles");
+            }
         },
         () => {
-            if (Game.handmadeCookies >= 1e31) Win("Keep up the click");
+            if (Game.handmadeCookies >= 1e31) {
+                Win("Keep up the click");
+            }
         },
         () => {
-            if (Game.handmadeCookies >= 1e33) Win("Clicking is the new booping");
+            if (Game.handmadeCookies >= 1e33) {
+                Win("Clicking is the new booping");
+            }
         },
         () => {
-            if (Game.handmadeCookies >= 1e35) Win("The final click");
+            if (Game.handmadeCookies >= 1e35) {
+                Win("The final click");
+            }
         },
         () => {
-            if (Game.handmadeCookies >= 1e37) Win("Sike, thats the wrong achievement");
+            if (Game.handmadeCookies >= 1e37) {
+                Win("Sike, thats the wrong achievement");
+            }
         },
         () => {
-            if (Game.handmadeCookies >= 1e39) Win("How about we tap the cookie now");
+            if (Game.handmadeCookies >= 1e39) {
+                Win("How about we tap the cookie now");
+            }
         },
         () => {
-            if (Game.handmadeCookies >= 1e41) Win("Cookie Destroyer");
+            if (Game.handmadeCookies >= 1e41) {
+                Win("Cookie Destroyer");
+            }
         },
         () => {
-            if (Game.handmadeCookies >= 1e43) Win("Give it a click");
+            if (Game.handmadeCookies >= 1e43) {
+                Win("Give it a click");
+            }
         },
         () => {
-            if (Game.handmadeCookies >= 1e46) Win("Clicking Frenzy: Our Lord and Saviour");
+            if (Game.handmadeCookies >= 1e46) {
+                Win("Clicking Frenzy: Our Lord and Saviour");
+            }
         },
         () => {
-            if (Game.handmadeCookies >= 1e47) Win("Hand-made cookies are still the best");
+            if (Game.handmadeCookies >= 1e47) {
+                Win("Hand-made cookies are still the best");
+            }
         },
         () => {
-            if (Game.handmadeCookies >= 1e49) Win("My strange clicking addiction");
+            if (Game.handmadeCookies >= 1e49) {
+                Win("My strange clicking addiction");
+            }
         },
         () => {
-            if (Game.BuildingsOwned >= 3000) Win("Owner of Buildings");
+            if (Game.BuildingsOwned >= 3000) {
+                Win("Owner of Buildings");
+            }
         },
         () => {
-            if (Game.BuildingsOwned >= 5000) Win("World-dominating company");
+            if (Game.BuildingsOwned >= 5000) {
+                Win("World-dominating company");
+            }
         },
         () => {
-            if (Game.BuildingsOwned >= 6000) Win("Creator of the Cookieverse");
+            if (Game.BuildingsOwned >= 6000) {
+                Win("Creator of the Cookieverse");
+            }
         },
         () => {
-            if (Game.BuildingsOwned >= 7000) Win("Build until you can't build anymore");
+            if (Game.BuildingsOwned >= 7000) {
+                Win("Build until you can't build anymore");
+            }
         },
         () => {
-            if (Game.BuildingsOwned >= 9000) Win("Overlord");
+            if (Game.BuildingsOwned >= 9000) {
+                Win("Overlord");
+            }
         },
         () => {
-            if (Game.BuildingsOwned >= 10000) Win("That's enough, boss");
+            if (Game.BuildingsOwned >= 10000) {
+                Win("That's enough, boss");
+            }
         },
         () => {
-            if (Game.UpgradesOwned >= 500) Win("Earth-shattering association");
+            if (Game.UpgradesOwned >= 500) {
+                Win("Earth-shattering association");
+            }
         },
         () => {
-            if (Game.UpgradesOwned >= 600) Win("Maker of the Idleverse");
+            if (Game.UpgradesOwned >= 600) {
+                Win("Maker of the Idleverse");
+            }
         },
         () => {
-            if (minAmount >= 650) Win("Sexcentennial and a half");
+            if (minAmount >= 650) {
+                Win("Sexcentennial and a half");
+            }
         },
         () => {
-            if (Game.cookieClicks >= 1000) Win("Clicker");
+            if (Game.cookieClicks >= 1000) {
+                Win("Clicker");
+            }
         },
         () => {
-            if (Game.cookieClicks >= 10000) Win("Advanced Clicker");
+            if (Game.cookieClicks >= 10000) {
+                Win("Advanced Clicker");
+            }
         },
         () => {
-            if (Game.cookieClicks >= 25000) Win("Expert Clicker");
+            if (Game.cookieClicks >= 25000) {
+                Win("Expert Clicker");
+            }
         },
         () => {
-            if (Game.prestige >= 100) Win("Heavenly");
+            if (Game.prestige >= 100) {
+                Win("Heavenly");
+            }
         },
         () => {
-            if (Game.prestige >= 10000) Win("Transcendent");
+            if (Game.prestige >= 10000) {
+                Win("Transcendent");
+            }
         },
         () => {
-            if (Game.prestige >= 1000000) Win("Higher energy state");
+            if (Game.prestige >= 1000000) {
+                Win("Higher energy state");
+            }
         },
         () => {
-            if (Game.prestige >= 1e8) Win("Omniverse");
+            if (Game.prestige >= 1e8) {
+                Win("Omniverse");
+            }
         },
         () => {
-            if (Game.prestige >= 1e10) Win("The Ascendant");
+            if (Game.prestige >= 1e10) {
+                Win("The Ascendant");
+            }
         },
         () => {
-            if (Game.Has("Lucky digit") && Game.Has("Lucky number") && Game.Has("Lucky payout")) Win("Secret fortune");
+            if (Game.Has("Lucky digit") && Game.Has("Lucky number") && Game.Has("Lucky payout")) {
+                Win("Secret fortune");
+            }
         },
         () => {
             if (
@@ -540,8 +634,9 @@
                 Game.Has("Zilla wafers") &&
                 Game.Has("Dim Dams") &&
                 Game.Has("Pokey")
-            )
+            ) {
                 Win("You wanna be popular?");
+            }
         },
         () => {
             if (
@@ -554,8 +649,9 @@
                 Game.Has("Caramel macarons") &&
                 Game.Has("Licorice macarons") &&
                 Game.Has("Earl Grey macarons")
-            )
+            ) {
                 Win("Emmanuel Macaron");
+            }
         },
         () => {
             if (
@@ -565,8 +661,9 @@
                 Game.Has("Round chocolate british tea biscuits") &&
                 Game.Has("Round british tea biscuits with heart motif") &&
                 Game.Has("Round chocolate british tea biscuits with heart motif")
-            )
+            ) {
                 Win("Getting fancy");
+            }
         },
         () => {
             if (
@@ -575,8 +672,9 @@
                 Game.Has("Butter knots") &&
                 Game.Has("Butter slabs") &&
                 Game.Has("Butter swirls")
-            )
+            ) {
                 Win("Rich butterfingers");
+            }
         },
         () => {
             if (
@@ -588,8 +686,9 @@
                 Game.Has("Apple pie") &&
                 Game.Has("Lemon meringue pie") &&
                 Game.Has("Butter croissant")
-            )
+            ) {
                 Win("Pastries from the past");
+            }
         },
         () => {
             if (
@@ -599,8 +698,9 @@
                 Game.Has("Flavor text cookie") &&
                 Game.Has("High-definition cookie") &&
                 Game.Has("Crackers")
-            )
+            ) {
                 Win("Bake me, maybe?");
+            }
         },
         () => {
             if (
@@ -611,8 +711,9 @@
                 Game.Has("One lone chocolate chip") &&
                 Game.Has("Pizza") &&
                 Game.Has("Candy")
-            )
+            ) {
                 Win("Burger Clicker");
+            }
         },
         () => {
             if (
@@ -623,8 +724,9 @@
                 Game.Has("Green yeast digestives") &&
                 Game.Has("Fern tea") &&
                 Game.Has("Ichor syrup")
-            )
+            ) {
                 Win("Collecting these is like growing plants");
+            }
         },
         () => {
             if (
@@ -632,8 +734,9 @@
                 Game.Has("Dragon claw") &&
                 Game.Has("Dragon fang") &&
                 Game.Has("Dragon teddy bear")
-            )
+            ) {
                 Win("Spike the dragon");
+            }
         },
         () => {
             if (
@@ -655,8 +758,9 @@
                 Game.Objects["Fractal engine"].level &&
                 Game.Objects["Javascript console"].level &&
                 Game.Objects["Idleverse"].level >= 1
-            )
+            ) {
                 Win("Level 1 complete!");
+            }
         },
         () => {
             if (
@@ -678,8 +782,9 @@
                 Game.Objects["Fractal engine"].level &&
                 Game.Objects["Javascript console"].level &&
                 Game.Objects["Idleverse"].level >= 5
-            )
+            ) {
                 Win("Five Hive");
+            }
         },
         () => {
             if (
@@ -701,17 +806,24 @@
                 Game.Objects["Fractal engine"].level &&
                 Game.Objects["Javascript console"].level &&
                 Game.Objects["Idleverse"].level >= 10
-            )
+            ) {
                 Win("This took forever");
+            }
         },
         () => {
-            if (Darky.prestigeUpgradesOwned >= 15) Win("Pretty prestige");
+            if (Darky.prestigeUpgradesOwned >= 15) {
+                Win("Pretty prestige");
+            }
         },
         () => {
-            if (Darky.prestigeUpgradesOwned >= 30) Win("Live and learn");
+            if (Darky.prestigeUpgradesOwned >= 30) {
+                Win("Live and learn");
+            }
         },
         () => {
-            if (Darky.prestigeUpgradesOwned >= 60) Win("We will stay with you forever");
+            if (Darky.prestigeUpgradesOwned >= 60) {
+                Win("We will stay with you forever");
+            }
         },
         () => {
             if (
@@ -730,8 +842,9 @@
                 Game.Has("Kitten executives") &&
                 Game.Has("Fortune #103") &&
                 Game.Has("Kitten angels")
-            )
+            ) {
                 Win("Purrfect Perfection");
+            }
         },
         () => {
             if (
@@ -751,8 +864,9 @@
                 Game.Has("Recursive mirrors") &&
                 Game.Has("Script grannies") &&
                 Game.Has("Perforated mille-feuille cosmos")
-            )
+            ) {
                 Win("It's sweet, sweet, sweet Synergy");
+            }
         },
         () => {
             if (
@@ -772,27 +886,40 @@
                 Game.Has("Mice clicking mice") &&
                 Game.Has("Tombola computing") &&
                 Game.Has("Infraverses and superverses")
-            )
+            ) {
                 Win("Out of Energy? Get Synergy!");
+            }
         },
 
         () => {
-            if (Game.goldenClicks >= 77777) Win("Golden Jackpot");
+            if (Game.goldenClicks >= 77777) {
+                Win("Golden Jackpot");
+            }
         },
         () => {
-            if (name === "darky") Win("Mod-God complex");
+            if (name === "darky") {
+                Win("Mod-God complex");
+            }
         },
         // () => {
-        //     if (Game.heralds >= 10) Win("I like playing supportive characters");
+        //     if (Game.heralds >= 10) {
+        //         Win("I like playing supportive characters");
+        //     }
         // },
         // () => {
-        //     if (Game.heralds >= 25) Win("That's a lot of money");
+        //     if (Game.heralds >= 25) {
+        //         Win("That's a lot of money");
+        //     }
         // },
         // () => {
-        //     if (Game.heralds >= 50) Win("You really want us to make games for you, huh?");
+        //     if (Game.heralds >= 50) {
+        //         Win("You really want us to make games for you, huh?");
+        //     }
         // },
         // () => {
-        //     if (Game.heralds >= 100) Win("Thank you guys so much!");
+        //     if (Game.heralds >= 100) {
+        //         Win("Thank you guys so much!");
+        //     }
         // },
     ]);
     // -------------------------------------------------------------------
