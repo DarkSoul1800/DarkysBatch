@@ -155,7 +155,11 @@
             "https://i.imgur.com/S5BnOGU.png",
         ]),
         // ~ ~ ~ UPGRADES ~ ~ ~
-        // new Achievement("Purchaser of Upgrades", "Purchase <b>300</b> upgrades.", [0, 1, "https://i.imgur.com/GGrHHrA.png"]),
+        // new Achievement("Purchaser of Upgrades", "Purchase <b>300</b> upgrades.", [
+        //     0,
+        //     1,
+        //     "https://i.imgur.com/GGrHHrA.png",
+        // ]),
         // new Achievement("Grade up", "Purchase <b>400</b> upgrades.", [1, 1, "https://i.imgur.com/GGrHHrA.png"]),
         new Achievement("Earth-shattering association", "Purchase <b>500</b> upgrades.", [
             2,
@@ -273,10 +277,17 @@
             "https://i.imgur.com/GGrHHrA.png",
         ]),
         (Game.last.pool = "shadow"),
-        // new Achievement("I like playing supportive characters", "Dashnet reached <b>10</b> heralds.", [21, 29]), Game.last.pool = "shadow",
-        // new Achievement("That's a lot of money", "Dashnet reached <b>25</b> heralds.", [21, 29]), Game.last.pool = "shadow",
-        // new Achievement("You really want us to make games for you, huh?", "Dashnet reached <b>50</b> heralds.", [21, 29]), Game.last.pool = "shadow",
-        // new Achievement("Thank you guys so much!", "Dashnet reached <b>100</b> heralds.", [21, 29]), Game.last.pool = "shadow",
+        // new Achievement("I like playing supportive characters", "Dashnet reached <b>10</b> heralds.", [21, 29]),
+        // (Game.last.pool = "shadow"),
+        // new Achievement("That's a lot of money", "Dashnet reached <b>25</b> heralds.", [21, 29]),
+        // (Game.last.pool = "shadow"),
+        // new Achievement("You really want us to make games for you, huh?", "Dashnet reached <b>50</b> heralds.", [
+        //     21,
+        //     29,
+        // ]),
+        // (Game.last.pool = "shadow"),
+        // new Achievement("Thank you guys so much!", "Dashnet reached <b>100</b> heralds.", [21, 29]),
+        // (Game.last.pool = "shadow"),
     ]);
     // -------------------------------------------------------------------
     Game.Achievements["Polymath"].order = 6010;
@@ -325,16 +336,16 @@
     Game.Achievements["My strange clicking addiction"].order = 1019;
 
     Game.Achievements["Owner of Buildings"].order = 5010;
-    // Game.Achievements["Build up"].order = 5011
+    // Game.Achievements["Build up"].order = 5011;
     Game.Achievements["World-dominating company"].order = 5012;
     Game.Achievements["Creator of the Cookieverse"].order = 5013;
     Game.Achievements["Build until you can't build anymore"].order = 5014;
-    // Game.Achievements["You built the guilt"].order = 5015
+    // Game.Achievements["You built the guilt"].order = 5015;
     Game.Achievements["Overlord"].order = 5016;
     Game.Achievements["That's enough, boss"].order = 5017;
 
-    // Game.Achievements["Purchaser of Upgrades"].order = 6001
-    // Game.Achievements["Grade up"].order = 6002
+    // Game.Achievements["Purchaser of Upgrades"].order = 6001;
+    // Game.Achievements["Grade up"].order = 6002;
     Game.Achievements["Earth-shattering association"].order = 6003;
     Game.Achievements["Maker of the Idleverse"].order = 6004;
 
@@ -487,7 +498,9 @@
         () => {
             if (Game.BuildingsOwned >= 3000) Win("Owner of Buildings");
         },
-        // () => { if (Game.BuildingsOwned >= 4000) Win("Build up") },
+        // () => {
+        //     if (Game.BuildingsOwned >= 4000) Win("Build up");
+        // },
         () => {
             if (Game.BuildingsOwned >= 5000) Win("World-dominating company");
         },
@@ -497,15 +510,21 @@
         () => {
             if (Game.BuildingsOwned >= 7000) Win("Build until you can't build anymore");
         },
-        // () => { if (Game.BuildingsOwned >= 8000) Win("You built the guilt") },
+        // () => {
+        //     if (Game.BuildingsOwned >= 8000) Win("You built the guilt");
+        // },
         () => {
             if (Game.BuildingsOwned >= 9000) Win("Overlord");
         },
         () => {
             if (Game.BuildingsOwned >= 10000) Win("That's enough, boss");
         },
-        // () => { if (Game.UpgradesOwned >= 300) Win("Purchaser of Upgrades") },
-        // () => { if (Game.UpgradesOwned >= 400) Win("Grade up") },
+        // () => {
+        //     if (Game.UpgradesOwned >= 300) Win("Purchaser of Upgrades");
+        // },
+        // () => {
+        //     if (Game.UpgradesOwned >= 400) Win("Grade up");
+        // },
         () => {
             if (Game.UpgradesOwned >= 500) Win("Earth-shattering association");
         },
@@ -801,10 +820,18 @@
         () => {
             if (name === "darky") Win("Mod-God complex");
         },
-        // () => { if (Game.heralds >= 10) Win("I like playing supportive characters") },
-        // () => { if (Game.heralds >= 25) Win("That's a lot of money") },
-        // () => { if (Game.heralds >= 50) Win("You really want us to make games for you, huh?") },
-        // () => { if (Game.heralds >= 100) Win("Thank you guys so much!") },
+        // () => {
+        //     if (Game.heralds >= 10) Win("I like playing supportive characters");
+        // },
+        // () => {
+        //     if (Game.heralds >= 25) Win("That's a lot of money");
+        // },
+        // () => {
+        //     if (Game.heralds >= 50) Win("You really want us to make games for you, huh?");
+        // },
+        // () => {
+        //     if (Game.heralds >= 100) Win("Thank you guys so much!");
+        // },
     ]);
     // -------------------------------------------------------------------
     DarkySavePrefix = "DarkyPackage";
