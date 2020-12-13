@@ -15,6 +15,20 @@
         }
     };
 
+    const CheckUpgrades = upgrades => {
+        try {
+            upgrades.forEach(upgrade => {
+                if (!Game.Has(upgrade)) {
+                    throw Error;
+                }
+            });
+
+            return true;
+        } catch {
+            return false;
+        }
+    };
+
     Game.crate = Game.crate
         .toString()
         .split("shadow';")
@@ -372,6 +386,8 @@
         minAmount = Math.min(object.amount, 100000);
     });
     // -------------------------------------------------------------------
+    let requirements = [""];
+    const buildingsLevels = Game.ObjectsById.map(object => object.level);
     Game.registerHook("check", [
         () => {
             let count = 0;
@@ -618,195 +634,136 @@
             }
         },
         () => {
-            if (
-                Game.Has("Caramoas") &&
-                Game.Has("Sagalongs") &&
-                Game.Has("Shortfoils") &&
-                Game.Has("Win mints") &&
-                Game.Has("Fig gluttons") &&
-                Game.Has("Loreols") &&
-                Game.Has("Jaffa cakes") &&
-                Game.Has("Grease's cups") &&
-                Game.Has("Digits") &&
-                Game.Has("Bastenaken cookies") &&
-                Game.Has("Festivity loops") &&
-                Game.Has("Havabreaks") &&
-                Game.Has("Zilla wafers") &&
-                Game.Has("Dim Dams") &&
-                Game.Has("Pokey")
-            ) {
+            requirements = [
+                "Caramoas",
+                "Sagalongs",
+                "Shortfoils",
+                "Win mints",
+                "Fig gluttons",
+                "Loreols",
+                "Jaffa cakes",
+                "Grease's cups",
+                "Digits",
+                "Bastenaken cookies",
+                "Festivity loops",
+                "Havabreaks",
+                "Zilla wafers",
+                "Dim Dams",
+                "Pokey",
+            ];
+            if (CheckUpgrades(requirements)) {
                 Win("You wanna be popular?");
             }
         },
         () => {
-            if (
-                Game.Has("Rose macarons") &&
-                Game.Has("Lemon macarons") &&
-                Game.Has("Chocolate macarons") &&
-                Game.Has("Pistachio macarons") &&
-                Game.Has("Hazelnut macarons") &&
-                Game.Has("Violet macarons") &&
-                Game.Has("Caramel macarons") &&
-                Game.Has("Licorice macarons") &&
-                Game.Has("Earl Grey macarons")
-            ) {
+            requirements = [
+                "Rose macarons",
+                "Lemon macarons",
+                "Chocolate macarons",
+                "Pistachio macarons",
+                "Hazelnut macarons",
+                "Violet macarons",
+                "Caramel macarons",
+                "Licorice macarons",
+                "Earl Grey macarons",
+            ];
+            if (CheckUpgrades(requirements)) {
                 Win("Emmanuel Macaron");
             }
         },
         () => {
-            if (
-                Game.Has("British tea biscuits") &&
-                Game.Has("Chocolate british tea biscuits") &&
-                Game.Has("Round british tea biscuits") &&
-                Game.Has("Round chocolate british tea biscuits") &&
-                Game.Has("Round british tea biscuits with heart motif") &&
-                Game.Has("Round chocolate british tea biscuits with heart motif")
-            ) {
+            requirements = [
+                "British tea biscuits",
+                "Chocolate british tea biscuits",
+                "Round british tea biscuits",
+                "Round chocolate british tea biscuits",
+                "Round british tea biscuits with heart motif",
+                "Round chocolate british tea biscuits with heart motif",
+            ];
+            if (CheckUpgrades(requirements)) {
                 Win("Getting fancy");
             }
         },
         () => {
-            if (
-                Game.Has("Butter horseshoes") &&
-                Game.Has("Butter pucks") &&
-                Game.Has("Butter knots") &&
-                Game.Has("Butter slabs") &&
-                Game.Has("Butter swirls")
-            ) {
+            requirements = ["Butter horseshoes", "Butter pucks", "Butter knots", "Butter slabs", "Butter swirls"];
+            if (CheckUpgrades(requirements)) {
                 Win("Rich butterfingers");
             }
         },
         () => {
-            if (
-                Game.Has("Profiteroles") &&
-                Game.Has("Jelly donut") &&
-                Game.Has("Glazed donut") &&
-                Game.Has("Chocolate cake") &&
-                Game.Has("Strawberry cake") &&
-                Game.Has("Apple pie") &&
-                Game.Has("Lemon meringue pie") &&
-                Game.Has("Butter croissant")
-            ) {
+            requirements = [
+                "Profiteroles",
+                "Jelly donut",
+                "Glazed donut",
+                "Chocolate cake",
+                "Strawberry cake",
+                "Apple pie",
+                "Lemon meringue pie",
+                "Butter croissant",
+            ];
+            if (CheckUpgrades(requirements)) {
                 Win("Pastries from the past");
             }
         },
         () => {
-            if (
-                Game.Has("Cookie dough") &&
-                Game.Has("Burnt cookie") &&
-                Game.Has("A chocolate chip cookie but with the chips picked off for some reason") &&
-                Game.Has("Flavor text cookie") &&
-                Game.Has("High-definition cookie") &&
-                Game.Has("Crackers")
-            ) {
+            requirements = [
+                "Cookie dough",
+                "Burnt cookie",
+                "A chocolate chip cookie but with the chips picked off for some reason",
+                "Flavor text cookie",
+                "High-definition cookie",
+                "Crackers",
+            ];
+            if (CheckUpgrades(requirements)) {
                 Win("Bake me, maybe?");
             }
         },
         () => {
-            if (
-                Game.Has("Toast") &&
-                Game.Has("Peanut butter & jelly") &&
-                Game.Has("Wookies") &&
-                Game.Has("Cheeseburger") &&
-                Game.Has("One lone chocolate chip") &&
-                Game.Has("Pizza") &&
-                Game.Has("Candy")
-            ) {
+            requirements = [
+                "Toast",
+                "Peanut butter & jelly",
+                "Wookies",
+                "Cheeseburger",
+                "One lone chocolate chip",
+                "Pizza",
+                "Candy",
+            ];
+            if (CheckUpgrades(requirements)) {
                 Win("Burger Clicker");
             }
         },
         () => {
-            if (
-                Game.Has("Elderwort biscuits") &&
-                Game.Has("Bakeberry cookies") &&
-                Game.Has("Wheat slims") &&
-                Game.Has("Duketater cookies") &&
-                Game.Has("Green yeast digestives") &&
-                Game.Has("Fern tea") &&
-                Game.Has("Ichor syrup")
-            ) {
+            requirements = [
+                "Elderwort biscuits",
+                "Bakeberry cookies",
+                "Wheat slims",
+                "Duketater cookies",
+                "Green yeast digestives",
+                "Fern tea",
+                "Ichor syrup",
+            ];
+            if (CheckUpgrades(requirements)) {
                 Win("Collecting these is like growing plants");
             }
         },
         () => {
-            if (
-                Game.Has("Dragon scale") &&
-                Game.Has("Dragon claw") &&
-                Game.Has("Dragon fang") &&
-                Game.Has("Dragon teddy bear")
-            ) {
+            requirements = ["Dragon scale", "Dragon claw", "Dragon fang", "Dragon teddy bear"];
+            if (CheckUpgrades(requirements)) {
                 Win("Spike the dragon");
             }
         },
         () => {
-            if (
-                Game.Objects["Cursor"].level &&
-                Game.Objects["Grandma"].level &&
-                Game.Objects["Farm"].level &&
-                Game.Objects["Factory"].level &&
-                Game.Objects["Mine"].level &&
-                Game.Objects["Bank"].level &&
-                Game.Objects["Temple"].level &&
-                Game.Objects["Wizard tower"].level &&
-                Game.Objects["Shipment"].level &&
-                Game.Objects["Alchemy lab"].level &&
-                Game.Objects["Portal"].level &&
-                Game.Objects["Time machine"].level &&
-                Game.Objects["Antimatter condenser"].level &&
-                Game.Objects["Prism"].level &&
-                Game.Objects["Chancemaker"] &&
-                Game.Objects["Fractal engine"].level &&
-                Game.Objects["Javascript console"].level &&
-                Game.Objects["Idleverse"].level >= 1
-            ) {
+            if (buildingsLevels.filter(level => level >= 1).length === Game.ObjectsById.length) {
                 Win("Level 1 complete!");
             }
         },
         () => {
-            if (
-                Game.Objects["Cursor"].level &&
-                Game.Objects["Grandma"].level &&
-                Game.Objects["Farm"].level &&
-                Game.Objects["Factory"].level &&
-                Game.Objects["Mine"].level &&
-                Game.Objects["Bank"].level &&
-                Game.Objects["Temple"].level &&
-                Game.Objects["Wizard tower"].level &&
-                Game.Objects["Shipment"].level &&
-                Game.Objects["Alchemy lab"].level &&
-                Game.Objects["Portal"].level &&
-                Game.Objects["Time machine"].level &&
-                Game.Objects["Antimatter condenser"].level &&
-                Game.Objects["Prism"].level &&
-                Game.Objects["Chancemaker"] &&
-                Game.Objects["Fractal engine"].level &&
-                Game.Objects["Javascript console"].level &&
-                Game.Objects["Idleverse"].level >= 5
-            ) {
+            if (buildingsLevels.filter(level => level >= 5).length === Game.ObjectsById.length) {
                 Win("Five Hive");
             }
         },
         () => {
-            if (
-                Game.Objects["Cursor"].level &&
-                Game.Objects["Grandma"].level &&
-                Game.Objects["Farm"].level &&
-                Game.Objects["Factory"].level &&
-                Game.Objects["Mine"].level &&
-                Game.Objects["Bank"].level &&
-                Game.Objects["Temple"].level &&
-                Game.Objects["Wizard tower"].level &&
-                Game.Objects["Shipment"].level &&
-                Game.Objects["Alchemy lab"].level &&
-                Game.Objects["Portal"].level &&
-                Game.Objects["Time machine"].level &&
-                Game.Objects["Antimatter condenser"].level &&
-                Game.Objects["Prism"].level &&
-                Game.Objects["Chancemaker"] &&
-                Game.Objects["Fractal engine"].level &&
-                Game.Objects["Javascript console"].level &&
-                Game.Objects["Idleverse"].level >= 10
-            ) {
+            if (buildingsLevels.filter(level => level >= 10).length === Game.ObjectsById.length) {
                 Win("This took forever");
             }
         },
@@ -826,67 +783,70 @@
             }
         },
         () => {
-            if (
-                Game.Has("Kitten helpers") &&
-                Game.Has("Kitten workers") &&
-                Game.Has("Kitten engineers") &&
-                Game.Has("Kitten overseers") &&
-                Game.Has("Kitten managers") &&
-                Game.Has("Kitten accountants") &&
-                Game.Has("Kitten specialists") &&
-                Game.Has("Kitten experts") &&
-                Game.Has("Kitten consultants") &&
-                Game.Has("Kitten assistants to the regional manager") &&
-                Game.Has("Kitten marketeers") &&
-                Game.Has("Kitten analysts") &&
-                Game.Has("Kitten executives") &&
-                Game.Has("Fortune #103") &&
-                Game.Has("Kitten angels")
-            ) {
+            requirements = [
+                "Kitten helpers",
+                "Kitten workers",
+                "Kitten engineers",
+                "Kitten overseers",
+                "Kitten managers",
+                "Kitten accountants",
+                "Kitten specialists",
+                "Kitten experts",
+                "Kitten consultants",
+                "Kitten assistants to the regional manager",
+                "Kitten marketeers",
+                "Kitten analysts",
+                "Kitten executives",
+                "Fortune #103",
+                "Kitten angels",
+            ];
+            if (CheckUpgrades(requirements)) {
                 Win("Purrfect Perfection");
             }
         },
         () => {
-            if (
-                Game.Has("Future almanacs") &&
-                Game.Has("Seismic magic") &&
-                Game.Has("Quantum electronics") &&
-                Game.Has("Contracts from beyond") &&
-                Game.Has("Paganism") &&
-                Game.Has("Arcane knowledge") &&
-                Game.Has("Fossil fuels") &&
-                Game.Has("Primordial ores") &&
-                Game.Has("Infernal crops") &&
-                Game.Has("Relativistic parsec-skipping") &&
-                Game.Has("Extra physics funding") &&
-                Game.Has("Light magic") &&
-                Game.Has("Gemmed talismans") &&
-                Game.Has("Recursive mirrors") &&
-                Game.Has("Script grannies") &&
-                Game.Has("Perforated mille-feuille cosmos")
-            ) {
+            requirements = [
+                "Future almanacs",
+                "Seismic magic",
+                "Quantum electronics",
+                "Contracts from beyond",
+                "Paganism",
+                "Arcane knowledge",
+                "Fossil fuels",
+                "Primordial ores",
+                "Infernal crops",
+                "Relativistic parsec-skipping",
+                "Extra physics funding",
+                "Light magic",
+                "Gemmed talismans",
+                "Recursive mirrors",
+                "Script grannies",
+                "Perforated mille-feuille cosmos",
+            ];
+            if (CheckUpgrades(requirements)) {
                 Win("It's sweet, sweet, sweet Synergy");
             }
         },
         () => {
-            if (
-                Game.Has("Rain prayer") &&
-                Game.Has("Asteroid mining") &&
-                Game.Has("Temporal overclocking") &&
-                Game.Has("Printing presses") &&
-                Game.Has("God particle") &&
-                Game.Has("Magical botany") &&
-                Game.Has("Shipyards") &&
-                Game.Has("Gold fund") &&
-                Game.Has("Abysmal glimmer") &&
-                Game.Has("Primeval glow") &&
-                Game.Has("Chemical proficiency") &&
-                Game.Has("Mystical energies") &&
-                Game.Has("Charm quarks") &&
-                Game.Has("Mice clicking mice") &&
-                Game.Has("Tombola computing") &&
-                Game.Has("Infraverses and superverses")
-            ) {
+            requirements = [
+                "Rain prayer",
+                "Asteroid mining",
+                "Temporal overclocking",
+                "Printing presses",
+                "God particle",
+                "Magical botany",
+                "Shipyards",
+                "Gold fund",
+                "Abysmal glimmer",
+                "Primeval glow",
+                "Chemical proficiency",
+                "Mystical energies",
+                "Charm quarks",
+                "Mice clicking mice",
+                "Tombola computing",
+                "Infraverses and superverses",
+            ];
+            if (CheckUpgrades(requirements)) {
                 Win("Out of Energy? Get Synergy!");
             }
         },
