@@ -279,133 +279,113 @@
         // new Achievement("Thank you guys so much!", "Dashnet reached <b>100</b> heralds.", [21, 29]), Game.last.pool = "shadow",
     ]);
     // -------------------------------------------------------------------
-    const Achievements = {};
-    Game.AchievementsById.forEach(achievement => {
-        Achievements[achievement.name] = achievement;
-    });
+    Game.Achievements["Polymath"].order = 6010;
+    Game.Achievements["Renaissance baker"].order = 6011;
+    Game.Achievements["The elder scrolls"].order = 6012;
+    Game.Achievements["Sacrifice"].order = 30015;
+    Game.Achievements["Oblivion"].order = 30016;
+    Game.Achievements["From scratch"].order = 30017;
+    Game.Achievements["Third-party"].order = 30202;
+    Game.Achievements["Tabloid addiction"].order = 11003;
+    Game.Achievements["Olden days"].order = 11002;
+    Game.Achievements["Grand design"].order = 5011;
+    Game.Achievements["Ecumenopolis"].order = 5015;
+    Game.Achievements["Seven horseshoes"].order = 10000;
+    Game.Achievements["Four-leaf cookie"].order = 10002;
 
-    Achievements["Polymath"].order = 6010;
-    Achievements["Renaissance baker"].order = 6011;
-    Achievements["The elder scrolls"].order = 6012;
-    Achievements["Sacrifice"].order = 30015;
-    Achievements["Oblivion"].order = 30016;
-    Achievements["From scratch"].order = 30017;
-    Achievements["Third-party"].order = 30202;
-    Achievements["Tabloid addiction"].order = 11003;
-    Achievements["Olden days"].order = 11002;
-    Achievements["Grand design"].order = 5011;
-    Achievements["Ecumenopolis"].order = 5015;
-    Achievements["Seven horseshoes"].order = 10000;
-    Achievements["Four-leaf cookie"].order = 10002;
+    Game.Achievements["Squeak goes the mouse"].order = 1060;
+    Game.Achievements["I'm too old for this"].order = 1110;
+    Game.Achievements["Gorden garden"].order = 1210;
+    Game.Achievements["A fine mine you got there"].order = 1310;
+    Game.Achievements["Working 24/7"].order = 1410;
+    Game.Achievements["My shipment arrives in the morning"].order = 1510;
+    Game.Achievements["Turning cookies into gold since 2013"].order = 1610;
+    Game.Achievements["A portal inside of a portal"].order = 1710;
+    Game.Achievements["It all began on the 8th of August, 2013"].order = 1810;
+    Game.Achievements["AntimatterCon"].order = 1910;
+    Game.Achievements["Stop being a prissm"].order = 2010;
+    Game.Achievements["Bank on it"].order = 1430;
+    Game.Achievements["Temple pun"].order = 1460;
+    Game.Achievements["It's magic, Joel!"].order = 1480;
+    Game.Achievements["And yet you probably never got a blab"].order = 2110;
+    Game.Achievements["Gouchnox"].order = 2210;
+    Game.Achievements["Follow the javascript"].order = 2310;
+    Game.Achievements["Don't call them fanverses, you fool"].order = 2410;
 
-    Achievements["Squeak goes the mouse"].order = 1060;
-    Achievements["I'm too old for this"].order = 1110;
-    Achievements["Gorden garden"].order = 1210;
-    Achievements["A fine mine you got there"].order = 1310;
-    Achievements["Working 24/7"].order = 1410;
-    Achievements["My shipment arrives in the morning"].order = 1510;
-    Achievements["Turning cookies into gold since 2013"].order = 1610;
-    Achievements["A portal inside of a portal"].order = 1710;
-    Achievements["It all began on the 8th of August, 2013"].order = 1810;
-    Achievements["AntimatterCon"].order = 1910;
-    Achievements["Stop being a prissm"].order = 2010;
-    Achievements["Bank on it"].order = 1430;
-    Achievements["Temple pun"].order = 1460;
-    Achievements["It's magic, Joel!"].order = 1480;
-    Achievements["And yet you probably never got a blab"].order = 2110;
-    Achievements["Gouchnox"].order = 2210;
-    Achievements["Follow the javascript"].order = 2310;
-    Achievements["Don't call them fanverses, you fool"].order = 2410;
+    Game.Achievements["Stop it, it clickles"].order = 1010;
+    Game.Achievements["Keep up the click"].order = 1011;
+    Game.Achievements["Clicking is the new booping"].order = 1012;
+    Game.Achievements["The final click"].order = 1013;
+    Game.Achievements["Sike, thats the wrong achievement"].order = 1014;
+    Game.Achievements["How about we tap the cookie now"].order = 1015;
+    Game.Achievements["Cookie Destroyer"].order = 1016;
+    Game.Achievements["Give it a click"].order = 1017;
+    Game.Achievements["Clicking Frenzy: Our Lord and Saviour"].order = 1018;
+    Game.Achievements["Hand-made cookies are still the best"].order = 1019;
+    Game.Achievements["My strange clicking addiction"].order = 1019;
 
-    Achievements["Stop it, it clickles"].order = 1010;
-    Achievements["Keep up the click"].order = 1011;
-    Achievements["Clicking is the new booping"].order = 1012;
-    Achievements["The final click"].order = 1013;
-    Achievements["Sike, thats the wrong achievement"].order = 1014;
-    Achievements["How about we tap the cookie now"].order = 1015;
-    Achievements["Cookie Destroyer"].order = 1016;
-    Achievements["Give it a click"].order = 1017;
-    Achievements["Clicking Frenzy: Our Lord and Saviour"].order = 1018;
-    Achievements["Hand-made cookies are still the best"].order = 1019;
-    Achievements["My strange clicking addiction"].order = 1019;
+    Game.Achievements["Owner of Buildings"].order = 5010;
+    // Game.Achievements["Build up"].order = 5011
+    Game.Achievements["World-dominating company"].order = 5012;
+    Game.Achievements["Creator of the Cookieverse"].order = 5013;
+    Game.Achievements["Build until you can't build anymore"].order = 5014;
+    // Game.Achievements["You built the guilt"].order = 5015
+    Game.Achievements["Overlord"].order = 5016;
+    Game.Achievements["That's enough, boss"].order = 5017;
 
-    Achievements["Owner of Buildings"].order = 5010;
-    // Achievements["Build up"].order = 5011
-    Achievements["World-dominating company"].order = 5012;
-    Achievements["Creator of the Cookieverse"].order = 5013;
-    Achievements["Build until you can't build anymore"].order = 5014;
-    // Achievements["You built the guilt"].order = 5015
-    Achievements["Overlord"].order = 5016;
-    Achievements["That's enough, boss"].order = 5017;
+    // Game.Achievements["Purchaser of Upgrades"].order = 6001
+    // Game.Achievements["Grade up"].order = 6002
+    Game.Achievements["Earth-shattering association"].order = 6003;
+    Game.Achievements["Maker of the Idleverse"].order = 6004;
 
-    // Achievements["Purchaser of Upgrades"].order = 6001
-    // Achievements["Grade up"].order = 6002
-    Achievements["Earth-shattering association"].order = 6003;
-    Achievements["Maker of the Idleverse"].order = 6004;
+    Game.Achievements["Sexcentennial and a half"].order = 7004;
 
-    Achievements["Sexcentennial and a half"].order = 7004;
+    Game.Achievements["Heavenly"].order = 30010;
+    Game.Achievements["Transcendent"].order = 30011;
+    Game.Achievements["Higher energy state"].order = 30012;
+    Game.Achievements["Omniverse"].order = 30013;
+    Game.Achievements["The Ascendant"].order = 30014;
 
-    Achievements["Heavenly"].order = 30010;
-    Achievements["Transcendent"].order = 30011;
-    Achievements["Higher energy state"].order = 30012;
-    Achievements["Omniverse"].order = 30013;
-    Achievements["The Ascendant"].order = 30014;
+    Game.Achievements["Clicker"].order = 1020;
+    Game.Achievements["Advanced Clicker"].order = 1021;
+    Game.Achievements["Expert Clicker"].order = 1022;
 
-    Achievements["Clicker"].order = 1020;
-    Achievements["Advanced Clicker"].order = 1021;
-    Achievements["Expert Clicker"].order = 1022;
+    Game.Achievements["Secret fortune"].order = 32001;
 
-    Achievements["Secret fortune"].order = 32001;
+    Game.Achievements["Getting fancy"].order = 21101;
+    Game.Achievements["Emmanuel Macaron"].order = 21102;
+    Game.Achievements["You wanna be popular?"].order = 21103;
+    Game.Achievements["Rich butterfingers"].order = 21104;
+    Game.Achievements["Pastries from the past"].order = 21105;
+    Game.Achievements["Bake me, maybe?"].order = 21106;
+    Game.Achievements["Burger Clicker"].order = 21107;
+    Game.Achievements["Collecting these is like growing plants"].order = 21108;
+    Game.Achievements["Spike the dragon"].order = 21109;
 
-    Achievements["Getting fancy"].order = 21101;
-    Achievements["Emmanuel Macaron"].order = 21102;
-    Achievements["You wanna be popular?"].order = 21103;
-    Achievements["Rich butterfingers"].order = 21104;
-    Achievements["Pastries from the past"].order = 21105;
-    Achievements["Bake me, maybe?"].order = 21106;
-    Achievements["Burger Clicker"].order = 21107;
-    Achievements["Collecting these is like growing plants"].order = 21108;
-    Achievements["Spike the dragon"].order = 21109;
+    Game.Achievements["Level 1 complete!"].order = 5017;
+    Game.Achievements["Five Hive"].order = 5018;
+    Game.Achievements["This took forever"].order = 5019;
 
-    Achievements["Level 1 complete!"].order = 5017;
-    Achievements["Five Hive"].order = 5018;
-    Achievements["This took forever"].order = 5019;
+    Game.Achievements["Pretty prestige"].order = 6005;
+    Game.Achievements["Live and learn"].order = 6006;
+    Game.Achievements["We will stay with you forever"].order = 6007;
 
-    Achievements["Pretty prestige"].order = 6005;
-    Achievements["Live and learn"].order = 6006;
-    Achievements["We will stay with you forever"].order = 6007;
+    Game.Achievements["Purrfect Perfection"].order = 10001;
+    Game.Achievements["It's sweet, sweet, sweet Synergy"].order = 6008;
+    Game.Achievements["Out of Energy? Get Synergy!"].order = 6009;
+    Game.Achievements["All you had to do was ask"].order = 11001;
 
-    Achievements["Purrfect Perfection"].order = 10001;
-    Achievements["It's sweet, sweet, sweet Synergy"].order = 6008;
-    Achievements["Out of Energy? Get Synergy!"].order = 6009;
-    Achievements["All you had to do was ask"].order = 11001;
-
-    Achievements["Mod-God complex"].order = 30201;
-    Achievements["Golden Jackpot"].order = 10001;
-
-    Object.values(Achievements).forEach(achievement => {
-        Game.AchievementsById[achievement.id] = achievement;
-    });
+    Game.Achievements["Mod-God complex"].order = 30201;
+    Game.Achievements["Golden Jackpot"].order = 10001;
     // -------------------------------------------------------------------
     if (typeof Darky === "undefined") {
         Darky = {};
     }
     Darky.prestigeUpgradesOwned = 0;
-    const getTotalBuildings = () => {
-        let amount = 0;
-        Game.ObjectsById.forEach(object => {
-            amount += object.amount;
-        });
-        return amount;
-    };
 
-    const getMinimalBuildingAmount = () => {
-        let minimalAmount = Infinity;
-        Game.ObjectsById.forEach(object => {
-            minimalAmount = Math.min(minimalAmount, object.amount);
-        });
-        return minimalAmount;
-    };
+    Game.ObjectsById.forEach(object => {
+        minAmount = Math.min(object.amount, 100000);
+    });
     // -------------------------------------------------------------------
     Game.registerHook("check", [
         () => {
@@ -505,24 +485,24 @@
             if (Game.handmadeCookies >= 1e49) Win("My strange clicking addiction");
         },
         () => {
-            if (getTotalBuildings() >= 3000) Win("Owner of Buildings");
+            if (Game.BuildingsOwned >= 3000) Win("Owner of Buildings");
         },
-        // () => { if (getTotalBuildings() >= 4000) Win("Build up") },
+        // () => { if (Game.BuildingsOwned >= 4000) Win("Build up") },
         () => {
-            if (getTotalBuildings() >= 5000) Win("World-dominating company");
-        },
-        () => {
-            if (getTotalBuildings() >= 6000) Win("Creator of the Cookieverse");
+            if (Game.BuildingsOwned >= 5000) Win("World-dominating company");
         },
         () => {
-            if (getTotalBuildings() >= 7000) Win("Build until you can't build anymore");
-        },
-        // () => { if (getTotalBuildings() >= 8000) Win("You built the guilt") },
-        () => {
-            if (getTotalBuildings() >= 9000) Win("Overlord");
+            if (Game.BuildingsOwned >= 6000) Win("Creator of the Cookieverse");
         },
         () => {
-            if (getTotalBuildings() >= 10000) Win("That's enough, boss");
+            if (Game.BuildingsOwned >= 7000) Win("Build until you can't build anymore");
+        },
+        // () => { if (Game.BuildingsOwned >= 8000) Win("You built the guilt") },
+        () => {
+            if (Game.BuildingsOwned >= 9000) Win("Overlord");
+        },
+        () => {
+            if (Game.BuildingsOwned >= 10000) Win("That's enough, boss");
         },
         // () => { if (Game.UpgradesOwned >= 300) Win("Purchaser of Upgrades") },
         // () => { if (Game.UpgradesOwned >= 400) Win("Grade up") },
@@ -533,7 +513,7 @@
             if (Game.UpgradesOwned >= 600) Win("Maker of the Idleverse");
         },
         () => {
-            if (getMinimalBuildingAmount() >= 650) Win("Sexcentennial and a half");
+            if (minAmount >= 650) Win("Sexcentennial and a half");
         },
         () => {
             if (Game.cookieClicks >= 1000) Win("Clicker");
