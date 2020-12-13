@@ -49,22 +49,17 @@
     if (typeof Darky === "undefined") {
         Darky = {};
     }
-
     // -------------------------------------------------------------------
-
     if (!Game.customCrate) Game.customCrate = [];
     Game.customCrate = Game.customCrate.concat([
         // ~ ~ ~ ORIGINAL ~ ~ ~
-
         new Upgrade(
             "Building up",
             "Everything is more efficient per building owned.<q>I can already feel the power building up.</q>",
             1000000,
             [2, 6]
         ), // No idea how to make this one work at all, help would be appreciated! The idea was that Everything is 0.005% more efficient per building.
-
         // ~ ~ ~ TIERED ~ ~ ~
-
         // new Upgrade('Nonillion fingers','The mouse and cursors gain <b>+50000000</b> cookies for each non-cursor object owned.<q>That\'s quite the finger power.</q>',10000000000000000000000000,[13,19]),Game.MakeTiered(Game.last,13,0),
         // new Upgrade('Loyalystic mouse','Clicking gains <b>+1% of your CpS</b>.<q>A true, true mouse.</q>',50000000000000000000000000000,[11,31]),Game.MakeTiered(Game.last,13,11),
         new TieredUpgrade(
@@ -175,9 +170,7 @@
         ),
         // new TieredUpgrade('new Game.TieredUpgrade','Javascript consoles are <b>twice</b> as efficient.<q>I am so tiered of this.</q>','Javascript console',13),
     ]);
-
     // -------------------------------------------------------------------
-
     // Game.Upgrades['Nonillion fingers'].order=113
     // Game.Upgrades['Loyalystic mouse'].order=163
     Game.Upgrades["Granny talk"].order = 201;
@@ -212,9 +205,7 @@
     // Game.Upgrades['Nora'].order=1302
     Game.Upgrades["Darky can't actually code"].order = 1401;
     // Game.Upgrades['new Game.TieredUpgrade'].order=1402
-
     // -------------------------------------------------------------------
-
     Game.customChecks = Game.customChecks.concat([
         // () => {if (Game.Objects['Cursor'].amount+Game.Objects['Grandma'].amount+Game.Objects['Farm'].amount+Game.Objects['Factory'].amount+Game.Objects['Mine'].amount+Game.Objects['Bank'].amount+Game.Objects['Temple'].amount+Game.Objects['Wizard tower'].amount+Game.Objects['Shipment'].amount+Game.Objects['Alchemy lab'].amount+Game.Objects['Portal'].amount+Game.Objects['Time machine'].amount+Game.Objects['Antimatter condenser'].amount+Game.Objects['Prism'].amount+Game.Objects['Chancemaker'].amount+Game.Objects['Fractal engine'].amount+Game.Objects['Javascript console'].amount>=100) Unlock('Building up')},
 
@@ -285,14 +276,10 @@
         },
         // () => {if (Game.Objects['Javascript console'].amount>=500) Unlock('new Game.TieredUpgrade')},
     ]);
-
     // -------------------------------------------------------------------
-
     // eval("Game.mouseCps =" + Game.mouseCps.toString().split("Octillion fingers')) add+=	5000000;").join("Octillion fingers')) add+=	5000000;\nif (Game.Has('Nonillion fingers')) add+=	50000000; //Darky's upgrade package injection").split("Plasmarble mouse')) add+=Game.cookiesPs*0.01;").join("Plasmarble mouse')) add+=Game.cookiesPs*0.01;\nif (Game.Has('Loyalystic mouse')) add+=Game.cookiesPs*0.01; //Darky's upgrade package injection"));
     // eval("Game.Objects[\"Cursor\"].cps =" + Game.Objects["Cursor"].cps.toString().split("Octillion fingers')) add+=	5000000;").join("Octillion fingers')) add+=	5000000;\nif (Game.Has('Nonillion fingers')) add+=	50000000; //Darky's upgrade package injection"));
-
     // -------------------------------------------------------------------
-
     DarkySavePrefix = "DarkyPackage";
 
     const DarkyUpgradesSaveConfig = () => {
@@ -357,9 +344,7 @@
 
     DarkyUpgradesLoadConfig();
 }
-
 // -------------------------------------------------------------------
-
 Game.Win("Third-party");
 Game.Notify(
     "Darky's Armful Collection of Upgrades 1.1",

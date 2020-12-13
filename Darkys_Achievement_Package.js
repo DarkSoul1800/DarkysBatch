@@ -51,19 +51,14 @@
             ".darky:before{background:url(https://i.imgur.com/q8nNdkI.png);background-position:120px 0px;}";
         document.head.appendChild(style);
     }
-
     // -------------------------------------------------------------------
-
     Game.Achievements["Grand design"].icon = [1, 0, "https://i.imgur.com/RWbOLsf.png"];
     Game.Achievements["Ecumenopolis"].icon = [5, 0, "https://i.imgur.com/RWbOLsf.png"];
     Game.RebuildUpgrades();
-
     // -------------------------------------------------------------------
-
     if (!Game.customCrate) Game.customCrate = [];
     Game.customCrate = Game.customCrate.concat([
         // ~ ~ ~ X OF BUILDINGS ~ ~ ~
-
         new Achievement("Squeak goes the mouse", "Have <b>900</b> cursors.", [0, 19], 1),
         new Achievement("I'm too old for this", "Have <b>650</b> grandmas.", [1, 21], 1),
         new Achievement("Gorden garden", "Have <b>650</b> farms.", [2, 21], 1),
@@ -82,9 +77,7 @@
         new Achievement("Gouchnox", "Have <b>650</b> fractal engines.<q>69</q>", [20, 21], 1),
         new Achievement("Follow the javascript", "Have <b>650</b> javascript consoles.", [32, 21], 1),
         new Achievement("Don't call them fanverses, you fool", "Have <b>650</b> idleverses.", [33, 21], 1),
-
         // ~ ~ ~ COOKIES FROM CLICKING ~ ~ ~
-
         new Achievement("Stop it, it clickles", "Make <b>100 octillion</b> cookies from clicking.", [11, 21], 1),
         new Achievement(
             "Keep up the click",
@@ -146,9 +139,7 @@
             [6, 5, "https://i.imgur.com/nv69nsg.png"],
             1
         ),
-
         // ~ ~ ~ BUILDINGS ~ ~ ~
-
         new Achievement(
             "Owner of Buildings",
             "Own <b>3000</b> buildings.",
@@ -182,9 +173,7 @@
             [6, 0, "https://i.imgur.com/S5BnOGU.png"],
             1
         ),
-
         // ~ ~ ~ UPGRADES ~ ~ ~
-
         // new Achievement("Purchaser of Upgrades", "Purchase <b>300</b> upgrades.", [0, 1, "https://i.imgur.com/GGrHHrA.png"], 1),
         // new Achievement("Grade up", "Purchase <b>400</b> upgrades.", [1, 1, "https://i.imgur.com/GGrHHrA.png"], 1),
         new Achievement(
@@ -199,32 +188,24 @@
             [3, 1, "https://i.imgur.com/AWmeHiO.png"],
             1
         ),
-
         // ~ ~ ~ X OF EVERYTHING ~ ~ ~
-
         new Achievement(
             "Sexcentennial and a half",
             "Have at least <b>650 of everything</b>.<q>Yes I just did that.</q>",
             [1, 3, "https://i.imgur.com/Qi5DPKy.png"],
             1
         ),
-
         // ~ ~ ~ BIG COOKIE CLICKS ~ ~ ~
-
         new Achievement("Clicker", "Click on the big cookie <b>1,000</b> times.", [11, 22], 1),
         new Achievement("Advanced Clicker", "Click on the big cookie <b>10,000</b> times.", [11, 23], 1),
         new Achievement("Expert Clicker", "Click on the big cookie <b>25,000</b> times.", [11, 24], 1),
-
         // ~ ~ ~ PRESTIGE LEVEL ~ ~ ~
-
         new Achievement("Heavenly", "Reach prestige level <b>100</b>.", [19, 7], 1),
         new Achievement("Transcendent", "Reach prestige level <b>10,000</b>.", [18, 7], 1),
         new Achievement("Higher energy state", "Reach prestige level <b>1 million</b>.", [17, 7], 1),
         new Achievement("Omniverse", "Reach prestige level <b>100 million</b>.", [16, 7], 1),
         new Achievement("The Ascendant", "Reach prestige level <b>10 billion</b>.", [15, 7], 1),
-
         // ~ ~ ~ PRESTIGE UPGRADES ~ ~ ~
-
         new Achievement(
             "Secret fortune",
             "Purchase the <b>3 secret prestige upgrades</b>.<q>You got more than one ace up your sleeve, huh?",
@@ -249,9 +230,7 @@
             [19, 46, "https://i.imgur.com/3jNJJNw.png"],
             1
         ),
-
         // ~ ~ ~ COOKIE UPGRADES ~ ~ ~
-
         new Achievement("Getting fancy", "Purchase <b>all fancy biscuits</b>.", [21, 8], 1),
         new Achievement("Emmanuel Macaron", "Purchase <b>all macarons</b>.", [20, 8], 1),
         new Achievement("You wanna be popular?", "Purchase <b>all popular biscuits</b>.", [20, 9], 1),
@@ -276,9 +255,7 @@
             [30, 12],
             1
         ),
-
         // ~ ~ ~ BUILDING LEVEL ~ ~ ~
-
         new Achievement(
             "Level 1 complete!",
             "Reach level <b>1</b> of every building.",
@@ -297,9 +274,7 @@
             [2, 2, "https://i.imgur.com/Qi5DPKy.png"],
             1
         ),
-
         // ~ ~ ~ OTHER ~ ~ ~
-
         new Achievement(
             "Purrfect Perfection",
             "Purrchase <b>every kitten upgrade</b>.<q>Are you sick of these puns yet?</q>",
@@ -326,7 +301,6 @@
             }
         }),
         // ~ ~ ~ SHADOW ~ ~ ~
-
         new Achievement("Mod-God complex", "Name yourself <b>Darky</b>.<q>Ducky.</q>", [2, 12], 1),
         (Game.last.pool = "shadow"),
         new Achievement(
@@ -341,9 +315,7 @@
         // new Achievement("You really want us to make games for you, huh?", "Dashnet reached <b>50</b> heralds.", [21, 29], 1), Game.last.pool = "shadow",
         // new Achievement("Thank you guys so much!", "Dashnet reached <b>100</b> heralds.", [21, 29], 1), Game.last.pool = "shadow",
     ]);
-
     // -------------------------------------------------------------------
-
     const Achievements = {};
     Game.AchievementsById.forEach(achievement => {
         Achievements[achievement.name] = achievement;
@@ -451,9 +423,7 @@
     Object.values(Achievements).forEach(achievement => {
         Game.AchievementsById[achievement.id] = achievement;
     });
-
     // -------------------------------------------------------------------
-
     if (typeof Darky === "undefined") {
         Darky = {};
     }
@@ -473,9 +443,7 @@
         });
         return minimalAmount;
     };
-
     // -------------------------------------------------------------------
-
     Game.registerHook("check", [
         () => {
             let count = 0;
@@ -895,9 +863,7 @@
         // () => { if (Game.heralds >= 50) Win("You really want us to make games for you, huh?") },
         // () => { if (Game.heralds >= 100) Win("Thank you guys so much!") },
     ]);
-
     // -------------------------------------------------------------------
-
     DarkySavePrefix = "DarkyPackage";
 
     const DarkyAchievSaveConfig = () => {
@@ -969,9 +935,7 @@
         DarkyAchievSaveConfig();
     };
     DarkyAchievMigrateOldSave();
-
     // -------------------------------------------------------------------
-
     Game.Win("Third-party");
     Game.Notify(
         "Darky's Achievement Package 1.7",
