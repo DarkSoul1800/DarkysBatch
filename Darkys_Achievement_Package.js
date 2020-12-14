@@ -1,4 +1,6 @@
 {
+    const DarkysAchievementPackage = {};
+
     const Achievement = (name, desc, icon) => {
         const answer = new Game.Achievement(name, desc, icon);
 
@@ -50,6 +52,10 @@
         style.textContent =
             ".darky:before{background:url(https://i.imgur.com/q8nNdkI.png);background-position:120px 0px;}";
         document.head.appendChild(style);
+
+        Darky = {
+            prestigeUpgradesOwned: 0,
+        };
     }
     // -------------------------------------------------------------------
     Game.Achievements["Grand design"].icon = [1, 0, "https://i.imgur.com/RWbOLsf.png"];
@@ -377,11 +383,6 @@
     Game.Achievements["Mod-God complex"].order = 30201;
     Game.Achievements["Golden Jackpot"].order = 10001;
     // -------------------------------------------------------------------
-    if (typeof Darky === "undefined") {
-        Darky = {};
-    }
-    Darky.prestigeUpgradesOwned = 0;
-
     Game.ObjectsById.forEach(object => {
         minAmount = Math.min(object.amount, 100000);
     });
@@ -883,49 +884,42 @@
         // },
     ]);
     // -------------------------------------------------------------------
-    DarkySavePrefix = "DarkyPackage";
+    DarkysAchievementPackage.save = () => {
+        const DarkySave = {};
 
-    const DarkyAchievSaveConfig = () => {
-        localStorage.setItem(DarkySavePrefix, JSON.stringify(DarkySave));
-    };
+        Game.AchievementsById.forEach(achievement => {
+            if (achievement.darky) {
+                const formattedName = achievement.name
+                    .toLowerCase()
+                    .replace(/\s+(.)/g, (match, group) => group.toUpperCase());
 
-    const DarkyAchievSaveDefault = () => {
-        if (typeof DarkySave === "undefined") {
-            DarkySave = {};
-        }
-
-        DarkySave.Achievements = {};
-        for (const i in Game.Achievements) {
-            const me = Game.Achievements[i];
-            if (me.darky === 1) {
-                DarkySave.Achievements[me.name] = 0;
+                Object.assign(DarkySave, {
+                    [formattedName]: !!achievement.won,
+                });
             }
-        }
-        DarkyAchievSaveConfig();
-    };
+        });
 
-    const DarkyAchievLoadConfig = () => {
-        if (localStorage.getItem(DarkySavePrefix) != null) {
-            DarkySave = JSON.parse(localStorage.getItem(DarkySavePrefix));
-            if (typeof DarkySave.Achievements === "undefined") {
-                DarkySave.Achievements = {};
-            }
-            for (const i in Game.Achievements) {
-                const me = Game.Achievements[i];
-                if (me.darky === 1) {
-                    if (typeof DarkySave.Achievements[me.name] === "undefined") {
-                        DarkySave.Achievements[me.name] = 0;
-                        DarkyAchievSaveConfig();
-                    } else if (DarkySave.Achievements[me.name] === 1) {
-                        Win(me.name);
-                    }
-                }
-            }
-        } else {
-            DarkyAchievSaveDefault();
-        }
+        return JSON.stringify(DarkySave);
     };
+    DarkysAchievementPackage.load = saveString => {
+        const save = JSON.parse(saveString);
 
+        const entries = Object.keys(save);
+        const formattedNames = Object.keys(save).map(achievementName => {
+            const sentenceCase = achievementName.replace(/([A-Z])/g, (group, match) => ` ${match.toLowerCase()}`);
+            const normalName = sentenceCase.charAt(0).toUpperCase() + sentenceCase.slice(1);
+
+            return normalName;
+        });
+
+        entries.forEach((achievement, index) => {
+            const achievementName = formattedNames[index];
+
+            if (save[achievement]) {
+                Win(achievementName);
+            }
+        });
+    };
     const oldReset = Game.HardReset;
     Game.HardReset = new Proxy(oldReset, {
         apply: (func, thisArg, args) => {
@@ -936,26 +930,22 @@
         },
     });
 
-    DarkyAchievLoadConfig();
-
-    const DarkyAchievMigrateOldSave = () => {
-        for (const i in Game.Achievements) {
-            const me = Game.Achievements[i];
-            if (me.darky === 1) {
-                if (DarkySave[me.name]) {
-                    DarkySave.Achievements[me.name] = DarkySave[me.name];
-                    if (DarkySave[me.name]) {
-                        Win(me.name);
-                    }
-                    delete DarkySave[me.name];
-                }
-            }
-        }
-        DarkyAchievSaveConfig();
-    };
-    DarkyAchievMigrateOldSave();
+    // const DarkyAchievMigrateOldSave = () => {
+    //     for (const i in Game.Achievements) {
+    //         const me = Game.Achievements[i];
+    //         if (me.darky === 1) {
+    //             if (DarkySave[me.name]) {
+    //                 DarkySave.Achievements[me.name] = DarkySave[me.name];
+    //                 if (DarkySave[me.name]) {
+    //                     Win(me.name);
+    //                 }
+    //                 delete DarkySave[me.name];
+    //             }
+    //         }
+    //     }
+    // };
     // -------------------------------------------------------------------
-    Game.Win("Third-party");
+    Game.registerMod("DarkysAchievementPackage", DarkysAchievementPackage);
     Game.Notify(
         "Darky's Achievement Package 1.7",
         " <b>68</b> new Achievements have been added, enjoy and thank you for using my mod!",

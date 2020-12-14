@@ -1,4 +1,6 @@
 {
+    const DarkysUpgradeCollection = {};
+
     const Upgrade = (name, desc, price, icon, buyFunction) => {
         const answer = new Game.Upgrade(name, desc, price, icon, buyFunction);
 
@@ -304,58 +306,49 @@
         },
     ]);
     // -------------------------------------------------------------------
-    DarkySavePrefix = "DarkyPackage";
+    DarkysUpgradeCollection.save = () => {
+        const DarkySave = {};
 
-    const DarkyUpgradesSaveConfig = () => {
-        localStorage.setItem(DarkySavePrefix, JSON.stringify(DarkySave));
-    };
+        Game.UpgradesById.forEach(upgrade => {
+            if (upgrade.darky) {
+                const formattedName = upgrade.name
+                    .toLowerCase()
+                    .replace(/\s+(.)/g, (match, group) => group.toUpperCase());
 
-    const DarkyUpgradesSaveDefault = () => {
-        if (typeof DarkySave === "undefined") {
-            DarkySave = {};
-        }
-
-        DarkySave.Upgrades = {};
-        for (const i in Game.Upgrades) {
-            const me = Game.Upgrades[i];
-            if (me.darky === 1) {
-                DarkySave.Upgrades[me.name] = {};
-                DarkySave.Upgrades[me.name].unlocked = 0;
-                DarkySave.Upgrades[me.name].bought = 0;
+                Object.assign(DarkySave, {
+                    [formattedName]: {
+                        bought: !!upgrade.bought,
+                        unlocked: !!upgrade.unlocked,
+                    },
+                });
             }
-        }
-        DarkyUpgradesSaveConfig();
-    };
+        });
 
-    const DarkyUpgradesLoadConfig = () => {
-        if (localStorage.getItem(DarkySavePrefix) != null) {
-            DarkySave = JSON.parse(localStorage.getItem(DarkySavePrefix));
-            if (typeof DarkySave.Upgrades === "undefined") {
-                DarkySave.Upgrades = {};
-            }
-            for (const i in Game.Upgrades) {
-                const me = Game.Upgrades[i];
-                if (me.darky === 1) {
-                    if (typeof DarkySave.Upgrades[me.name] === "undefined") {
-                        DarkySave.Upgrades[me.name] = {};
-                        DarkySave.Upgrades[me.name].unlocked = 0;
-                        DarkySave.Upgrades[me.name].bought = 0;
-                        DarkyUpgradesSaveConfig();
-                    } else {
-                        if (DarkySave.Upgrades[me.name].unlocked === 1) {
-                            Unlock(me.name);
-                        }
-                        if (DarkySave.Upgrades[me.name].bought === 1) {
-                            Game.Upgrades[me.name].bought = 1;
-                        }
-                    }
-                }
-            }
-        } else {
-            DarkyUpgradesSaveDefault();
-        }
+        return JSON.stringify(DarkySave);
     };
+    DarkysUpgradeCollection.load = saveString => {
+        const save = JSON.parse(saveString);
 
+        const entries = Object.keys(save);
+        const names = Object.keys(save).map(
+            achievementName =>
+                achievementName
+                    .replace(/([A-Z])/g, (group, match) => " " + `${match.toLowerCase()}`)
+                    .charAt(0)
+                    .toUpperCase() + achievementName.slice(1)
+        );
+
+        entries.forEach((upgrade, index) => {
+            const upgradeName = names[index];
+
+            if (save[upgrade].unlocked) {
+                Unlock(upgradeName);
+            }
+            if (save[upgrade].bought) {
+                Game.Upgrades[upgradeName].bought = 1;
+            }
+        });
+    };
     const oldReset = Game.HardReset;
     Game.HardReset = new Proxy(oldReset, {
         apply: (func, thisArg, args) => {
@@ -365,14 +358,12 @@
             return func.apply(thisArg, args);
         },
     });
-
-    DarkyUpgradesLoadConfig();
+    // -------------------------------------------------------------------
+    Game.Win("Third-party");
+    Game.Notify(
+        "Darky's Armful Collection of Upgrades 1.1",
+        " <b>16</b> new Upgrades have been added, enjoy and thank you for using my mod!",
+        [19, 26, "https://i.imgur.com/3jNJJNw.png"]
+    );
+    PlaySound("https://freesound.org/data/previews/172/172589_71257-lq.mp3");
 }
-// -------------------------------------------------------------------
-Game.Win("Third-party");
-Game.Notify(
-    "Darky's Armful Collection of Upgrades 1.1",
-    " <b>16</b> new Upgrades have been added, enjoy and thank you for using my mod!",
-    [19, 26, "https://i.imgur.com/3jNJJNw.png"]
-);
-PlaySound("https://freesound.org/data/previews/172/172589_71257-lq.mp3");
