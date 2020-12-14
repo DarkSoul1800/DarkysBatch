@@ -310,16 +310,13 @@
         const DarkySave = {};
 
         Game.UpgradesById.forEach(upgrade => {
-            if (upgrade.darky) {
+            if (upgrade.darky && upgrade.unlocked) {
                 const formattedName = upgrade.name
                     .toLowerCase()
                     .replace(/\s+(.)/g, (match, group) => group.toUpperCase());
 
                 Object.assign(DarkySave, {
-                    [formattedName]: {
-                        bought: !!upgrade.bought,
-                        unlocked: !!upgrade.unlocked,
-                    },
+                    [formattedName]: !!upgrade.bought,
                 });
             }
         });
@@ -330,21 +327,18 @@
         const save = JSON.parse(saveString);
 
         const entries = Object.keys(save);
-        const names = Object.keys(save).map(
-            achievementName =>
-                achievementName
-                    .replace(/([A-Z])/g, (group, match) => " " + `${match.toLowerCase()}`)
-                    .charAt(0)
-                    .toUpperCase() + achievementName.slice(1)
-        );
+        const names = Object.keys(save).map(upgradeName => {
+            const sentenceCase = upgradeName.replace(/([A-Z])/g, (group, match) => ` ${match.toLowerCase()}`);
+            const normalName = sentenceCase.charAt(0).toUpperCase() + sentenceCase.slice(1);
+
+            return normalName;
+        });
 
         entries.forEach((upgrade, index) => {
             const upgradeName = names[index];
+            Unlock(upgradeName);
 
-            if (save[upgrade].unlocked) {
-                Unlock(upgradeName);
-            }
-            if (save[upgrade].bought) {
+            if (save[upgrade] === true) {
                 Game.Upgrades[upgradeName].bought = 1;
             }
         });
@@ -359,7 +353,7 @@
         },
     });
     // -------------------------------------------------------------------
-    Game.Win("Third-party");
+    Game.registerMod("Darkys Upgrade Collection", DarkysUpgradeCollection);
     Game.Notify(
         "Darky's Armful Collection of Upgrades 1.1",
         " <b>16</b> new Upgrades have been added, enjoy and thank you for using my mod!",

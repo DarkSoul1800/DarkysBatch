@@ -888,13 +888,13 @@
         const DarkySave = {};
 
         Game.AchievementsById.forEach(achievement => {
-            if (achievement.darky) {
+            if (achievement.darky && achievement.won) {
                 const formattedName = achievement.name
                     .toLowerCase()
                     .replace(/\s+(.)/g, (match, group) => group.toUpperCase());
 
                 Object.assign(DarkySave, {
-                    [formattedName]: !!achievement.won,
+                    [formattedName]: true,
                 });
             }
         });
@@ -905,7 +905,7 @@
         const save = JSON.parse(saveString);
 
         const entries = Object.keys(save);
-        const formattedNames = Object.keys(save).map(achievementName => {
+        const names = Object.keys(save).map(achievementName => {
             const sentenceCase = achievementName.replace(/([A-Z])/g, (group, match) => ` ${match.toLowerCase()}`);
             const normalName = sentenceCase.charAt(0).toUpperCase() + sentenceCase.slice(1);
 
@@ -913,11 +913,8 @@
         });
 
         entries.forEach((achievement, index) => {
-            const achievementName = formattedNames[index];
-
-            if (save[achievement]) {
-                Win(achievementName);
-            }
+            const achievementName = names[index];
+            Game.Achievements[achievementName].won = 1;
         });
     };
     const oldReset = Game.HardReset;
@@ -945,7 +942,7 @@
     //     }
     // };
     // -------------------------------------------------------------------
-    Game.registerMod("DarkysAchievementPackage", DarkysAchievementPackage);
+    Game.registerMod("Darkys Achievement Package", DarkysAchievementPackage);
     Game.Notify(
         "Darky's Achievement Package 1.7",
         " <b>68</b> new Achievements have been added, enjoy and thank you for using my mod!",
