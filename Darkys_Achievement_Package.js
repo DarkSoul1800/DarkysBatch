@@ -47,16 +47,9 @@
             "if (mysterious) icon=[0,7]; if (mysterious && me.darky == 1) icon = [0, 0, 'https://i.imgur.com/JKKvixm.png']"
         );
 
-    if (typeof Darky === "undefined") {
-        const style = document.createElement("style");
-        style.textContent =
-            ".darky:before{background:url(https://i.imgur.com/q8nNdkI.png);background-position:120px 0px;}";
-        document.head.appendChild(style);
-
-        Darky = {
-            prestigeUpgradesOwned: 0,
-        };
-    }
+    const style = document.createElement("style");
+    style.textContent = ".darky:before{background:url(https://i.imgur.com/q8nNdkI.png);background-position:120px 0px;}";
+    document.head.appendChild(style);
     // -------------------------------------------------------------------
     Game.Achievements["Grand design"].icon = [1, 0, "https://i.imgur.com/RWbOLsf.png"];
     Game.Achievements["Ecumenopolis"].icon = [5, 0, "https://i.imgur.com/RWbOLsf.png"];
@@ -372,486 +365,390 @@
     Game.Achievements["Mod-God complex"].order = 30201;
     Game.Achievements["Golden Jackpot"].order = 10001;
     // -------------------------------------------------------------------
-    Game.ObjectsById.forEach(object => {
-        minAmount = Math.min(object.amount, 100000);
-    });
-    // -------------------------------------------------------------------
-    let requirements = [""];
-    const buildingsLevels = Game.ObjectsById.map(object => object.level);
-    Game.registerHook("check", [
-        () => {
-            let count = 0;
-            for (const i in Game.UpgradesById) {
-                const me = Game.UpgradesById[i];
-                if (me.bought && me.pool === "prestige") count++;
-            }
-            Darky.prestigeUpgradesOwned = count;
-        },
+    DarkysAchievementPackage.init = () => {
+        Game.registerHook("check", [
+            // Have X buildings
+            () => {
+                if (Game.Objects["Cursor"].amount >= 900) {
+                    Win("Squeak goes the mouse");
+                }
+                if (Game.Objects["Grandma"].amount >= 650) {
+                    Win("I'm too old for this");
+                }
+                if (Game.Objects["Farm"].amount >= 650) {
+                    Win("Gorden garden");
+                }
+                if (Game.Objects["Mine"].amount >= 650) {
+                    Win("A fine mine you got there");
+                }
+                if (Game.Objects["Factory"].amount >= 650) {
+                    Win("Working 24/7");
+                }
+                if (Game.Objects["Bank"].amount >= 650) {
+                    Win("Bank on it");
+                }
+                if (Game.Objects["Temple"].amount >= 650) {
+                    Win("Temple pun");
+                }
+                if (Game.Objects["Wizard tower"].amount >= 650) {
+                    Win("It's magic, Joel!");
+                }
+                if (Game.Objects["Shipment"].amount >= 650) {
+                    Win("My shipment arrives in the morning");
+                }
+                if (Game.Objects["Alchemy lab"].amount >= 650) {
+                    Win("Turning cookies into gold since 2013");
+                }
+                if (Game.Objects["Portal"].amount >= 650) {
+                    Win("A portal inside of a portal");
+                }
+                if (Game.Objects["Time machine"].amount >= 650) {
+                    Win("It all began on the 8th of August, 2013");
+                }
+                if (Game.Objects["Antimatter condenser"].amount >= 650) {
+                    Win("AntimatterCon");
+                }
+                if (Game.Objects["Prism"].amount >= 650) {
+                    Win("Stop being a prissm");
+                }
+                if (Game.Objects["Chancemaker"].amount >= 650) {
+                    Win("And yet you probably never got a blab");
+                }
+                if (Game.Objects["Fractal engine"].amount >= 650) {
+                    Win("Gouchnox");
+                }
+                if (Game.Objects["Javascript console"].amount >= 650) {
+                    Win("Follow the javascript");
+                }
+                if (Game.Objects["Idleverse"].amount >= 650) {
+                    Win("Don't call them fanverses, you fool");
+                }
+            },
+            // Have X of every building
+            () => {
+                Game.ObjectsById.forEach(object => {
+                    minAmount = Math.min(object.amount, 100000);
+                });
 
-        () => {
-            if (Game.Objects["Cursor"].amount >= 900) {
-                Win("Squeak goes the mouse");
-            }
-        },
-        () => {
-            if (Game.Objects["Grandma"].amount >= 650) {
-                Win("I'm too old for this");
-            }
-        },
-        () => {
-            if (Game.Objects["Farm"].amount >= 650) {
-                Win("Gorden garden");
-            }
-        },
-        () => {
-            if (Game.Objects["Mine"].amount >= 650) {
-                Win("A fine mine you got there");
-            }
-        },
-        () => {
-            if (Game.Objects["Factory"].amount >= 650) {
-                Win("Working 24/7");
-            }
-        },
-        () => {
-            if (Game.Objects["Bank"].amount >= 650) {
-                Win("Bank on it");
-            }
-        },
-        () => {
-            if (Game.Objects["Temple"].amount >= 650) {
-                Win("Temple pun");
-            }
-        },
-        () => {
-            if (Game.Objects["Wizard tower"].amount >= 650) {
-                Win("It's magic, Joel!");
-            }
-        },
-        () => {
-            if (Game.Objects["Shipment"].amount >= 650) {
-                Win("My shipment arrives in the morning");
-            }
-        },
-        () => {
-            if (Game.Objects["Alchemy lab"].amount >= 650) {
-                Win("Turning cookies into gold since 2013");
-            }
-        },
-        () => {
-            if (Game.Objects["Portal"].amount >= 650) {
-                Win("A portal inside of a portal");
-            }
-        },
-        () => {
-            if (Game.Objects["Time machine"].amount >= 650) {
-                Win("It all began on the 8th of August, 2013");
-            }
-        },
-        () => {
-            if (Game.Objects["Antimatter condenser"].amount >= 650) {
-                Win("AntimatterCon");
-            }
-        },
-        () => {
-            if (Game.Objects["Prism"].amount >= 650) {
-                Win("Stop being a prissm");
-            }
-        },
-        () => {
-            if (Game.Objects["Chancemaker"].amount >= 650) {
-                Win("And yet you probably never got a blab");
-            }
-        },
-        () => {
-            if (Game.Objects["Fractal engine"].amount >= 650) {
-                Win("Gouchnox");
-            }
-        },
-        () => {
-            if (Game.Objects["Javascript console"].amount >= 650) {
-                Win("Follow the javascript");
-            }
-        },
-        () => {
-            if (Game.Objects["Idleverse"].amount >= 650) {
-                Win("Don't call them fanverses, you fool");
-            }
-        },
-        () => {
-            if (Game.handmadeCookies >= 1e29) {
-                Win("Stop it, it clickles");
-            }
-        },
-        () => {
-            if (Game.handmadeCookies >= 1e31) {
-                Win("Keep up the click");
-            }
-        },
-        () => {
-            if (Game.handmadeCookies >= 1e33) {
-                Win("Clicking is the new booping");
-            }
-        },
-        () => {
-            if (Game.handmadeCookies >= 1e35) {
-                Win("The final click");
-            }
-        },
-        () => {
-            if (Game.handmadeCookies >= 1e37) {
-                Win("Sike, thats the wrong achievement");
-            }
-        },
-        () => {
-            if (Game.handmadeCookies >= 1e39) {
-                Win("How about we tap the cookie now");
-            }
-        },
-        () => {
-            if (Game.handmadeCookies >= 1e41) {
-                Win("Cookie Destroyer");
-            }
-        },
-        () => {
-            if (Game.handmadeCookies >= 1e43) {
-                Win("Give it a click");
-            }
-        },
-        () => {
-            if (Game.handmadeCookies >= 1e46) {
-                Win("Clicking Frenzy: Our Lord and Saviour");
-            }
-        },
-        () => {
-            if (Game.handmadeCookies >= 1e47) {
-                Win("Hand-made cookies are still the best");
-            }
-        },
-        () => {
-            if (Game.handmadeCookies >= 1e49) {
-                Win("My strange clicking addiction");
-            }
-        },
-        () => {
-            if (Game.BuildingsOwned >= 3000) {
-                Win("Owner of Buildings");
-            }
-        },
-        () => {
-            if (Game.BuildingsOwned >= 5000) {
-                Win("World-dominating company");
-            }
-        },
-        () => {
-            if (Game.BuildingsOwned >= 6000) {
-                Win("Creator of the Cookieverse");
-            }
-        },
-        () => {
-            if (Game.BuildingsOwned >= 7000) {
-                Win("Build until you can't build anymore");
-            }
-        },
-        () => {
-            if (Game.BuildingsOwned >= 9000) {
-                Win("Overlord");
-            }
-        },
-        () => {
-            if (Game.BuildingsOwned >= 10000) {
-                Win("That's enough, boss");
-            }
-        },
-        () => {
-            if (Game.UpgradesOwned >= 500) {
-                Win("Earth-shattering association");
-            }
-        },
-        () => {
-            if (Game.UpgradesOwned >= 600) {
-                Win("Maker of the Idleverse");
-            }
-        },
-        () => {
-            if (minAmount >= 650) {
-                Win("Sexcentennial and a half");
-            }
-        },
-        () => {
-            if (Game.cookieClicks >= 1000) {
-                Win("Clicker");
-            }
-        },
-        () => {
-            if (Game.cookieClicks >= 10000) {
-                Win("Advanced Clicker");
-            }
-        },
-        () => {
-            if (Game.cookieClicks >= 25000) {
-                Win("Expert Clicker");
-            }
-        },
-        () => {
-            if (Game.prestige >= 100) {
-                Win("Heavenly");
-            }
-        },
-        () => {
-            if (Game.prestige >= 10000) {
-                Win("Transcendent");
-            }
-        },
-        () => {
-            if (Game.prestige >= 1000000) {
-                Win("Higher energy state");
-            }
-        },
-        () => {
-            if (Game.prestige >= 1e8) {
-                Win("Omniverse");
-            }
-        },
-        () => {
-            if (Game.prestige >= 1e10) {
-                Win("The Ascendant");
-            }
-        },
-        () => {
-            if (Game.Has("Lucky digit") && Game.Has("Lucky number") && Game.Has("Lucky payout")) {
-                Win("Secret fortune");
-            }
-        },
-        () => {
-            requirements = [
-                "Caramoas",
-                "Sagalongs",
-                "Shortfoils",
-                "Win mints",
-                "Fig gluttons",
-                "Loreols",
-                "Jaffa cakes",
-                "Grease's cups",
-                "Digits",
-                "Bastenaken cookies",
-                "Festivity loops",
-                "Havabreaks",
-                "Zilla wafers",
-                "Dim Dams",
-                "Pokey",
-            ];
-            if (CheckUpgrades(requirements)) {
-                Win("You wanna be popular?");
-            }
-        },
-        () => {
-            requirements = [
-                "Rose macarons",
-                "Lemon macarons",
-                "Chocolate macarons",
-                "Pistachio macarons",
-                "Hazelnut macarons",
-                "Violet macarons",
-                "Caramel macarons",
-                "Licorice macarons",
-                "Earl Grey macarons",
-            ];
-            if (CheckUpgrades(requirements)) {
-                Win("Emmanuel Macaron");
-            }
-        },
-        () => {
-            requirements = [
-                "British tea biscuits",
-                "Chocolate british tea biscuits",
-                "Round british tea biscuits",
-                "Round chocolate british tea biscuits",
-                "Round british tea biscuits with heart motif",
-                "Round chocolate british tea biscuits with heart motif",
-            ];
-            if (CheckUpgrades(requirements)) {
-                Win("Getting fancy");
-            }
-        },
-        () => {
-            requirements = ["Butter horseshoes", "Butter pucks", "Butter knots", "Butter slabs", "Butter swirls"];
-            if (CheckUpgrades(requirements)) {
-                Win("Rich butterfingers");
-            }
-        },
-        () => {
-            requirements = [
-                "Profiteroles",
-                "Jelly donut",
-                "Glazed donut",
-                "Chocolate cake",
-                "Strawberry cake",
-                "Apple pie",
-                "Lemon meringue pie",
-                "Butter croissant",
-            ];
-            if (CheckUpgrades(requirements)) {
-                Win("Pastries from the past");
-            }
-        },
-        () => {
-            requirements = [
-                "Cookie dough",
-                "Burnt cookie",
-                "A chocolate chip cookie but with the chips picked off for some reason",
-                "Flavor text cookie",
-                "High-definition cookie",
-                "Crackers",
-            ];
-            if (CheckUpgrades(requirements)) {
-                Win("Bake me, maybe?");
-            }
-        },
-        () => {
-            requirements = [
-                "Toast",
-                "Peanut butter & jelly",
-                "Wookies",
-                "Cheeseburger",
-                "One lone chocolate chip",
-                "Pizza",
-                "Candy",
-            ];
-            if (CheckUpgrades(requirements)) {
-                Win("Burger Clicker");
-            }
-        },
-        () => {
-            requirements = [
-                "Elderwort biscuits",
-                "Bakeberry cookies",
-                "Wheat slims",
-                "Duketater cookies",
-                "Green yeast digestives",
-                "Fern tea",
-                "Ichor syrup",
-            ];
-            if (CheckUpgrades(requirements)) {
-                Win("Collecting these is like growing plants");
-            }
-        },
-        () => {
-            requirements = ["Dragon scale", "Dragon claw", "Dragon fang", "Dragon teddy bear"];
-            if (CheckUpgrades(requirements)) {
-                Win("Spike the dragon");
-            }
-        },
-        () => {
-            if (buildingsLevels.filter(level => level >= 1).length === Game.ObjectsById.length) {
-                Win("Level 1 complete!");
-            }
-        },
-        () => {
-            if (buildingsLevels.filter(level => level >= 5).length === Game.ObjectsById.length) {
-                Win("Five Hive");
-            }
-        },
-        () => {
-            if (buildingsLevels.filter(level => level >= 10).length === Game.ObjectsById.length) {
-                Win("This took forever");
-            }
-        },
-        () => {
-            if (Darky.prestigeUpgradesOwned >= 15) {
-                Win("Pretty prestige");
-            }
-        },
-        () => {
-            if (Darky.prestigeUpgradesOwned >= 30) {
-                Win("Live and learn");
-            }
-        },
-        () => {
-            if (Darky.prestigeUpgradesOwned >= 60) {
-                Win("We will stay with you forever");
-            }
-        },
-        () => {
-            requirements = [
-                "Kitten helpers",
-                "Kitten workers",
-                "Kitten engineers",
-                "Kitten overseers",
-                "Kitten managers",
-                "Kitten accountants",
-                "Kitten specialists",
-                "Kitten experts",
-                "Kitten consultants",
-                "Kitten assistants to the regional manager",
-                "Kitten marketeers",
-                "Kitten analysts",
-                "Kitten executives",
-                "Fortune #103",
-                "Kitten angels",
-            ];
-            if (CheckUpgrades(requirements)) {
-                Win("Purrfect Perfection");
-            }
-        },
-        () => {
-            requirements = [
-                "Future almanacs",
-                "Seismic magic",
-                "Quantum electronics",
-                "Contracts from beyond",
-                "Paganism",
-                "Arcane knowledge",
-                "Fossil fuels",
-                "Primordial ores",
-                "Infernal crops",
-                "Relativistic parsec-skipping",
-                "Extra physics funding",
-                "Light magic",
-                "Gemmed talismans",
-                "Recursive mirrors",
-                "Script grannies",
-                "Perforated mille-feuille cosmos",
-            ];
-            if (CheckUpgrades(requirements)) {
-                Win("It's sweet, sweet, sweet Synergy");
-            }
-        },
-        () => {
-            requirements = [
-                "Rain prayer",
-                "Asteroid mining",
-                "Temporal overclocking",
-                "Printing presses",
-                "God particle",
-                "Magical botany",
-                "Shipyards",
-                "Gold fund",
-                "Abysmal glimmer",
-                "Primeval glow",
-                "Chemical proficiency",
-                "Mystical energies",
-                "Charm quarks",
-                "Mice clicking mice",
-                "Tombola computing",
-                "Infraverses and superverses",
-            ];
-            if (CheckUpgrades(requirements)) {
-                Win("Out of Energy? Get Synergy!");
-            }
-        },
+                if (minAmount >= 650) {
+                    Win("Sexcentennial and a half");
+                }
+            },
+            // Buildings owned
+            () => {
+                if (Game.BuildingsOwned >= 3000) {
+                    Win("Owner of Buildings");
+                }
+                if (Game.BuildingsOwned >= 5000) {
+                    Win("World-dominating company");
+                }
+                if (Game.BuildingsOwned >= 6000) {
+                    Win("Creator of the Cookieverse");
+                }
+                if (Game.BuildingsOwned >= 7000) {
+                    Win("Build until you can't build anymore");
+                }
+                if (Game.BuildingsOwned >= 9000) {
+                    Win("Overlord");
+                }
+                if (Game.BuildingsOwned >= 10000) {
+                    Win("That's enough, boss");
+                }
+            },
+            // Upgrades owned
+            () => {
+                if (Game.UpgradesOwned >= 500) {
+                    Win("Earth-shattering association");
+                }
+                if (Game.UpgradesOwned >= 600) {
+                    Win("Maker of the Idleverse");
+                }
+            },
+            // Prestige upgrades owned
+            () => {
+                let prestigeUpgradesOwned = 0;
+                Game.PrestigeUpgrades.forEach(upgrade => {
+                    if (upgrade.bought) {
+                        prestigeUpgradesOwned++;
+                    }
+                });
 
-        () => {
-            if (Game.goldenClicks >= 77777) {
-                Win("Golden Jackpot");
-            }
-        },
-        () => {
-            if (name === "darky") {
-                Win("Mod-God complex");
-            }
-        },
-    ]);
+                if (prestigeUpgradesOwned >= 15) {
+                    Win("Pretty prestige");
+                }
+                if (prestigeUpgradesOwned >= 30) {
+                    Win("Live and learn");
+                }
+                if (prestigeUpgradesOwned >= 60) {
+                    Win("We will stay with you forever");
+                }
+            },
+            // Big cookie clicks
+            () => {
+                if (Game.cookieClicks >= 1000) {
+                    Win("Clicker");
+                }
+                if (Game.cookieClicks >= 10000) {
+                    Win("Advanced Clicker");
+                }
+                if (Game.cookieClicks >= 25000) {
+                    Win("Expert Clicker");
+                }
+            },
+            // Make X cookies from clicking
+            () => {
+                if (Game.handmadeCookies >= 1e29) {
+                    Win("Stop it, it clickles");
+                }
+                if (Game.handmadeCookies >= 1e31) {
+                    Win("Keep up the click");
+                }
+                if (Game.handmadeCookies >= 1e33) {
+                    Win("Clicking is the new booping");
+                }
+                if (Game.handmadeCookies >= 1e35) {
+                    Win("The final click");
+                }
+                if (Game.handmadeCookies >= 1e37) {
+                    Win("Sike, thats the wrong achievement");
+                }
+                if (Game.handmadeCookies >= 1e39) {
+                    Win("How about we tap the cookie now");
+                }
+                if (Game.handmadeCookies >= 1e41) {
+                    Win("Cookie Destroyer");
+                }
+                if (Game.handmadeCookies >= 1e43) {
+                    Win("Give it a click");
+                }
+                if (Game.handmadeCookies >= 1e46) {
+                    Win("Clicking Frenzy: Our Lord and Saviour");
+                }
+                if (Game.handmadeCookies >= 1e47) {
+                    Win("Hand-made cookies are still the best");
+                }
+                if (Game.handmadeCookies >= 1e49) {
+                    Win("My strange clicking addiction");
+                }
+            },
+            // Prestige amount
+            () => {
+                if (Game.prestige >= 100) {
+                    Win("Heavenly");
+                }
+                if (Game.prestige >= 10000) {
+                    Win("Transcendent");
+                }
+                if (Game.prestige >= 1000000) {
+                    Win("Higher energy state");
+                }
+                if (Game.prestige >= 100000000) {
+                    Win("Omniverse");
+                }
+                if (Game.prestige >= 10000000000) {
+                    Win("The Ascendant");
+                }
+            },
+            // Themed cookies
+            () => {
+                let requirements = [""];
+
+                // Technically not a cookie upgrade
+                requirements = ["Lucky digit", "Lucky number", "Lucky payout"];
+                if (CheckUpgrades(requirements)) {
+                    Win("Secret fortune");
+                }
+                requirements = [
+                    "Caramoas",
+                    "Sagalongs",
+                    "Shortfoils",
+                    "Win mints",
+                    "Fig gluttons",
+                    "Loreols",
+                    "Jaffa cakes",
+                    "Grease's cups",
+                    "Digits",
+                    "Bastenaken cookies",
+                    "Festivity loops",
+                    "Havabreaks",
+                    "Zilla wafers",
+                    "Dim Dams",
+                    "Pokey",
+                ];
+                if (CheckUpgrades(requirements)) {
+                    Win("You wanna be popular?");
+                }
+                requirements = [
+                    "Rose macarons",
+                    "Lemon macarons",
+                    "Chocolate macarons",
+                    "Pistachio macarons",
+                    "Hazelnut macarons",
+                    "Violet macarons",
+                    "Caramel macarons",
+                    "Licorice macarons",
+                    "Earl Grey macarons",
+                ];
+                if (CheckUpgrades(requirements)) {
+                    Win("Emmanuel Macaron");
+                }
+                requirements = [
+                    "British tea biscuits",
+                    "Chocolate british tea biscuits",
+                    "Round british tea biscuits",
+                    "Round chocolate british tea biscuits",
+                    "Round british tea biscuits with heart motif",
+                    "Round chocolate british tea biscuits with heart motif",
+                ];
+                if (CheckUpgrades(requirements)) {
+                    Win("Getting fancy");
+                }
+                requirements = ["Butter horseshoes", "Butter pucks", "Butter knots", "Butter slabs", "Butter swirls"];
+                if (CheckUpgrades(requirements)) {
+                    Win("Rich butterfingers");
+                }
+                requirements = [
+                    "Profiteroles",
+                    "Jelly donut",
+                    "Glazed donut",
+                    "Chocolate cake",
+                    "Strawberry cake",
+                    "Apple pie",
+                    "Lemon meringue pie",
+                    "Butter croissant",
+                ];
+                if (CheckUpgrades(requirements)) {
+                    Win("Pastries from the past");
+                }
+                requirements = [
+                    "Cookie dough",
+                    "Burnt cookie",
+                    "A chocolate chip cookie but with the chips picked off for some reason",
+                    "Flavor text cookie",
+                    "High-definition cookie",
+                    "Crackers",
+                ];
+                if (CheckUpgrades(requirements)) {
+                    Win("Bake me, maybe?");
+                }
+                requirements = [
+                    "Toast",
+                    "Peanut butter & jelly",
+                    "Wookies",
+                    "Cheeseburger",
+                    "One lone chocolate chip",
+                    "Pizza",
+                    "Candy",
+                ];
+                if (CheckUpgrades(requirements)) {
+                    Win("Burger Clicker");
+                }
+                requirements = [
+                    "Elderwort biscuits",
+                    "Bakeberry cookies",
+                    "Wheat slims",
+                    "Duketater cookies",
+                    "Green yeast digestives",
+                    "Fern tea",
+                    "Ichor syrup",
+                ];
+                if (CheckUpgrades(requirements)) {
+                    Win("Collecting these is like growing plants");
+                }
+                requirements = ["Dragon scale", "Dragon claw", "Dragon fang", "Dragon teddy bear"];
+                if (CheckUpgrades(requirements)) {
+                    Win("Spike the dragon");
+                }
+                requirements = [
+                    "Kitten helpers",
+                    "Kitten workers",
+                    "Kitten engineers",
+                    "Kitten overseers",
+                    "Kitten managers",
+                    "Kitten accountants",
+                    "Kitten specialists",
+                    "Kitten experts",
+                    "Kitten consultants",
+                    "Kitten assistants to the regional manager",
+                    "Kitten marketeers",
+                    "Kitten analysts",
+                    "Kitten executives",
+                    "Fortune #103",
+                    "Kitten angels",
+                ];
+                if (CheckUpgrades(requirements)) {
+                    Win("Purrfect Perfection");
+                }
+                requirements = [
+                    "Future almanacs",
+                    "Seismic magic",
+                    "Quantum electronics",
+                    "Contracts from beyond",
+                    "Paganism",
+                    "Arcane knowledge",
+                    "Fossil fuels",
+                    "Primordial ores",
+                    "Infernal crops",
+                    "Relativistic parsec-skipping",
+                    "Extra physics funding",
+                    "Light magic",
+                    "Gemmed talismans",
+                    "Recursive mirrors",
+                    "Script grannies",
+                    "Perforated mille-feuille cosmos",
+                ];
+                if (CheckUpgrades(requirements)) {
+                    Win("It's sweet, sweet, sweet Synergy");
+                }
+                requirements = [
+                    "Rain prayer",
+                    "Asteroid mining",
+                    "Temporal overclocking",
+                    "Printing presses",
+                    "God particle",
+                    "Magical botany",
+                    "Shipyards",
+                    "Gold fund",
+                    "Abysmal glimmer",
+                    "Primeval glow",
+                    "Chemical proficiency",
+                    "Mystical energies",
+                    "Charm quarks",
+                    "Mice clicking mice",
+                    "Tombola computing",
+                    "Infraverses and superverses",
+                ];
+                if (CheckUpgrades(requirements)) {
+                    Win("Out of Energy? Get Synergy!");
+                }
+            },
+            // Buildings' level
+            () => {
+                const buildingsLevels = Game.ObjectsById.map(object => object.level);
+
+                if (buildingsLevels.filter(level => level >= 1).length === Game.ObjectsById.length) {
+                    Win("Level 1 complete!");
+                }
+                if (buildingsLevels.filter(level => level >= 5).length === Game.ObjectsById.length) {
+                    Win("Five Hive");
+                }
+                if (buildingsLevels.filter(level => level >= 10).length === Game.ObjectsById.length) {
+                    Win("This took forever");
+                }
+            },
+            // Shadow achievements
+            () => {
+                if (Game.goldenClicks >= 77777) {
+                    Win("Golden Jackpot");
+                }
+            },
+            () => {
+                if (Game.bakeryName === "Darky") {
+                    Win("Mod-God complex");
+                }
+            },
+        ]);
+    };
     // -------------------------------------------------------------------
     DarkysAchievementPackage.save = () => {
         const DarkySave = {};

@@ -189,122 +189,124 @@
     Game.Upgrades["Big brain time"].order = 1301;
     Game.Upgrades["Darky can't actually code"].order = 1401;
     // -------------------------------------------------------------------
-    Game.customChecks = Game.customChecks.concat([
-        // () => {
-        //     if (
-        //         Game.Objects["Cursor"].amount +
-        //             Game.Objects["Grandma"].amount +
-        //             Game.Objects["Farm"].amount +
-        //             Game.Objects["Factory"].amount +
-        //             Game.Objects["Mine"].amount +
-        //             Game.Objects["Bank"].amount +
-        //             Game.Objects["Temple"].amount +
-        //             Game.Objects["Wizard tower"].amount +
-        //             Game.Objects["Shipment"].amount +
-        //             Game.Objects["Alchemy lab"].amount +
-        //             Game.Objects["Portal"].amount +
-        //             Game.Objects["Time machine"].amount +
-        //             Game.Objects["Antimatter condenser"].amount +
-        //             Game.Objects["Prism"].amount +
-        //             Game.Objects["Chancemaker"].amount +
-        //             Game.Objects["Fractal engine"].amount +
-        //             Game.Objects["Javascript console"].amount >=
-        //         100
-        //     ) {
-        //         Unlock("Building up");
-        //     }
-        // },
-        // () => {
-        //     if (Game.Objects["Cursor"].amount >= 450) {
-        //         Unlock("Nonillion fingers");
-        //     }
-        // },
-        // () => {
-        //     if (Game.handmadeCookies >= 1e27) {
-        //         Unlock("Loyalystic mouse");
-        //     }
-        // },
-        () => {
-            if (Game.Objects["Grandma"].amount >= 500) {
-                Unlock("Granny talk");
-            }
-        },
-        () => {
-            if (Game.Objects["Farm"].amount >= 500) {
-                Unlock("Chocolate chip seeds");
-            }
-        },
-        () => {
-            if (Game.Objects["Mine"].amount >= 500) {
-                Unlock("Omegadrill");
-            }
-        },
-        () => {
-            if (Game.Objects["Factory"].amount >= 500) {
-                Unlock("Pumping out new workers");
-            }
-        },
-        () => {
-            if (Game.Objects["Bank"].amount >= 500) {
-                Unlock("Baking the dough");
-            }
-        },
-        () => {
-            if (Game.Objects["Temple"].amount >= 500) {
-                Unlock("Cookie cults");
-            }
-        },
-        () => {
-            if (Game.Objects["Wizard tower"].amount >= 500) {
-                Unlock("Trix™️");
-            }
-        },
-        () => {
-            if (Game.Objects["Shipment"].amount >= 500) {
-                Unlock("Hyperspeed");
-            }
-        },
-        () => {
-            if (Game.Objects["Alchemy lab"].amount >= 500) {
-                Unlock("The way we make golden cookies");
-            }
-        },
-        () => {
-            if (Game.Objects["Portal"].amount >= 500) {
-                Unlock("Portal to nowhere");
-            }
-        },
-        () => {
-            if (Game.Objects["Time machine"].amount >= 500) {
-                Unlock("Year of the weekly months without the days");
-            }
-        },
-        () => {
-            if (Game.Objects["Antimatter condenser"].amount >= 500) {
-                Unlock("Bake matter");
-            }
-        },
-        () => {
-            if (Game.Objects["Prism"].amount >= 500) {
-                Unlock("Shiny!!");
-            }
-        },
-        () => {
-            if (Game.Objects["Chancemaker"].amount >= 500) {
-                Unlock("Casino fever");
-            }
-        },
-        () => {
-            if (Game.Objects["Fractal engine"].amount >= 500) {
-                Unlock("Big brain time");
-            }
-        },
-        () => {
-            if (Game.Objects["Javascript console"].amount >= 500) {
-                Unlock("Darky can't actually code");
-            }
-        },
-    ]);
+    DarkysUpgradeCollection.init = () => {
+        Game.registerHook("check", [
+            // () => {
+            //     if (
+            //         Game.Objects["Cursor"].amount +
+            //             Game.Objects["Grandma"].amount +
+            //             Game.Objects["Farm"].amount +
+            //             Game.Objects["Factory"].amount +
+            //             Game.Objects["Mine"].amount +
+            //             Game.Objects["Bank"].amount +
+            //             Game.Objects["Temple"].amount +
+            //             Game.Objects["Wizard tower"].amount +
+            //             Game.Objects["Shipment"].amount +
+            //             Game.Objects["Alchemy lab"].amount +
+            //             Game.Objects["Portal"].amount +
+            //             Game.Objects["Time machine"].amount +
+            //             Game.Objects["Antimatter condenser"].amount +
+            //             Game.Objects["Prism"].amount +
+            //             Game.Objects["Chancemaker"].amount +
+            //             Game.Objects["Fractal engine"].amount +
+            //             Game.Objects["Javascript console"].amount >=
+            //         100
+            //     ) {
+            //         Unlock("Building up");
+            //     }
+            // },
+            // () => {
+            //     if (Game.Objects["Cursor"].amount >= 450) {
+            //         Unlock("Nonillion fingers");
+            //     }
+            // },
+            // () => {
+            //     if (Game.handmadeCookies >= 1e27) {
+            //         Unlock("Loyalystic mouse");
+            //     }
+            // },
+            () => {
+                if (Game.Objects["Grandma"].amount >= 500) {
+                    Unlock("Granny talk");
+                }
+            },
+            () => {
+                if (Game.Objects["Farm"].amount >= 500) {
+                    Unlock("Chocolate chip seeds");
+                }
+            },
+            () => {
+                if (Game.Objects["Mine"].amount >= 500) {
+                    Unlock("Omegadrill");
+                }
+            },
+            () => {
+                if (Game.Objects["Factory"].amount >= 500) {
+                    Unlock("Pumping out new workers");
+                }
+            },
+            () => {
+                if (Game.Objects["Bank"].amount >= 500) {
+                    Unlock("Baking the dough");
+                }
+            },
+            () => {
+                if (Game.Objects["Temple"].amount >= 500) {
+                    Unlock("Cookie cults");
+                }
+            },
+            () => {
+                if (Game.Objects["Wizard tower"].amount >= 500) {
+                    Unlock("Trix™️");
+                }
+            },
+            () => {
+                if (Game.Objects["Shipment"].amount >= 500) {
+                    Unlock("Hyperspeed");
+                }
+            },
+            () => {
+                if (Game.Objects["Alchemy lab"].amount >= 500) {
+                    Unlock("The way we make golden cookies");
+                }
+            },
+            () => {
+                if (Game.Objects["Portal"].amount >= 500) {
+                    Unlock("Portal to nowhere");
+                }
+            },
+            () => {
+                if (Game.Objects["Time machine"].amount >= 500) {
+                    Unlock("Year of the weekly months without the days");
+                }
+            },
+            () => {
+                if (Game.Objects["Antimatter condenser"].amount >= 500) {
+                    Unlock("Bake matter");
+                }
+            },
+            () => {
+                if (Game.Objects["Prism"].amount >= 500) {
+                    Unlock("Shiny!!");
+                }
+            },
+            () => {
+                if (Game.Objects["Chancemaker"].amount >= 500) {
+                    Unlock("Casino fever");
+                }
+            },
+            () => {
+                if (Game.Objects["Fractal engine"].amount >= 500) {
+                    Unlock("Big brain time");
+                }
+            },
+            () => {
+                if (Game.Objects["Javascript console"].amount >= 500) {
+                    Unlock("Darky can't actually code");
+                }
+            },
+        ]);
+    };
     // -------------------------------------------------------------------
     DarkysUpgradeCollection.save = () => {
         const DarkySave = {};
