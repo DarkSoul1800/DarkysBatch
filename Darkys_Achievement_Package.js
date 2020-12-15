@@ -275,17 +275,6 @@
             "https://i.imgur.com/GGrHHrA.png",
         ]),
         (Game.last.pool = "shadow"),
-        // new Achievement("I like playing supportive characters", "Dashnet reached <b>10</b> heralds.", [21, 29]),
-        // (Game.last.pool = "shadow"),
-        // new Achievement("That's a lot of money", "Dashnet reached <b>25</b> heralds.", [21, 29]),
-        // (Game.last.pool = "shadow"),
-        // new Achievement("You really want us to make games for you, huh?", "Dashnet reached <b>50</b> heralds.", [
-        //     21,
-        //     29,
-        // ]),
-        // (Game.last.pool = "shadow"),
-        // new Achievement("Thank you guys so much!", "Dashnet reached <b>100</b> heralds.", [21, 29]),
-        // (Game.last.pool = "shadow"),
     ]);
     // -------------------------------------------------------------------
     Game.Achievements["Polymath"].order = 6010;
@@ -862,26 +851,6 @@
                 Win("Mod-God complex");
             }
         },
-        // () => {
-        //     if (Game.heralds >= 10) {
-        //         Win("I like playing supportive characters");
-        //     }
-        // },
-        // () => {
-        //     if (Game.heralds >= 25) {
-        //         Win("That's a lot of money");
-        //     }
-        // },
-        // () => {
-        //     if (Game.heralds >= 50) {
-        //         Win("You really want us to make games for you, huh?");
-        //     }
-        // },
-        // () => {
-        //     if (Game.heralds >= 100) {
-        //         Win("Thank you guys so much!");
-        //     }
-        // },
     ]);
     // -------------------------------------------------------------------
     DarkysAchievementPackage.save = () => {
