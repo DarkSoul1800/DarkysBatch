@@ -52,124 +52,6 @@
         Darky = {};
     }
     // -------------------------------------------------------------------
-    if (!Game.customCrate) Game.customCrate = [];
-    Game.customCrate = Game.customCrate.concat([
-        // ~ ~ ~ ORIGINAL ~ ~ ~
-        // No idea how to make this one work at all, help would be appreciated! The idea was that Everything is 0.005% more efficient per building.
-        // new Upgrade(
-        //     "Building up",
-        //     "Everything is more efficient per building owned.<q>I can already feel the power building up.</q>",
-        //     1000000,
-        //     [2, 6]
-        // ),
-        // ~ ~ ~ TIERED ~ ~ ~
-        // new Upgrade(
-        //     "Nonillion fingers",
-        //     "The mouse and cursors gain <b>+50000000</b> cookies for each non-cursor object owned.<q>That's quite the finger power.</q>",
-        //     10000000000000000000000000,
-        //     [13, 19]
-        // ),
-        // Game.MakeTiered(Game.last, 13, 0),
-        // new Upgrade(
-        //     "Loyalystic mouse",
-        //     "Clicking gains <b>+1% of your CpS</b>.<q>A true, true mouse.</q>",
-        //     50000000000000000000000000000,
-        //     [11, 31]
-        // ),
-        // Game.MakeTiered(Game.last, 13, 11),
-        new TieredUpgrade(
-            "Granny talk",
-            "Grandmas are <b>twice</b> as efficient.<q>Only a few have survived.</q>",
-            "Grandma",
-            13
-        ),
-        new TieredUpgrade(
-            "Chocolate chip seeds",
-            "Farms are <b>twice</b> as efficient.<q>Makes sense, right?</q>",
-            "Farm",
-            13
-        ),
-        new TieredUpgrade(
-            "Omegadrill",
-            "Mines are <b>twice</b> as efficient.<q>It's coming in late but we go it.</q>",
-            "Mine",
-            13
-        ),
-        new TieredUpgrade(
-            "Pumping out new workers",
-            "Factories are <b>twice</b> as efficient.<q>Yes, we no longer need the birds and the bees, we can just create life itself!</q>",
-            "Factory",
-            13
-        ),
-        new TieredUpgrade(
-            "Baking the dough",
-            "Banks are <b>twice</b> as efficient.<q>Instead of making the bucks.</q>",
-            "Bank",
-            13
-        ),
-        new TieredUpgrade(
-            "Cookie cults",
-            "Temples are <b>twice</b> as efficient.<q>Every sunday they meet to bake in secret.</q>",
-            "Temple",
-            13
-        ),
-        new TieredUpgrade(
-            "Trix™️",
-            "Wizard towers are <b>twice</b> as efficient.<q>Brand cookies which taste pretty bad but not taken off the market for some reason. These darn wizards and their silly magic, keeping their brand cookies alive with their magic!</q>",
-            "Wizard tower",
-            13
-        ),
-        new TieredUpgrade(
-            "Hyperspeed",
-            "Shipments are <b>twice</b> as efficient.<q>HYPE, HYPE, HYPE, HYPE!</q>",
-            "Shipment",
-            13
-        ),
-        new TieredUpgrade(
-            "The way we make golden cookies",
-            "Alchemy labs are <b>twice</b> as efficient.<q>[REDACTED]</q>",
-            "Alchemy lab",
-            13
-        ),
-        new TieredUpgrade(
-            "Portal to nowhere",
-            "Portals are <b>twice</b> as efficient.<q>A quiet place to store the cookies. I don't know why you would want to do that though.</q>",
-            "Portal",
-            13
-        ),
-        new TieredUpgrade(
-            "Year of the weekly months without the days",
-            "Time machines are <b>twice</b> as efficient.<q>Counting the hourly seconds by minutes.</q>",
-            "Time machine",
-            13
-        ),
-        new TieredUpgrade(
-            "Bake matter",
-            "Antimatter condensers are <b>twice</b> as efficient.<q>Just a bunch of tiny balls during scientific baking.</q>",
-            "Antimatter condenser",
-            13
-        ),
-        new TieredUpgrade("Shiny!!", "Prisms are <b>twice</b> as efficient.<q>Let's baking!</q>", "Prism", 13),
-        new TieredUpgrade(
-            "Casino fever",
-            "Chancemakers are <b>twice</b> as efficient.<q>A dangerous place for your wallet has become heaven on earth for it.</q>",
-            "Chancemaker",
-            13
-        ),
-        new TieredUpgrade(
-            "Big brain time",
-            "Fractal engines are <b>twice</b> as efficient.<q>Think thonk.</q>",
-            "Fractal engine",
-            13
-        ),
-        new TieredUpgrade(
-            "Darky can't actually code",
-            "Javascript consoles are <b>twice</b> as efficient.<q>He just happened to be smart enough to make both an achievement and upgrade mod for Cookie Clicker.</q>",
-            "Javascript console",
-            13
-        ),
-    ]);
-    // -------------------------------------------------------------------
     // Game.Upgrades["Nonillion fingers"].order = 113;
     // Game.Upgrades["Loyalystic mouse"].order = 163;
     Game.Upgrades["Granny talk"].order = 201;
@@ -304,6 +186,124 @@
                 if (Game.Objects["Javascript console"].amount >= 500) {
                     Unlock("Darky can't actually code");
                 }
+            },
+        ]);
+        Game.registerHook("create", [
+            () => {
+                // ~ ~ ~ ORIGINAL ~ ~ ~
+                // No idea how to make this one work at all, help would be appreciated! The idea was that Everything is 0.005% more efficient per building.
+                //  Upgrade(
+                //     "Building up",
+                //     "Everything is more efficient per building owned.<q>I can already feel the power building up.</q>",
+                //     1000000,
+                //     [2, 6]
+                // );
+                // ~ ~ ~ TIERED ~ ~ ~
+                //  Upgrade(
+                //     "Nonillion fingers",
+                //     "The mouse and cursors gain <b>+50000000</b> cookies for each non-cursor object owned.<q>That's quite the finger power.</q>",
+                //     10000000000000000000000000,
+                //     [13, 19]
+                // );
+                // Game.MakeTiered(Game.last, 13, 0);
+                //  Upgrade(
+                //     "Loyalystic mouse",
+                //     "Clicking gains <b>+1% of your CpS</b>.<q>A true, true mouse.</q>",
+                //     50000000000000000000000000000,
+                //     [11, 31]
+                // );
+                // Game.MakeTiered(Game.last, 13, 11);
+                TieredUpgrade(
+                    "Granny talk",
+                    "Grandmas are <b>twice</b> as efficient.<q>Only a few have survived.</q>",
+                    "Grandma",
+                    13
+                );
+                TieredUpgrade(
+                    "Chocolate chip seeds",
+                    "Farms are <b>twice</b> as efficient.<q>Makes sense, right?</q>",
+                    "Farm",
+                    13
+                );
+                TieredUpgrade(
+                    "Omegadrill",
+                    "Mines are <b>twice</b> as efficient.<q>It's coming in late but we go it.</q>",
+                    "Mine",
+                    13
+                );
+                TieredUpgrade(
+                    "Pumping out new workers",
+                    "Factories are <b>twice</b> as efficient.<q>Yes, we no longer need the birds and the bees, we can just create life itself!</q>",
+                    "Factory",
+                    13
+                );
+                TieredUpgrade(
+                    "Baking the dough",
+                    "Banks are <b>twice</b> as efficient.<q>Instead of making the bucks.</q>",
+                    "Bank",
+                    13
+                );
+                TieredUpgrade(
+                    "Cookie cults",
+                    "Temples are <b>twice</b> as efficient.<q>Every sunday they meet to bake in secret.</q>",
+                    "Temple",
+                    13
+                );
+                TieredUpgrade(
+                    "Trix™️",
+                    "Wizard towers are <b>twice</b> as efficient.<q>Brand cookies which taste pretty bad but not taken off the market for some reason. These darn wizards and their silly magic, keeping their brand cookies alive with their magic!</q>",
+                    "Wizard tower",
+                    13
+                );
+                TieredUpgrade(
+                    "Hyperspeed",
+                    "Shipments are <b>twice</b> as efficient.<q>HYPE, HYPE, HYPE, HYPE!</q>",
+                    "Shipment",
+                    13
+                );
+                TieredUpgrade(
+                    "The way we make golden cookies",
+                    "Alchemy labs are <b>twice</b> as efficient.<q>[REDACTED]</q>",
+                    "Alchemy lab",
+                    13
+                );
+                TieredUpgrade(
+                    "Portal to nowhere",
+                    "Portals are <b>twice</b> as efficient.<q>A quiet place to store the cookies. I don't know why you would want to do that though.</q>",
+                    "Portal",
+                    13
+                );
+                TieredUpgrade(
+                    "Year of the weekly months without the days",
+                    "Time machines are <b>twice</b> as efficient.<q>Counting the hourly seconds by minutes.</q>",
+                    "Time machine",
+                    13
+                );
+                TieredUpgrade(
+                    "Bake matter",
+                    "Antimatter condensers are <b>twice</b> as efficient.<q>Just a bunch of tiny balls during scientific baking.</q>",
+                    "Antimatter condenser",
+                    13
+                );
+                TieredUpgrade("Shiny!!", "Prisms are <b>twice</b> as efficient.<q>Let's baking!</q>", "Prism", 13);
+                TieredUpgrade(
+                    "Casino fever",
+                    "Chancemakers are <b>twice</b> as efficient.<q>A dangerous place for your wallet has become heaven on earth for it.</q>",
+                    "Chancemaker",
+                    13
+                );
+                TieredUpgrade(
+                    "Big brain time",
+                    "Fractal engines are <b>twice</b> as efficient.<q>Think thonk.</q>",
+                    "Fractal engine",
+                    13
+                );
+                TieredUpgrade(
+                    "Darky can't actually code",
+                    "Javascript consoles are <b>twice</b> as efficient.<q>He just happened to be smart enough to make both an achievement and upgrade mod for Cookie Clicker.</q>",
+                    "Javascript console",
+                    13
+                );
             },
         ]);
     };
