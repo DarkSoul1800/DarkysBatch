@@ -311,7 +311,7 @@
                 if (Game.handmadeCookies >= 1e43) {
                     Win("Give it a click");
                 }
-                if (Game.handmadeCookies >= 1e46) {
+                if (Game.handmadeCookies >= 1e45) {
                     Win("Clicking Frenzy: Our Lord and Saviour");
                 }
                 if (Game.handmadeCookies >= 1e47) {
@@ -332,10 +332,10 @@
                 if (Game.prestige >= 1000000) {
                     Win("Higher energy state");
                 }
-                if (Game.prestige >= 100000000) {
+                if (Game.prestige >= 1e8) {
                     Win("Omniverse");
                 }
-                if (Game.prestige >= 10000000000) {
+                if (Game.prestige >= 1e10) {
                     Win("The Ascendant");
                 }
             },

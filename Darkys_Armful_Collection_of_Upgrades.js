@@ -202,14 +202,14 @@
                 //  Upgrade(
                 //     "Nonillion fingers",
                 //     "The mouse and cursors gain <b>+50000000</b> cookies for each non-cursor object owned.<q>That's quite the finger power.</q>",
-                //     10000000000000000000000000,
+                //     1e25,
                 //     [13, 19]
                 // );
                 // Game.MakeTiered(Game.last, 13, 0);
                 //  Upgrade(
                 //     "Loyalystic mouse",
                 //     "Clicking gains <b>+1% of your CpS</b>.<q>A true, true mouse.</q>",
-                //     50000000000000000000000000000,
+                //     5e28,
                 //     [11, 31]
                 // );
                 // Game.MakeTiered(Game.last, 13, 11);
