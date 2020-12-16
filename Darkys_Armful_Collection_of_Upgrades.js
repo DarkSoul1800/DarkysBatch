@@ -52,25 +52,6 @@
         Darky = {};
     }
     // -------------------------------------------------------------------
-    // Game.Upgrades["Nonillion fingers"].order = 113;
-    // Game.Upgrades["Loyalystic mouse"].order = 163;
-    Game.Upgrades["Granny talk"].order = 201;
-    Game.Upgrades["Chocolate chip seeds"].order = 301;
-    Game.Upgrades["Omegadrill"].order = 401;
-    Game.Upgrades["Pumping out new workers"].order = 501;
-    Game.Upgrades["Baking the dough"].order = 526;
-    Game.Upgrades["Cookie cults"].order = 551;
-    Game.Upgrades["Trix™️"].order = 576;
-    Game.Upgrades["Hyperspeed"].order = 601;
-    Game.Upgrades["The way we make golden cookies"].order = 701;
-    Game.Upgrades["Portal to nowhere"].order = 801;
-    Game.Upgrades["Year of the weekly months without the days"].order = 901;
-    Game.Upgrades["Bake matter"].order = 1001;
-    Game.Upgrades["Shiny!!"].order = 1101;
-    Game.Upgrades["Casino fever"].order = 1201;
-    Game.Upgrades["Big brain time"].order = 1301;
-    Game.Upgrades["Darky can't actually code"].order = 1401;
-    // -------------------------------------------------------------------
     DarkysUpgradeCollection.init = () => {
         Game.registerHook("check", [
             // () => {
@@ -205,6 +186,7 @@
                 //     1e25,
                 //     [13, 19]
                 // );
+                Game.last.order = 113;
                 // Game.MakeTiered(Game.last, 13, 0);
                 //  Upgrade(
                 //     "Loyalystic mouse",
@@ -212,6 +194,7 @@
                 //     5e28,
                 //     [11, 31]
                 // );
+                Game.last.order = 163;
                 // Game.MakeTiered(Game.last, 13, 11);
                 TieredUpgrade(
                     "Granny talk",
@@ -219,91 +202,107 @@
                     "Grandma",
                     13
                 );
+                Game.last.order = 201;
                 TieredUpgrade(
                     "Chocolate chip seeds",
                     "Farms are <b>twice</b> as efficient.<q>Makes sense, right?</q>",
                     "Farm",
                     13
                 );
+                Game.last.order = 301;
                 TieredUpgrade(
                     "Omegadrill",
                     "Mines are <b>twice</b> as efficient.<q>It's coming in late but we go it.</q>",
                     "Mine",
                     13
                 );
+                Game.last.order = 401;
                 TieredUpgrade(
                     "Pumping out new workers",
                     "Factories are <b>twice</b> as efficient.<q>Yes, we no longer need the birds and the bees, we can just create life itself!</q>",
                     "Factory",
                     13
                 );
+                Game.last.order = 501;
                 TieredUpgrade(
                     "Baking the dough",
                     "Banks are <b>twice</b> as efficient.<q>Instead of making the bucks.</q>",
                     "Bank",
                     13
                 );
+                Game.last.order = 526;
                 TieredUpgrade(
                     "Cookie cults",
                     "Temples are <b>twice</b> as efficient.<q>Every sunday they meet to bake in secret.</q>",
                     "Temple",
                     13
                 );
+                Game.last.order = 551;
                 TieredUpgrade(
                     "Trix™️",
                     "Wizard towers are <b>twice</b> as efficient.<q>Brand cookies which taste pretty bad but not taken off the market for some reason. These darn wizards and their silly magic, keeping their brand cookies alive with their magic!</q>",
                     "Wizard tower",
                     13
                 );
+                Game.last.order = 576;
                 TieredUpgrade(
                     "Hyperspeed",
                     "Shipments are <b>twice</b> as efficient.<q>HYPE, HYPE, HYPE, HYPE!</q>",
                     "Shipment",
                     13
                 );
+                Game.last.order = 601;
                 TieredUpgrade(
                     "The way we make golden cookies",
                     "Alchemy labs are <b>twice</b> as efficient.<q>[REDACTED]</q>",
                     "Alchemy lab",
                     13
                 );
+                Game.last.order = 701;
                 TieredUpgrade(
                     "Portal to nowhere",
                     "Portals are <b>twice</b> as efficient.<q>A quiet place to store the cookies. I don't know why you would want to do that though.</q>",
                     "Portal",
                     13
                 );
+                Game.last.order = 801;
                 TieredUpgrade(
                     "Year of the weekly months without the days",
                     "Time machines are <b>twice</b> as efficient.<q>Counting the hourly seconds by minutes.</q>",
                     "Time machine",
                     13
                 );
+                Game.last.order = 901;
                 TieredUpgrade(
                     "Bake matter",
                     "Antimatter condensers are <b>twice</b> as efficient.<q>Just a bunch of tiny balls during scientific baking.</q>",
                     "Antimatter condenser",
                     13
                 );
+                Game.last.order = 1001;
                 TieredUpgrade("Shiny!!", "Prisms are <b>twice</b> as efficient.<q>Let's baking!</q>", "Prism", 13);
+                Game.last.order = 1101;
                 TieredUpgrade(
                     "Casino fever",
                     "Chancemakers are <b>twice</b> as efficient.<q>A dangerous place for your wallet has become heaven on earth for it.</q>",
                     "Chancemaker",
                     13
                 );
+                Game.last.order = 1201;
                 TieredUpgrade(
                     "Big brain time",
                     "Fractal engines are <b>twice</b> as efficient.<q>Think thonk.</q>",
                     "Fractal engine",
                     13
                 );
+                Game.last.order = 1301;
                 TieredUpgrade(
                     "Darky can't actually code",
                     "Javascript consoles are <b>twice</b> as efficient.<q>He just happened to be smart enough to make both an achievement and upgrade mod for Cookie Clicker.</q>",
                     "Javascript console",
                     13
                 );
+                Game.last.order = 1401;
             },
         ]);
     };
