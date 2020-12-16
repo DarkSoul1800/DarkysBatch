@@ -44,15 +44,15 @@
         .toString()
         .split("if (mysterious) icon=[0,7];")
         .join(
-            "if (mysterious) icon=[0,7]; if (mysterious && me.darky == 1) icon = [0, 0, 'https://i.imgur.com/JKKvixm.png']"
+            "if (mysterious) icon=[0,7]; if (mysterious && me.darky == 1) icon = [1, 4, 'https://i.imgur.com/AWmeHiO.png']"
         );
 
     const style = document.createElement("style");
     style.textContent = ".darky:before{background:url(https://i.imgur.com/q8nNdkI.png);background-position:120px 0px;}";
     document.head.appendChild(style);
     // Overrides
-    Game.Achievements["Grand design"].icon = [1, 0, "https://i.imgur.com/RWbOLsf.png"];
-    Game.Achievements["Ecumenopolis"].icon = [5, 0, "https://i.imgur.com/RWbOLsf.png"];
+    Game.Achievements["Grand design"].icon = [1, 0, "https://i.imgur.com/AWmeHiO.png"];
+    Game.Achievements["Ecumenopolis"].icon = [5, 0, "https://i.imgur.com/AWmeHiO.png"];
     Game.RebuildUpgrades();
     Game.Achievements["Grand design"].order = 5011;
     Game.Achievements["Ecumenopolis"].order = 5015;
@@ -605,7 +605,7 @@
                 Achievement(
                     "Sexcentennial and a half",
                     "Have at least <b>650 of everything</b>.<q>Yes I just did that.</q>",
-                    [1, 3, "https://i.imgur.com/Qi5DPKy.png"]
+                    [1, 3, "https://i.imgur.com/AWmeHiO.png"]
                 );
                 Game.last.order = 7004;
             },
@@ -614,25 +614,25 @@
                 Achievement("Owner of Buildings", "Own <b>3000</b> buildings.", [
                     0,
                     0,
-                    "https://i.imgur.com/GGrHHrA.png",
+                    "https://i.imgur.com/AWmeHiO.png",
                 ]);
                 Game.last.order = 5010;
                 Achievement("World-dominating company", "Own <b>5000</b> buildings.", [
                     2,
                     0,
-                    "https://i.imgur.com/GGrHHrA.png",
+                    "https://i.imgur.com/AWmeHiO.png",
                 ]);
                 Game.last.order = 5012;
                 Achievement("Creator of the Cookieverse", "Own <b>6000</b> buildings.", [
                     3,
                     0,
-                    "https://i.imgur.com/GGrHHrA.png",
+                    "https://i.imgur.com/AWmeHiO.png",
                 ]);
                 Game.last.order = 5013;
                 Achievement("Build until you can't build anymore", "Own <b>7000</b> buildings.", [
                     4,
                     0,
-                    "https://i.imgur.com/GGrHHrA.png",
+                    "https://i.imgur.com/AWmeHiO.png",
                 ]);
                 Game.last.order = 5014;
                 Achievement("Overlord", "Own <b>9000</b> buildings.", [4, 4, "https://i.imgur.com/AWmeHiO.png"]);
@@ -640,7 +640,7 @@
                 Achievement("That's enough, boss", "Own <b>10000</b> buildings.", [
                     6,
                     0,
-                    "https://i.imgur.com/S5BnOGU.png",
+                    "https://i.imgur.com/AWmeHiO.png",
                 ]);
                 Game.last.order = 5017;
             },
@@ -649,7 +649,7 @@
                 Achievement("Earth-shattering association", "Purchase <b>500</b> upgrades.", [
                     2,
                     1,
-                    "https://i.imgur.com/S5BnOGU.png",
+                    "https://i.imgur.com/AWmeHiO.png",
                 ]);
                 Game.last.order = 6003;
                 Achievement("Maker of the Idleverse", "Purchase <b>600</b> upgrades.", [
@@ -720,43 +720,43 @@
                 Achievement(
                     "Sike, thats the wrong achievement",
                     "Make <b>10 undecillion</b> cookies from clicking.<q>The last achievement wasn't the final one.</q>",
-                    [0, 5, "https://i.imgur.com/nv69nsg.png"]
+                    [0, 5, "https://i.imgur.com/AWmeHiO.png"]
                 );
                 Game.last.order = 1014;
                 Achievement(
                     "How about we tap the cookie now",
                     "Make <b>1 duodecillion</b> cookies from clicking.<q>I heard the mobile version is out now.</q>",
-                    [1, 5, "https://i.imgur.com/nv69nsg.png"]
+                    [1, 5, "https://i.imgur.com/AWmeHiO.png"]
                 );
                 Game.last.order = 1015;
                 Achievement(
                     "Cookie Destroyer",
                     "Make <b>100 duodecillion</b> cookies from clicking.<q>Agent Johnson was here</q>",
-                    [2, 5, "https://i.imgur.com/nv69nsg.png"]
+                    [2, 5, "https://i.imgur.com/AWmeHiO.png"]
                 );
                 Game.last.order = 1016;
                 Achievement("Give it a click", "Make <b>10 tredecillion</b> cookies from clicking.", [
                     3,
                     5,
-                    "https://i.imgur.com/nv69nsg.png",
+                    "https://i.imgur.com/AWmeHiO.png",
                 ]);
                 Game.last.order = 1017;
                 Achievement(
                     "Clicking Frenzy: Our Lord and Saviour",
                     "Make <b>1 quattuordecillion</b> cookies from clicking.",
-                    [4, 5, "https://i.imgur.com/nv69nsg.png"]
+                    [4, 5, "https://i.imgur.com/AWmeHiO.png"]
                 );
                 Game.last.order = 1018;
                 Achievement(
                     "Hand-made cookies are still the best",
                     "Make <b>100 quattuordecillion</b> cookies from clicking.",
-                    [5, 5, "https://i.imgur.com/nv69nsg.png"]
+                    [5, 5, "https://i.imgur.com/AWmeHiO.png"]
                 );
                 Game.last.order = 1019;
                 Achievement("My strange clicking addiction", "Make <b>10 quindecillion</b> cookies from clicking.", [
                     6,
                     5,
-                    "https://i.imgur.com/nv69nsg.png",
+                    "https://i.imgur.com/AWmeHiO.png",
                 ]);
                 Game.last.order = 1019;
             },
@@ -825,19 +825,19 @@
                 Achievement("Level 1 complete!", "Reach level <b>1</b> of every building.", [
                     0,
                     2,
-                    "https://i.imgur.com/GGrHHrA.png",
+                    "https://i.imgur.com/AWmeHiO.png",
                 ]);
                 Game.last.order = 5017;
                 Achievement("Five Hive", "Reach level <b>5</b> of every building.", [
                     1,
                     2,
-                    "https://i.imgur.com/GGrHHrA.png",
+                    "https://i.imgur.com/AWmeHiO.png",
                 ]);
                 Game.last.order = 5018;
                 Achievement("This took forever", "Reach level <b>10</b> of every building.", [
                     2,
                     2,
-                    "https://i.imgur.com/Qi5DPKy.png",
+                    "https://i.imgur.com/AWmeHiO.png",
                 ]);
                 Game.last.order = 5019;
             },
@@ -849,7 +849,7 @@
                 Achievement("Golden Jackpot", "Click <b>77,777 golden cookies</b>.", [
                     0,
                     3,
-                    "https://i.imgur.com/GGrHHrA.png",
+                    "https://i.imgur.com/AWmeHiO.png",
                 ]);
                 Game.last.order = 10001;
                 Game.last.pool = "shadow";
@@ -859,7 +859,7 @@
                 Achievement("All you had to do was ask", "Click this custom achievement's slot.<q>Here you go.</q>", [
                     2,
                     4,
-                    "https://i.imgur.com/sl3FeNY.png",
+                    "https://i.imgur.com/AWmeHiO.png",
                 ]);
                 Game.last.order = 11001;
                 Game.last.clickFunction = () => {
