@@ -1,30 +1,6 @@
 {
     const DarkysUpgradeCollection = {};
 
-    const Upgrade = (name, desc, price, icon, buyFunction) => {
-        const answer = new Game.Upgrade(name, desc, price, icon, buyFunction);
-
-        answer.darky = 1;
-
-        return answer;
-    };
-
-    const TieredUpgrade = (name, desc, building, tier) => {
-        const answer = new Game.TieredUpgrade(name, desc, building, tier);
-
-        answer.darky = 1;
-
-        return answer;
-    };
-
-    const Unlock = what => {
-        Game.Unlock(what);
-        if (Game.Upgrades[what] && Game.Upgrades[what].darky === 1) {
-            DarkySave.Upgrades[what].unlocked = 1;
-            DarkyUpgradesSaveConfig();
-        }
-    };
-
     Game.crate = Game.crate
         .toString()
         .split("classes+=' upgrade';")
@@ -64,97 +40,97 @@
             //             Game.Objects["Javascript console"].amount >=
             //         100
             //     ) {
-            //         Unlock("Building up");
+            //         Game.Game.Unlock("Building up");
             //     }
             // },
             // () => {
             //     if (Game.Objects["Cursor"].amount >= 450) {
-            //         Unlock("Nonillion fingers");
+            //         Game.Unlock("Nonillion fingers");
             //     }
             // },
             // () => {
             //     if (Game.handmadeCookies >= 1e27) {
-            //         Unlock("Loyalystic mouse");
+            //         Game.Unlock("Loyalystic mouse");
             //     }
             // },
             () => {
                 if (Game.Objects["Grandma"].amount >= 500) {
-                    Unlock("Granny talk");
+                    Game.Unlock("Granny talk");
                 }
             },
             () => {
                 if (Game.Objects["Farm"].amount >= 500) {
-                    Unlock("Chocolate chip seeds");
+                    Game.Unlock("Chocolate chip seeds");
                 }
             },
             () => {
                 if (Game.Objects["Mine"].amount >= 500) {
-                    Unlock("Omegadrill");
+                    Game.Unlock("Omegadrill");
                 }
             },
             () => {
                 if (Game.Objects["Factory"].amount >= 500) {
-                    Unlock("Pumping out new workers");
+                    Game.Unlock("Pumping out new workers");
                 }
             },
             () => {
                 if (Game.Objects["Bank"].amount >= 500) {
-                    Unlock("Baking the dough");
+                    Game.Unlock("Baking the dough");
                 }
             },
             () => {
                 if (Game.Objects["Temple"].amount >= 500) {
-                    Unlock("Cookie cults");
+                    Game.Unlock("Cookie cults");
                 }
             },
             () => {
                 if (Game.Objects["Wizard tower"].amount >= 500) {
-                    Unlock("Trix™️");
+                    Game.Unlock("Trix™️");
                 }
             },
             () => {
                 if (Game.Objects["Shipment"].amount >= 500) {
-                    Unlock("Hyperspeed");
+                    Game.Unlock("Hyperspeed");
                 }
             },
             () => {
                 if (Game.Objects["Alchemy lab"].amount >= 500) {
-                    Unlock("The way we make golden cookies");
+                    Game.Unlock("The way we make golden cookies");
                 }
             },
             () => {
                 if (Game.Objects["Portal"].amount >= 500) {
-                    Unlock("Portal to nowhere");
+                    Game.Unlock("Portal to nowhere");
                 }
             },
             () => {
                 if (Game.Objects["Time machine"].amount >= 500) {
-                    Unlock("Year of the weekly months without the days");
+                    Game.Unlock("Year of the weekly months without the days");
                 }
             },
             () => {
                 if (Game.Objects["Antimatter condenser"].amount >= 500) {
-                    Unlock("Bake matter");
+                    Game.Unlock("Bake matter");
                 }
             },
             () => {
                 if (Game.Objects["Prism"].amount >= 500) {
-                    Unlock("Shiny!!");
+                    Game.Unlock("Shiny!!");
                 }
             },
             () => {
                 if (Game.Objects["Chancemaker"].amount >= 500) {
-                    Unlock("Casino fever");
+                    Game.Unlock("Casino fever");
                 }
             },
             () => {
                 if (Game.Objects["Fractal engine"].amount >= 500) {
-                    Unlock("Big brain time");
+                    Game.Unlock("Big brain time");
                 }
             },
             () => {
                 if (Game.Objects["Javascript console"].amount >= 500) {
-                    Unlock("Darky can't actually code");
+                    Game.Unlock("Darky can't actually code");
                 }
             },
         ]);
@@ -162,130 +138,135 @@
             () => {
                 // ~ ~ ~ ORIGINAL ~ ~ ~
                 // No idea how to make this one work at all, help would be appreciated! The idea was that Everything is 0.005% more efficient per building.
-                //  Upgrade(
+                // DarkysUpgradeCollection.Upgrade(
                 //     "Building up",
                 //     "Everything is more efficient per building owned.<q>I can already feel the power building up.</q>",
                 //     1000000,
                 //     [2, 6]
                 // );
                 // ~ ~ ~ TIERED ~ ~ ~
-                //  Upgrade(
+                // DarkysUpgradeCollection.Upgrade(
                 //     "Nonillion fingers",
                 //     "The mouse and cursors gain <b>+50000000</b> cookies for each non-cursor object owned.<q>That's quite the finger power.</q>",
                 //     1e25,
                 //     [13, 19]
                 // );
-                Game.last.order = 113;
+                // Game.last.order = 113;
                 // Game.MakeTiered(Game.last, 13, 0);
-                //  Upgrade(
+                // DarkysUpgradeCollection.Upgrade(
                 //     "Loyalystic mouse",
                 //     "Clicking gains <b>+1% of your CpS</b>.<q>A true, true mouse.</q>",
                 //     5e28,
                 //     [11, 31]
                 // );
-                Game.last.order = 163;
+                // Game.last.order = 163;
                 // Game.MakeTiered(Game.last, 13, 11);
-                TieredUpgrade(
+                DarkysUpgradeCollection.TieredUpgrade(
                     "Granny talk",
                     "Grandmas are <b>twice</b> as efficient.<q>Only a few have survived.</q>",
                     "Grandma",
                     13
                 );
                 Game.last.order = 201;
-                TieredUpgrade(
+                DarkysUpgradeCollection.TieredUpgrade(
                     "Chocolate chip seeds",
                     "Farms are <b>twice</b> as efficient.<q>Makes sense, right?</q>",
                     "Farm",
                     13
                 );
                 Game.last.order = 301;
-                TieredUpgrade(
+                DarkysUpgradeCollection.TieredUpgrade(
                     "Omegadrill",
                     "Mines are <b>twice</b> as efficient.<q>It's coming in late but we go it.</q>",
                     "Mine",
                     13
                 );
                 Game.last.order = 401;
-                TieredUpgrade(
+                DarkysUpgradeCollection.TieredUpgrade(
                     "Pumping out new workers",
                     "Factories are <b>twice</b> as efficient.<q>Yes, we no longer need the birds and the bees, we can just create life itself!</q>",
                     "Factory",
                     13
                 );
                 Game.last.order = 501;
-                TieredUpgrade(
+                DarkysUpgradeCollection.TieredUpgrade(
                     "Baking the dough",
                     "Banks are <b>twice</b> as efficient.<q>Instead of making the bucks.</q>",
                     "Bank",
                     13
                 );
                 Game.last.order = 526;
-                TieredUpgrade(
+                DarkysUpgradeCollection.TieredUpgrade(
                     "Cookie cults",
                     "Temples are <b>twice</b> as efficient.<q>Every sunday they meet to bake in secret.</q>",
                     "Temple",
                     13
                 );
                 Game.last.order = 551;
-                TieredUpgrade(
+                DarkysUpgradeCollection.TieredUpgrade(
                     "Trix™️",
                     "Wizard towers are <b>twice</b> as efficient.<q>Brand cookies which taste pretty bad but not taken off the market for some reason. These darn wizards and their silly magic, keeping their brand cookies alive with their magic!</q>",
                     "Wizard tower",
                     13
                 );
                 Game.last.order = 576;
-                TieredUpgrade(
+                DarkysUpgradeCollection.TieredUpgrade(
                     "Hyperspeed",
                     "Shipments are <b>twice</b> as efficient.<q>HYPE, HYPE, HYPE, HYPE!</q>",
                     "Shipment",
                     13
                 );
                 Game.last.order = 601;
-                TieredUpgrade(
+                DarkysUpgradeCollection.TieredUpgrade(
                     "The way we make golden cookies",
                     "Alchemy labs are <b>twice</b> as efficient.<q>[REDACTED]</q>",
                     "Alchemy lab",
                     13
                 );
                 Game.last.order = 701;
-                TieredUpgrade(
+                DarkysUpgradeCollection.TieredUpgrade(
                     "Portal to nowhere",
                     "Portals are <b>twice</b> as efficient.<q>A quiet place to store the cookies. I don't know why you would want to do that though.</q>",
                     "Portal",
                     13
                 );
                 Game.last.order = 801;
-                TieredUpgrade(
+                DarkysUpgradeCollection.TieredUpgrade(
                     "Year of the weekly months without the days",
                     "Time machines are <b>twice</b> as efficient.<q>Counting the hourly seconds by minutes.</q>",
                     "Time machine",
                     13
                 );
                 Game.last.order = 901;
-                TieredUpgrade(
+                DarkysUpgradeCollection.TieredUpgrade(
                     "Bake matter",
                     "Antimatter condensers are <b>twice</b> as efficient.<q>Just a bunch of tiny balls during scientific baking.</q>",
                     "Antimatter condenser",
                     13
                 );
                 Game.last.order = 1001;
-                TieredUpgrade("Shiny!!", "Prisms are <b>twice</b> as efficient.<q>Let's baking!</q>", "Prism", 13);
+                DarkysUpgradeCollection.TieredUpgrade(
+                    "Shiny!!",
+                    "Prisms are <b>twice</b> as efficient.<q>Let's baking!</q>",
+                    "Prism",
+                    13
+                );
                 Game.last.order = 1101;
-                TieredUpgrade(
+                DarkysUpgradeCollection.TieredUpgrade(
                     "Casino fever",
                     "Chancemakers are <b>twice</b> as efficient.<q>A dangerous place for your wallet has become heaven on earth for it.</q>",
                     "Chancemaker",
                     13
                 );
                 Game.last.order = 1201;
-                TieredUpgrade(
+                DarkysUpgradeCollection.TieredUpgrade(
                     "Big brain time",
                     "Fractal engines are <b>twice</b> as efficient.<q>Think thonk.</q>",
                     "Fractal engine",
                     13
                 );
                 Game.last.order = 1301;
-                TieredUpgrade(
+                DarkysUpgradeCollection.TieredUpgrade(
                     "Darky can't actually code",
                     "Javascript consoles are <b>twice</b> as efficient.<q>He just happened to be smart enough to make both an achievement and upgrade mod for Cookie Clicker.</q>",
                     "Javascript console",
@@ -332,6 +313,18 @@
                 Game.Upgrades[upgradeName].bought = 1;
             }
         });
+    };
+    DarkysUpgradeCollection.Upgrade = (name, desc, price, icon, buyFunction) => {
+        const answer = new Game.Upgrade(name, desc, price, icon, buyFunction);
+        answer.darky = 1;
+
+        return answer;
+    };
+    DarkysUpgradeCollection.TieredUpgrade = (name, desc, building, tier) => {
+        const answer = new Game.TieredUpgrade(name, desc, building, tier);
+        answer.darky = 1;
+
+        return answer;
     };
     // -------------------------------------------------------------------
     Game.registerMod("Darkys Upgrade Collection", DarkysUpgradeCollection);
