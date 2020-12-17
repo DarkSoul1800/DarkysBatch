@@ -25,17 +25,6 @@
         }
     };
 
-    const oldBuy = Game.Upgrade.prototype.buy;
-    Game.Upgrade.prototype.buy = new Proxy(oldBuy, {
-        apply: (func, thisArg, args) => {
-            const answer = func.apply(thisArg, args);
-            if (answer) {
-                DarkySave.Upgrades[thisArg.name].bought = 1;
-            }
-            return answer;
-        },
-    });
-
     Game.crate = Game.crate
         .toString()
         .split("classes+=' upgrade';")
@@ -344,15 +333,6 @@
             }
         });
     };
-    const oldReset = Game.HardReset;
-    Game.HardReset = new Proxy(oldReset, {
-        apply: (func, thisArg, args) => {
-            if (args[0] === 2) {
-                DarkyUpgradesSaveDefault();
-            }
-            return func.apply(thisArg, args);
-        },
-    });
     // -------------------------------------------------------------------
     Game.registerMod("Darkys Upgrade Collection", DarkysUpgradeCollection);
     Game.Notify(

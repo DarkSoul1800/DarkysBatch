@@ -905,30 +905,6 @@
             Game.Achievements[achievementName].won = 1;
         });
     };
-    const oldReset = Game.HardReset;
-    Game.HardReset = new Proxy(oldReset, {
-        apply: (func, thisArg, args) => {
-            if (args[0] === 2) {
-                DarkyAchievSaveDefault();
-            }
-            return func.apply(thisArg, args);
-        },
-    });
-
-    // const DarkyAchievMigrateOldSave = () => {
-    //     for (const i in Game.Achievements) {
-    //         const me = Game.Achievements[i];
-    //         if (me.darky === 1) {
-    //             if (DarkySave[me.name]) {
-    //                 DarkySave.Achievements[me.name] = DarkySave[me.name];
-    //                 if (DarkySave[me.name]) {
-    //                     Win(me.name);
-    //                 }
-    //                 delete DarkySave[me.name];
-    //             }
-    //         }
-    //     }
-    // };
     // -------------------------------------------------------------------
     Game.registerMod("Darkys Achievement Package", DarkysAchievementPackage);
     Game.Notify(
