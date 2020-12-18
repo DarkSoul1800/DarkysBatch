@@ -55,259 +55,259 @@
             // Have X buildings
             () => {
                 if (Game.Objects["Cursor"].amount >= 900) {
-                    DarkysAchievementPackage.Win("Squeak goes the mouse");
+                    Game.Win("Squeak goes the mouse");
                 }
             },
             () => {
                 if (Game.Objects["Grandma"].amount >= 650) {
-                    DarkysAchievementPackage.Win("I'm too old for this");
+                    Game.Win("I'm too old for this");
                 }
             },
             () => {
                 if (Game.Objects["Farm"].amount >= 650) {
-                    DarkysAchievementPackage.Win("Gorden garden");
+                    Game.Win("Gorden garden");
                 }
             },
             () => {
                 if (Game.Objects["Mine"].amount >= 650) {
-                    DarkysAchievementPackage.Win("A fine mine you got there");
+                    Game.Win("A fine mine you got there");
                 }
             },
             () => {
                 if (Game.Objects["Factory"].amount >= 650) {
-                    DarkysAchievementPackage.Win("Working 24/7");
+                    Game.Win("Working 24/7");
                 }
             },
             () => {
                 if (Game.Objects["Bank"].amount >= 650) {
-                    DarkysAchievementPackage.Win("Bank on it");
+                    Game.Win("Bank on it");
                 }
             },
             () => {
                 if (Game.Objects["Temple"].amount >= 650) {
-                    DarkysAchievementPackage.Win("Temple pun");
+                    Game.Win("Temple pun");
                 }
             },
             () => {
                 if (Game.Objects["Wizard tower"].amount >= 650) {
-                    DarkysAchievementPackage.Win("It's magic, Joel!");
+                    Game.Win("It's magic, Joel!");
                 }
             },
             () => {
                 if (Game.Objects["Shipment"].amount >= 650) {
-                    DarkysAchievementPackage.Win("My shipment arrives in the morning");
+                    Game.Win("My shipment arrives in the morning");
                 }
             },
             () => {
                 if (Game.Objects["Alchemy lab"].amount >= 650) {
-                    DarkysAchievementPackage.Win("Turning cookies into gold since 2013");
+                    Game.Win("Turning cookies into gold since 2013");
                 }
             },
             () => {
                 if (Game.Objects["Portal"].amount >= 650) {
-                    DarkysAchievementPackage.Win("A portal inside of a portal");
+                    Game.Win("A portal inside of a portal");
                 }
             },
             () => {
                 if (Game.Objects["Time machine"].amount >= 650) {
-                    DarkysAchievementPackage.Win("It all began on the 8th of August, 2013");
+                    Game.Win("It all began on the 8th of August, 2013");
                 }
             },
             () => {
                 if (Game.Objects["Antimatter condenser"].amount >= 650) {
-                    DarkysAchievementPackage.Win("AntimatterCon");
+                    Game.Win("AntimatterCon");
                 }
             },
             () => {
                 if (Game.Objects["Prism"].amount >= 650) {
-                    DarkysAchievementPackage.Win("Stop being a prissm");
+                    Game.Win("Stop being a prissm");
                 }
             },
             () => {
                 if (Game.Objects["Chancemaker"].amount >= 650) {
-                    DarkysAchievementPackage.Win("And yet you probably never got a blab");
+                    Game.Win("And yet you probably never got a blab");
                 }
             },
             () => {
                 if (Game.Objects["Fractal engine"].amount >= 650) {
-                    DarkysAchievementPackage.Win("Gouchnox");
+                    Game.Win("Gouchnox");
                 }
             },
             () => {
                 if (Game.Objects["Javascript console"].amount >= 650) {
-                    DarkysAchievementPackage.Win("Follow the javascript");
+                    Game.Win("Follow the javascript");
                 }
             },
             () => {
                 if (Game.Objects["Idleverse"].amount >= 650) {
-                    DarkysAchievementPackage.Win("Don't call them fanverses, you fool");
+                    Game.Win("Don't call them fanverses, you fool");
                 }
             },
             // Have X of every building
             () => {
                 if (minAmount >= 650) {
-                    DarkysAchievementPackage.Win("Sexcentennial and a half");
+                    Game.Win("Sexcentennial and a half");
                 }
             },
             // Buildings owned
             () => {
                 if (Game.BuildingsOwned >= 3000) {
-                    DarkysAchievementPackage.Win("Owner of Buildings");
+                    Game.Win("Owner of Buildings");
                 }
             },
             () => {
                 if (Game.BuildingsOwned >= 5000) {
-                    DarkysAchievementPackage.Win("World-dominating company");
+                    Game.Win("World-dominating company");
                 }
             },
             () => {
                 if (Game.BuildingsOwned >= 6000) {
-                    DarkysAchievementPackage.Win("Creator of the Cookieverse");
+                    Game.Win("Creator of the Cookieverse");
                 }
             },
             () => {
                 if (Game.BuildingsOwned >= 7000) {
-                    DarkysAchievementPackage.Win("Build until you can't build anymore");
+                    Game.Win("Build until you can't build anymore");
                 }
             },
             () => {
                 if (Game.BuildingsOwned >= 9000) {
-                    DarkysAchievementPackage.Win("Overlord");
+                    Game.Win("Overlord");
                 }
             },
             () => {
                 if (Game.BuildingsOwned >= 10000) {
-                    DarkysAchievementPackage.Win("That's enough, boss");
+                    Game.Win("That's enough, boss");
                 }
             },
             // Upgrades owned
             () => {
                 if (Game.UpgradesOwned >= 500) {
-                    DarkysAchievementPackage.Win("Earth-shattering association");
+                    Game.Win("Earth-shattering association");
                 }
             },
             () => {
                 if (Game.UpgradesOwned >= 600) {
-                    DarkysAchievementPackage.Win("Maker of the Idleverse");
+                    Game.Win("Maker of the Idleverse");
                 }
             },
             // Prestige upgrades owned
             () => {
                 if (Game.Has("Lucky digit") && Game.Has("Lucky number") && Game.Has("Lucky payout")) {
-                    DarkysAchievementPackage.Win("Secret fortune");
+                    Game.Win("Secret fortune");
                 }
             },
             () => {
                 if (prestigeUpgradesOwned >= 15) {
-                    DarkysAchievementPackage.Win("Pretty prestige");
+                    Game.Win("Pretty prestige");
                 }
             },
             () => {
                 if (prestigeUpgradesOwned >= 30) {
-                    DarkysAchievementPackage.Win("Live and learn");
+                    Game.Win("Live and learn");
                 }
             },
             () => {
                 if (prestigeUpgradesOwned >= 60) {
-                    DarkysAchievementPackage.Win("We will stay with you forever");
+                    Game.Win("We will stay with you forever");
                 }
             },
             // Big cookie clicks
             () => {
                 if (Game.cookieClicks >= 1000) {
-                    DarkysAchievementPackage.Win("Clicker");
+                    Game.Win("Clicker");
                 }
             },
             () => {
                 if (Game.cookieClicks >= 10000) {
-                    DarkysAchievementPackage.Win("Advanced Clicker");
+                    Game.Win("Advanced Clicker");
                 }
             },
             () => {
                 if (Game.cookieClicks >= 25000) {
-                    DarkysAchievementPackage.Win("Expert Clicker");
+                    Game.Win("Expert Clicker");
                 }
             },
             // Make X cookies from clicking
             () => {
                 if (Game.handmadeCookies >= 1e29) {
-                    DarkysAchievementPackage.Win("Stop it, it clickles");
+                    Game.Win("Stop it, it clickles");
                 }
             },
             () => {
                 if (Game.handmadeCookies >= 1e31) {
-                    DarkysAchievementPackage.Win("Keep up the click");
+                    Game.Win("Keep up the click");
                 }
             },
             () => {
                 if (Game.handmadeCookies >= 1e33) {
-                    DarkysAchievementPackage.Win("Clicking is the new booping");
+                    Game.Win("Clicking is the new booping");
                 }
             },
             () => {
                 if (Game.handmadeCookies >= 1e35) {
-                    DarkysAchievementPackage.Win("The final click");
+                    Game.Win("The final click");
                 }
             },
             () => {
                 if (Game.handmadeCookies >= 1e37) {
-                    DarkysAchievementPackage.Win("Sike, thats the wrong achievement");
+                    Game.Win("Sike, thats the wrong achievement");
                 }
             },
             () => {
                 if (Game.handmadeCookies >= 1e39) {
-                    DarkysAchievementPackage.Win("How about we tap the cookie now");
+                    Game.Win("How about we tap the cookie now");
                 }
             },
             () => {
                 if (Game.handmadeCookies >= 1e41) {
-                    DarkysAchievementPackage.Win("Cookie Destroyer");
+                    Game.Win("Cookie Destroyer");
                 }
             },
             () => {
                 if (Game.handmadeCookies >= 1e43) {
-                    DarkysAchievementPackage.Win("Give it a click");
+                    Game.Win("Give it a click");
                 }
             },
             () => {
                 if (Game.handmadeCookies >= 1e45) {
-                    DarkysAchievementPackage.Win("Clicking Frenzy: Our Lord and Saviour");
+                    Game.Win("Clicking Frenzy: Our Lord and Saviour");
                 }
             },
             () => {
                 if (Game.handmadeCookies >= 1e47) {
-                    DarkysAchievementPackage.Win("Hand-made cookies are still the best");
+                    Game.Win("Hand-made cookies are still the best");
                 }
             },
             () => {
                 if (Game.handmadeCookies >= 1e49) {
-                    DarkysAchievementPackage.Win("My strange clicking addiction");
+                    Game.Win("My strange clicking addiction");
                 }
             },
             // Prestige amount
             () => {
                 if (Game.prestige >= 100) {
-                    DarkysAchievementPackage.Win("Heavenly");
+                    Game.Win("Heavenly");
                 }
             },
             () => {
                 if (Game.prestige >= 10000) {
-                    DarkysAchievementPackage.Win("Transcendent");
+                    Game.Win("Transcendent");
                 }
             },
             () => {
                 if (Game.prestige >= 1000000) {
-                    DarkysAchievementPackage.Win("Higher energy state");
+                    Game.Win("Higher energy state");
                 }
             },
             () => {
                 if (Game.prestige >= 1e8) {
-                    DarkysAchievementPackage.Win("Omniverse");
+                    Game.Win("Omniverse");
                 }
             },
             () => {
                 if (Game.prestige >= 1e10) {
-                    DarkysAchievementPackage.Win("The Ascendant");
+                    Game.Win("The Ascendant");
                 }
             },
             // Themed upgrades
@@ -320,7 +320,7 @@
                     Game.Has("Round british tea biscuits with heart motif") &&
                     Game.Has("Round chocolate british tea biscuits with heart motif")
                 ) {
-                    DarkysAchievementPackage.Win("Getting fancy");
+                    Game.Win("Getting fancy");
                 }
             },
             () => {
@@ -342,7 +342,7 @@
                     Game.Has("Dim Dams") &&
                     Game.Has("Pokey")
                 ) {
-                    DarkysAchievementPackage.Win("You wanna be popular?");
+                    Game.Win("You wanna be popular?");
                 }
             },
             () => {
@@ -357,7 +357,7 @@
                     Game.Has("Licorice macarons") &&
                     Game.Has("Earl Grey macarons")
                 ) {
-                    DarkysAchievementPackage.Win("Emmanuel Macaron");
+                    Game.Win("Emmanuel Macaron");
                 }
             },
             () => {
@@ -368,7 +368,7 @@
                     Game.Has("Butter slabs") &&
                     Game.Has("Butter swirls")
                 ) {
-                    DarkysAchievementPackage.Win("Rich butterfingers");
+                    Game.Win("Rich butterfingers");
                 }
             },
             () => {
@@ -380,7 +380,7 @@
                     Game.Has("High-definition cookie") &&
                     Game.Has("Crackers")
                 ) {
-                    DarkysAchievementPackage.Win("Bake me, maybe?");
+                    Game.Win("Bake me, maybe?");
                 }
             },
             () => {
@@ -393,7 +393,7 @@
                     Game.Has("Pizza") &&
                     Game.Has("Candy")
                 ) {
-                    DarkysAchievementPackage.Win("Burger Clicker");
+                    Game.Win("Burger Clicker");
                 }
             },
             () => {
@@ -407,7 +407,7 @@
                     Game.Has("Lemon meringue pie") &&
                     Game.Has("Butter croissant")
                 ) {
-                    DarkysAchievementPackage.Win("Pastries from the past");
+                    Game.Win("Pastries from the past");
                 }
             },
             () => {
@@ -428,7 +428,7 @@
                     Game.Has("Kitten angels") &&
                     Game.Has("Fortune #103")
                 ) {
-                    DarkysAchievementPackage.Win("Purrfect Perfection");
+                    Game.Win("Purrfect Perfection");
                 }
             },
             () => {
@@ -450,7 +450,7 @@
                     Game.Has("Script grannies") &&
                     Game.Has("Perforated mille-feuille cosmos")
                 ) {
-                    DarkysAchievementPackage.Win("It's sweet, sweet, sweet Synergy");
+                    Game.Win("It's sweet, sweet, sweet Synergy");
                 }
             },
             () => {
@@ -472,7 +472,7 @@
                     Game.Has("Tombola computing") &&
                     Game.Has("Infraverses and superverses")
                 ) {
-                    DarkysAchievementPackage.Win("Out of Energy? Get Synergy!");
+                    Game.Win("Out of Energy? Get Synergy!");
                 }
             },
             () => {
@@ -482,7 +482,7 @@
                     Game.Has("Dragon fang") &&
                     Game.Has("Dragon teddy bear")
                 ) {
-                    DarkysAchievementPackage.Win("Spike the dragon");
+                    Game.Win("Spike the dragon");
                 }
             },
             () => {
@@ -495,34 +495,34 @@
                     Game.Has("Ichor syrup") &&
                     Game.Has("Wheat slims")
                 ) {
-                    DarkysAchievementPackage.Win("Collecting these is like growing plants");
+                    Game.Win("Collecting these is like growing plants");
                 }
             },
             // Buildings' level
             () => {
                 if (buildingsLevels.filter(level => level >= 1).length === Game.ObjectsById.length) {
-                    DarkysAchievementPackage.Win("Level 1 complete!");
+                    Game.Win("Level 1 complete!");
                 }
             },
             () => {
                 if (buildingsLevels.filter(level => level >= 5).length === Game.ObjectsById.length) {
-                    DarkysAchievementPackage.Win("Five Hive");
+                    Game.Win("Five Hive");
                 }
             },
             () => {
                 if (buildingsLevels.filter(level => level >= 10).length === Game.ObjectsById.length) {
-                    DarkysAchievementPackage.Win("This took forever");
+                    Game.Win("This took forever");
                 }
             },
             // Shadow achievements
             () => {
                 if (Game.bakeryName === "Darky") {
-                    DarkysAchievementPackage.Win("Mod-God complex");
+                    Game.Win("Mod-God complex");
                 }
             },
             () => {
                 if (Game.goldenClicks >= 77777) {
-                    DarkysAchievementPackage.Win("Golden Jackpot");
+                    Game.Win("Golden Jackpot");
                 }
             },
         ]);
@@ -900,7 +900,7 @@
                 Game.last.clickFunction = () => {
                     if (!Game.HasAchiev("All you had to do was ask")) {
                         PlaySound("snd/tick.mp3");
-                        DarkysAchievementPackage.Win("All you had to do was ask");
+                        Game.Win("All you had to do was ask");
                     }
                 };
             },
@@ -944,13 +944,6 @@
         answer.darky = 1;
 
         return answer;
-    };
-    DarkysAchievementPackage.Win = what => {
-        Game.Win(what);
-        if (Game.Achievements[what] && Game.Achievements[what].darky === 1) {
-            DarkySave.Achievements[what] = 1;
-            DarkyAchievSaveConfig();
-        }
     };
     // -------------------------------------------------------------------
     Game.registerMod("Darkys Achievement Package", DarkysAchievementPackage);
