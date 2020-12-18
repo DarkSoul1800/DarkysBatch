@@ -1,21 +1,14 @@
 {
     const DarkysUpgradeCollection = {};
 
-    Game.crate = Game.crate
-        .toString()
-        .split("classes+=' upgrade';")
-        .join("classes+=' upgrade';\nif (me.darky == 1) classes+=' darky';//Darky's upgrade package injection");
+    // Game.crate = Game.crate
+    //     .toString()
+    //     .split("classes+=' upgrade';")
+    //     .join("classes+=' upgrade';\nif (me.darky === 1) classes+=' darky';//Darky's upgrade package injection");
 
-    if (typeof Darky === "undefined") {
-        const style = document.createElement("style");
-        style.textContent =
-            ".darky:before{background:url(https://i.imgur.com/q8nNdkI.png);background-position:120px 0px;}";
-        document.head.appendChild(style);
-    }
-
-    if (typeof Darky === "undefined") {
-        Darky = {};
-    }
+    const style = document.createElement("style");
+    style.textContent = ".darky:before{background:url(https://i.imgur.com/q8nNdkI.png);background-position:120px 0px;}";
+    document.head.appendChild(style);
     // -------------------------------------------------------------------
     DarkysUpgradeCollection.init = () => {
         Game.registerHook("check", [

@@ -1,21 +1,20 @@
 {
     const DarkysAchievementPackage = {};
 
-    Game.crate = Game.crate
-        .toString()
-        .split("shadow';")
-        .join(" shadow';\nif (me.darky == 1) classes+=' darky'; //Darky's achievement package injection")
-        .split("mysterious?")
-        .join(
-            "mysterious? (me.darky == 1) ? 'background-image:url(\\'https://i.imgur.com/JKKvixm.png\\')'/*Darky's achievement package injection*/ : "
-        );
-
-    Game.crateTooltip = Game.crateTooltip
-        .toString()
-        .split("if (mysterious) icon=[0,7];")
-        .join(
-            "if (mysterious) icon=[0,7]; if (mysterious && me.darky == 1) icon = [1, 4, 'https://i.imgur.com/AWmeHiO.png']"
-        );
+    // Game.crate = Game.crate
+    //     .toString()
+    //     .split("shadow';")
+    //     .join(" shadow';\nif (me.darky === 1) classes+=' darky'; //Darky's achievement package injection")
+    //     .split("mysterious?")
+    //     .join(
+    //         "mysterious? (me.darky === 1) ? 'background-image:url(\\'https://i.imgur.com/JKKvixm.png\\')'/*Darky's achievement package injection*/ : "
+    //     );
+    // Game.crateTooltip = Game.crateTooltip
+    //     .toString()
+    //     .split("if (mysterious) icon=[0,7];")
+    //     .join(
+    //         "if (mysterious) icon=[0,7]; if (mysterious && me.darky === 1) icon = [1, 4, 'https://i.imgur.com/AWmeHiO.png']"
+    //     );
 
     const style = document.createElement("style");
     style.textContent = ".darky:before{background:url(https://i.imgur.com/q8nNdkI.png);background-position:120px 0px;}";
