@@ -526,9 +526,10 @@
                 }
             },
         ]);
-        Game.registerHook("create", [
+        // Custom content creation
+        {
             // Have X buildings
-            () => {
+            {
                 DarkysAchievementPackage.Achievement("Squeak goes the mouse", "Have <b>900</b> cursors.", [0, 19]);
                 Game.last.order = 1060;
                 DarkysAchievementPackage.Achievement("I'm too old for this", "Have <b>650</b> grandmas.", [1, 21]);
@@ -594,18 +595,18 @@
                     [33, 21]
                 );
                 Game.last.order = 2410;
-            },
+            }
             // Have X of every building
-            () => {
+            {
                 DarkysAchievementPackage.Achievement(
                     "Sexcentennial and a half",
                     "Have at least <b>650 of everything</b>.<q>Yes I just did that.</q>",
                     [1, 3, "https://i.imgur.com/AWmeHiO.png"]
                 );
                 Game.last.order = 7004;
-            },
+            }
             // Buildings owned
-            () => {
+            {
                 DarkysAchievementPackage.Achievement("Owner of Buildings", "Own <b>3000</b> buildings.", [
                     0,
                     0,
@@ -642,9 +643,9 @@
                     "https://i.imgur.com/AWmeHiO.png",
                 ]);
                 Game.last.order = 5017;
-            },
+            }
             // Upgrades owned
-            () => {
+            {
                 DarkysAchievementPackage.Achievement("Earth-shattering association", "Purchase <b>500</b> upgrades.", [
                     2,
                     1,
@@ -657,9 +658,9 @@
                     "https://i.imgur.com/AWmeHiO.png",
                 ]);
                 Game.last.order = 6004;
-            },
+            }
             // Prestige upgrades owned
-            () => {
+            {
                 DarkysAchievementPackage.Achievement(
                     "Secret fortune",
                     "Purchase the <b>3 secret prestige upgrades</b>.<q>You got more than one ace up your sleeve, huh?",
@@ -684,9 +685,9 @@
                     [19, 46, "https://i.imgur.com/3jNJJNw.png"]
                 );
                 Game.last.order = 6007;
-            },
+            }
             // Big cookie clicks
-            () => {
+            {
                 DarkysAchievementPackage.Achievement("Clicker", "Click on the big cookie <b>1,000</b> times.", [
                     11,
                     22,
@@ -703,9 +704,9 @@
                     24,
                 ]);
                 Game.last.order = 1022;
-            },
+            }
             // Make X cookies from clicking
-            () => {
+            {
                 DarkysAchievementPackage.Achievement(
                     "Stop it, it clickles",
                     "Make <b>100 octillion</b> cookies from clicking.",
@@ -772,9 +773,9 @@
                     [6, 5, "https://i.imgur.com/AWmeHiO.png"]
                 );
                 Game.last.order = 1019;
-            },
+            }
             // Prestige amount
-            () => {
+            {
                 DarkysAchievementPackage.Achievement("Heavenly", "Reach prestige level <b>100</b>.", [19, 7]);
                 Game.last.order = 30010;
                 DarkysAchievementPackage.Achievement("Transcendent", "Reach prestige level <b>10,000</b>.", [18, 7]);
@@ -791,9 +792,9 @@
                     7,
                 ]);
                 Game.last.order = 30014;
-            },
+            }
             // Themed upgrades
-            () => {
+            {
                 DarkysAchievementPackage.Achievement("Getting fancy", "Purchase <b>all fancy biscuits</b>.", [21, 8]);
                 Game.last.order = 21101;
                 DarkysAchievementPackage.Achievement("You wanna be popular?", "Purchase <b>all popular biscuits</b>.", [
@@ -851,9 +852,9 @@
                     [24, 25]
                 );
                 Game.last.order = 21108;
-            },
+            }
             // Buildings' level
-            () => {
+            {
                 DarkysAchievementPackage.Achievement("Level 1 complete!", "Reach level <b>1</b> of every building.", [
                     0,
                     2,
@@ -872,9 +873,9 @@
                     "https://i.imgur.com/AWmeHiO.png",
                 ]);
                 Game.last.order = 5019;
-            },
+            }
             // Shadow achievements
-            () => {
+            {
                 DarkysAchievementPackage.Achievement("Mod-God complex", "Name yourself <b>Darky</b>.<q>Ducky.</q>", [
                     2,
                     12,
@@ -888,9 +889,9 @@
                 ]);
                 Game.last.order = 10001;
                 Game.last.pool = "shadow";
-            },
+            }
             // Etc
-            () => {
+            {
                 DarkysAchievementPackage.Achievement(
                     "All you had to do was ask",
                     "Click this custom achievement's slot.<q>Here you go.</q>",
@@ -903,8 +904,8 @@
                         Game.Win("All you had to do was ask");
                     }
                 };
-            },
-        ]);
+            }
+        }
     };
     DarkysAchievementPackage.save = () => {
         const DarkySave = {};
