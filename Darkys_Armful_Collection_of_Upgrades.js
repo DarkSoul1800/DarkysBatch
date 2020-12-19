@@ -1,16 +1,21 @@
 {
     const DarkysUpgradeCollection = {};
 
-    // Game.crate = Game.crate
-    //     .toString()
-    //     .split("classes+=' upgrade';")
-    //     .join("classes+=' upgrade';\nif (me.darky === 1) classes+=' darky';//Darky's upgrade package injection");
-
-    const style = document.createElement("style");
-    style.textContent = ".darky:before{background:url(https://i.imgur.com/q8nNdkI.png);background-position:120px 0px;}";
-    document.head.appendChild(style);
-    // -------------------------------------------------------------------
     DarkysUpgradeCollection.init = () => {
+        // Overrides
+        const style = document.createElement("style");
+        style.textContent =
+            ".darky:before{background:url(https://i.imgur.com/q8nNdkI.png);background-position:120px 0px;}";
+        document.head.appendChild(style);
+        Game.crate = new Function(
+            `return ${Game.crate
+                .toString()
+                .split("classes+=' upgrade';")
+                .join(
+                    "classes+=' upgrade';\nif (me.darky === 1) classes+=' darky';//Darky's upgrade package injection"
+                )}`
+        )();
+
         Game.registerHook("check", [
             // () => {
             //     if (
@@ -268,7 +273,6 @@
             Game.last.order = 1401;
         }
     };
-    // -------------------------------------------------------------------
     DarkysUpgradeCollection.save = () => {
         const DarkySave = {};
 
@@ -318,7 +322,7 @@
 
         return answer;
     };
-    // -------------------------------------------------------------------
+
     Game.registerMod("Darkys Upgrade Collection", DarkysUpgradeCollection);
     Game.Notify(
         "Darky's Armful Collection of Upgrades 1.1",

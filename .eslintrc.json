@@ -11,6 +11,7 @@
     "rules": {
         "dot-notation": "off",
         "no-lone-blocks": "off",
+        "no-new-func": "off",
         "no-undef": "off",
         "no-unused-vars": "warn",
         "prettier/prettier": "error",
