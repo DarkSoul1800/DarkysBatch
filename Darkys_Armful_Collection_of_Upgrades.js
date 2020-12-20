@@ -274,17 +274,20 @@
         }
     };
     DarkysUpgradeCollection.save = () => {
-        const DarkySave = {};
+        const DarkySave = {
+            boughtUpgrades: [],
+            unlockedUpgrades: [],
+        };
 
         Game.UpgradesById.forEach(upgrade => {
-            if (upgrade.darky && upgrade.unlocked) {
-                const formattedName = upgrade.name
-                    .toLowerCase()
-                    .replace(/\s+(.)/g, (match, group) => group.toUpperCase());
+            if (upgrade.darky) {
+                if (upgrade.unlocked) {
+                    DarkySave.unlockedUpgrades.push(upgrade.name);
+                }
 
-                Object.assign(DarkySave, {
-                    [formattedName]: !!upgrade.bought,
-                });
+                if (upgrade.bought) {
+                    DarkySave.boughtUpgrades.push(upgrade.name);
+                }
             }
         });
 
@@ -293,21 +296,11 @@
     DarkysUpgradeCollection.load = saveString => {
         const save = JSON.parse(saveString);
 
-        const entries = Object.keys(save);
-        const names = Object.keys(save).map(upgradeName => {
-            const sentenceCase = upgradeName.replace(/([A-Z])/g, (group, match) => ` ${match.toLowerCase()}`);
-            const normalName = sentenceCase.charAt(0).toUpperCase() + sentenceCase.slice(1);
-
-            return normalName;
+        save.unlockedUpgrades.forEach(upgradeName => {
+            Game.Achievements[upgradeName].unlocked = 1;
         });
-
-        entries.forEach((upgrade, index) => {
-            const upgradeName = names[index];
-            Unlock(upgradeName);
-
-            if (save[upgrade] === true) {
-                Game.Upgrades[upgradeName].bought = 1;
-            }
+        save.boughtUpgrades.forEach(upgradeName => {
+            Game.Achievements[upgradeName].bought = 1;
         });
     };
     DarkysUpgradeCollection.Upgrade = (name, desc, price, icon, buyFunction) => {

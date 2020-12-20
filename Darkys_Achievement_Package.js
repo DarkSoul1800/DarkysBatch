@@ -914,17 +914,13 @@
         }
     };
     DarkysAchievementPackage.save = () => {
-        const DarkySave = {};
+        const DarkySave = {
+            unlockedAchievs: [],
+        };
 
         Game.AchievementsById.forEach(achievement => {
             if (achievement.darky && achievement.won) {
-                const formattedName = achievement.name
-                    .toLowerCase()
-                    .replace(/\s+(.)/g, (match, group) => group.toUpperCase());
-
-                Object.assign(DarkySave, {
-                    [formattedName]: true,
-                });
+                DarkySave.unlockedAchievs.push(achievement.name);
             }
         });
 
@@ -933,16 +929,7 @@
     DarkysAchievementPackage.load = saveString => {
         const save = JSON.parse(saveString);
 
-        const entries = Object.keys(save);
-        const names = Object.keys(save).map(achievementName => {
-            const sentenceCase = achievementName.replace(/([A-Z])/g, (group, match) => ` ${match.toLowerCase()}`);
-            const normalName = sentenceCase.charAt(0).toUpperCase() + sentenceCase.slice(1);
-
-            return normalName;
-        });
-
-        entries.forEach((achievement, index) => {
-            const achievementName = names[index];
+        save.unlockedAchievs.forEach(achievementName => {
             Game.Achievements[achievementName].won = 1;
         });
     };
