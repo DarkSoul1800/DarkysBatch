@@ -1,6 +1,6 @@
 import Upgrade from "UpgradesRoot/Upgrade";
 
-const original = {
+const original = () => {
     // No idea how to make this one work at all, help would be appreciated! The idea was that Everything is 0.005% more efficient per building.
     // Upgrade(
     //     "Building up",
