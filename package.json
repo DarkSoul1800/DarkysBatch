@@ -1,6 +1,6 @@
 {
     "name": "darkys_achievements_and_upgrades_batch",
-    "version": "2.0",
+    "version": "1.7.1",
     "description": "Darky's Achievements and Upgrades Batch is a bundle mod containing Darky's Achievement Package and Darky's Armful Collection of Upgrades and when loaded into Cookie Clicker will give you a lot of new custom achievements and upgrades for the game! And yes, those achievements add to your milk!",
     "keywords": [
         "JavaScript",
@@ -21,6 +21,9 @@
     "author": {
         "name": "Darky"
     },
+    "scripts": {
+        "build": "webpack"
+    },
     "husky": {
         "hooks": {
             "pre-commit": "lint-staged"
@@ -28,22 +31,25 @@
     },
     "lint-staged": {
         "src/**/*.ts": [
-            "eslint --fix"
+            "eslint --fix",
+            "yarn build",
+            "git add dist/*"
         ]
     },
-    "dependencies": {
-        "eslint": "^7.15.0",
-        "eslint-config-prettier": "^7.0.0",
+    "dependencies": {},
+    "devDependencies": {
+        "eslint": "^7.16.0",
+        "eslint-config-prettier": "^7.1.0",
         "eslint-config-standard": "^16.0.2",
         "eslint-plugin-import": "^2.22.1",
         "eslint-plugin-node": "^11.1.0",
-        "eslint-plugin-prettier": "^3.2.0",
-        "eslint-plugin-promise": "^4.2.1"
-    },
-    "devDependencies": {
+        "eslint-plugin-prettier": "^3.3.0",
+        "eslint-plugin-promise": "^4.2.1",
         "husky": "^4.3.0",
         "jest": "^26.0.1",
         "lint-staged": "^10.4.0",
-        "prettier": "^2.0.4"
+        "prettier": "^2.0.4",
+        "webpack": "^5.11.0",
+        "webpack-cli": "^4.2.0"
     }
 }
