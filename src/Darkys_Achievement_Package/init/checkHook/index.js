@@ -1,3 +1,16 @@
+const buildingsLevels = Game.ObjectsById.map(object => object.level);
+let minAmount = 0;
+let prestigeUpgradesOwned = 0;
+
+Game.ObjectsById.forEach(object => {
+    minAmount = Math.min(object.amount, 100000);
+});
+Game.PrestigeUpgrades.forEach(upgrade => {
+    if (upgrade.bought) {
+        prestigeUpgradesOwned++;
+    }
+});
+
 const checkHookContent = [
     // Have X buildings
     () => {
