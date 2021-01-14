@@ -1,6 +1,6 @@
 # Darky's Achievements and Upgrades Batch
 
-Hey there! My name is Darky and welcome to **Darky's Achievements and Upgrades Batch**, a *bundle* of 2 mods i made for the popular and Father of Idle Games: [Cookie Clicker](https://cookieclicker.eu/cookieclicker/). Those 2 mods in question are: *Darky's Achievement Package* and *Darky's Armful Collection of Upgrades*.
+Hey there! My name is Darky and welcome to **Darky's Achievements and Upgrades Batch**, a *bundle* of 2 mods i made for the popular and Father of Idle Games: [Cookie Clicker](https://orteil.dashnet.org/cookieclicker/). Those 2 mods in question are: *Darky's Achievement Package* and *Darky's Armful Collection of Upgrades*.
 
 ## What is Darky's Achievements and Upgrades Batch?
 
@@ -10,7 +10,7 @@ If you like to spoil yourself on all the new achievements and upgrades in this B
 
 ## Current version
 
-Check the [releases page](https://github.com/DarkSoul1800/DarkysBatch/releases) for a full history of all versions of both the Package and the Collection (excluding the Pastebin versions).
+Check the [releases page](https://github.com/hyoretsu/DarkysBatch/releases) for a full history of all versions of both the Package and the Collection (excluding the Pastebin versions).
 
 # How do I load these mods?
 
@@ -26,7 +26,7 @@ There are a few ways to load these mods:
 
 ```javascript
 javascript: (function () {
-	Game.LoadMod('https://darksoul1800.github.io/DarkysBatch/Darkys_Achievement_Package.js');
+	Game.LoadMod('https://hyoretsu.github.io/DarkysBatch/dist/Darkys_Achievement_Package.js');
 }());
 ```
 
@@ -34,7 +34,7 @@ javascript: (function () {
 
 ```javascript
 javascript: (function () {
-	Game.LoadMod('https://darksoul1800.github.io/DarkysBatch/Darkys_Armful_Collection_of_Upgrades.js');
+	Game.LoadMod('https://hyoretsu.github.io/DarkysBatch/dist/Darkys_Armful_Collection_of_Upgrades.js');
 }());
 ```
 
@@ -42,7 +42,7 @@ javascript: (function () {
 
 ```javascript
 javascript: (function () {
-	Game.LoadMod('https://darksoul1800.github.io/DarkysBatch/Darkys_Achievements_and_Upgrades_Batch.js');
+	Game.LoadMod('https://hyoretsu.github.io/DarkysBatch/dist/Darkys_Achievements_and_Upgrades_Batch.js');
 }());
 ```
 
@@ -56,7 +56,10 @@ Want the mods to be loaded automatically everytime you open the game? Well for t
 // ==UserScript==
 // @name Darky's Achievement Package
 // @namespace Package
-// @include https://cookieclicker.eu/cookieclicker/
+// @include http://orteil.dashnet.org/cookieclicker/
+// @include https://orteil.dashnet.org/cookieclicker/
+// @include http://orteil.dashnet.org/cookieclicker/beta/
+// @include https://orteil.dashnet.org/cookieclicker/beta/
 // @version 1
 // @grant none
 // ==/UserScript==
@@ -64,7 +67,7 @@ Want the mods to be loaded automatically everytime you open the game? Well for t
 var code = "(" + (function() {
     var checkReady = setInterval(function() {
         if (typeof Game.ready !== 'undefined' && Game.ready) {
-            Game.LoadMod('https://darksoul1800.github.io/DarkysBatch/Darkys_Achievement_Package.js');
+            Game.LoadMod('https://hyoretsu.github.io/DarkysBatch/dist/Darkys_Achievement_Package.js');
             clearInterval(checkReady);
         }
     }, 1000);
@@ -80,7 +83,10 @@ window.eval(code);
 // ==UserScript==
 // @name Darky's Armful Collection of Upgrades
 // @namespace Collection
-// @include https://cookieclicker.eu/cookieclicker/
+// @include http://orteil.dashnet.org/cookieclicker/
+// @include https://orteil.dashnet.org/cookieclicker/
+// @include http://orteil.dashnet.org/cookieclicker/beta/
+// @include https://orteil.dashnet.org/cookieclicker/beta/
 // @version 1
 // @grant none
 // ==/UserScript==
@@ -88,7 +94,7 @@ window.eval(code);
 var code = "(" + (function() {
     var checkReady = setInterval(function() {
         if (typeof Game.ready !== 'undefined' && Game.ready) {
-            Game.LoadMod('https://darksoul1800.github.io/DarkysBatch/Darkys_Armful_Collection_of_Upgrades.js');
+            Game.LoadMod('https://hyoretsu.github.io/DarkysBatch/dist/Darkys_Armful_Collection_of_Upgrades.js');
             clearInterval(checkReady);
         }
     }, 1000);
@@ -104,7 +110,10 @@ window.eval(code);
 // ==UserScript==
 // @name Darky's Achievements and Upgrades Batch
 // @namespace Batch
-// @include https://cookieclicker.eu/cookieclicker/
+// @include http://orteil.dashnet.org/cookieclicker/
+// @include https://orteil.dashnet.org/cookieclicker/
+// @include http://orteil.dashnet.org/cookieclicker/beta/
+// @include https://orteil.dashnet.org/cookieclicker/beta/
 // @version 1
 // @grant none
 // ==/UserScript==
@@ -112,7 +121,7 @@ window.eval(code);
 var code = "(" + (function() {
     var checkReady = setInterval(function() {
         if (typeof Game.ready !== 'undefined' && Game.ready) {
-            Game.LoadMod('https://darksoul1800.github.io/DarkysBatch/Darkys_Achievements_and_Upgrades_Batch.js');
+            Game.LoadMod('https://hyoretsu.github.io/DarkysBatch/dist/Darkys_Achievements_and_Upgrades_Batch.js');
             clearInterval(checkReady);
         }
     }, 1000);
@@ -123,7 +132,7 @@ window.eval(code);
 
 # Bugs and suggestions
 
-Any bugs or suggestions you have should be **opened as an issue** [here](https://github.com/DarkSoul1800/DarkysBatch/issues) for easier tracking. This allows me to close issues once they're fixed.
+Any bugs or suggestions you have should be **opened as an issue** [here](https://github.com/hyoretsu/DarkysBatch/issues) for easier tracking. This allows me to close issues once they're fixed.
 
 # Is that all?
 
