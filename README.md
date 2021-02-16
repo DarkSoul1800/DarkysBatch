@@ -16,6 +16,14 @@ Check the [releases page](https://github.com/hyoretsu/DarkysCheevosPackage/relea
 
 There are a few ways to load these mods:
 
+## CCRepo (Preferred)
+
+Courtesy of [Z](https://github.com/TheGLander), it's a new centralized way of posting/installing Cookie Clicker mods.
+
+1. Install [this extension](https://chrome.google.com/webstore/detail/cppkies-mod-manager/bjooleocnlcahbnfieoojeijeddfdnfe) if you're on Chrome or [this one](https://addons.mozilla.org/firefox/addon/cppkies-mod-manager) if you're on Firefox.
+2. Go to [CCRepo](https://ccrepo.glander.club/all).
+3. Click on Darky's Achievement Package and then "Subscribe".
+
 ## Bookmarklet
 
 1. Copy this code and save it as a bookmark.
