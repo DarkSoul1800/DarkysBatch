@@ -1,6 +1,6 @@
-import Achievement from 'AchievementsRoot/Achievement';
+import Achievement from 'Achievement';
 
-const spritesheet = 'https://hyoretsu.github.io/DarkysBatch/static/achievements.png';
+const spritesheet = 'https://hyoretsu.github.io/DarkysCheevosPackage/static/achievements.png';
 const externalSpritesheet = 'https://i.imgur.com/3jNJJNw.png';
 
 const createHook = () => {
