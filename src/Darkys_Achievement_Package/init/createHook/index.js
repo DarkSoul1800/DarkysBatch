@@ -1,5 +1,8 @@
 import Achievement from "AchievementsRoot/Achievement";
 
+const spritesheet = "https://hyoretsu.github.io/DarkysBatch/static/achievements.png";
+const externalSpritesheet = "https://i.imgur.com/3jNJJNw.png";
+
 const createHook = () => {
     // Have X buildings
     {
@@ -45,50 +48,30 @@ const createHook = () => {
         Achievement("Sexcentennial and a half", "Have at least <b>650 of everything</b>.<q>Yes I just did that.</q>", [
             1,
             3,
-            "https://i.imgur.com/AWmeHiO.png",
+            spritesheet,
         ]);
         Game.last.order = 7004;
     }
     // Buildings owned
     {
-        Achievement("Owner of Buildings", "Own <b>3000</b> buildings.", [0, 0, "https://i.imgur.com/AWmeHiO.png"]);
+        Achievement("Owner of Buildings", "Own <b>3000</b> buildings.", [0, 0, spritesheet]);
         Game.last.order = 5010;
-        Achievement("World-dominating company", "Own <b>5000</b> buildings.", [
-            2,
-            0,
-            "https://i.imgur.com/AWmeHiO.png",
-        ]);
+        Achievement("World-dominating company", "Own <b>5000</b> buildings.", [2, 0, spritesheet]);
         Game.last.order = 5012;
-        Achievement("Creator of the Cookieverse", "Own <b>6000</b> buildings.", [
-            3,
-            0,
-            "https://i.imgur.com/AWmeHiO.png",
-        ]);
+        Achievement("Creator of the Cookieverse", "Own <b>6000</b> buildings.", [3, 0, spritesheet]);
         Game.last.order = 5013;
-        Achievement("Build until you can't build anymore", "Own <b>7000</b> buildings.", [
-            4,
-            0,
-            "https://i.imgur.com/AWmeHiO.png",
-        ]);
+        Achievement("Build until you can't build anymore", "Own <b>7000</b> buildings.", [4, 0, spritesheet]);
         Game.last.order = 5014;
-        Achievement("Overlord", "Own <b>9000</b> buildings.", [4, 4, "https://i.imgur.com/AWmeHiO.png"]);
+        Achievement("Overlord", "Own <b>9000</b> buildings.", [4, 4, spritesheet]);
         Game.last.order = 5016;
-        Achievement("That's enough, boss", "Own <b>10000</b> buildings.", [6, 0, "https://i.imgur.com/AWmeHiO.png"]);
+        Achievement("That's enough, boss", "Own <b>10000</b> buildings.", [6, 0, spritesheet]);
         Game.last.order = 5017;
     }
     // Upgrades owned
     {
-        Achievement("Earth-shattering association", "Purchase <b>500</b> upgrades.", [
-            2,
-            1,
-            "https://i.imgur.com/AWmeHiO.png",
-        ]);
+        Achievement("Earth-shattering association", "Purchase <b>500</b> upgrades.", [2, 1, spritesheet]);
         Game.last.order = 6003;
-        Achievement("Maker of the Idleverse", "Purchase <b>600</b> upgrades.", [
-            3,
-            1,
-            "https://i.imgur.com/AWmeHiO.png",
-        ]);
+        Achievement("Maker of the Idleverse", "Purchase <b>600</b> upgrades.", [3, 1, spritesheet]);
         Game.last.order = 6004;
     }
     // Prestige upgrades owned
@@ -99,22 +82,18 @@ const createHook = () => {
             [24, 15]
         );
         Game.last.order = 32001;
-        Achievement("Pretty prestige", "Purchase <b>15</b> prestige upgrades.", [
-            19,
-            48,
-            "https://i.imgur.com/3jNJJNw.png",
-        ]);
+        Achievement("Pretty prestige", "Purchase <b>15</b> prestige upgrades.", [19, 48, externalSpritesheet]);
         Game.last.order = 6005;
         Achievement("Live and learn", "Purchase <b>30</b> prestige upgrades.<q>And never forget.", [
             19,
             47,
-            "https://i.imgur.com/3jNJJNw.png",
+            externalSpritesheet,
         ]);
         Game.last.order = 6006;
         Achievement("We will stay with you forever", "Purchase <b>60</b> prestige upgrades.<q>Don't reset us.</q>", [
             19,
             46,
-            "https://i.imgur.com/3jNJJNw.png",
+            externalSpritesheet,
         ]);
         Game.last.order = 6007;
     }
@@ -134,61 +113,57 @@ const createHook = () => {
         Achievement("Keep up the click", "Make <b>10 nonillion</b> cookies from clicking.", [
             0,
             69,
-            "https://i.imgur.com/3jNJJNw.png",
+            externalSpritesheet,
         ]);
         Game.last.order = 1011;
         Achievement("Clicking is the new booping", "Make <b>1 decillion</b> cookies from clicking.", [
             0,
             34,
-            "https://i.imgur.com/3jNJJNw.png",
+            externalSpritesheet,
         ]);
         Game.last.order = 1012;
         Achievement("The final click", "Make <b>100 decillion</b> cookies from clicking.<q>But its never over.</q>", [
             0,
             46,
-            "https://i.imgur.com/3jNJJNw.png",
+            externalSpritesheet,
         ]);
         Game.last.order = 1013;
         Achievement(
             "Sike, thats the wrong achievement",
             "Make <b>10 undecillion</b> cookies from clicking.<q>The last achievement wasn't the final one.</q>",
-            [0, 5, "https://i.imgur.com/AWmeHiO.png"]
+            [0, 5, spritesheet]
         );
         Game.last.order = 1014;
         Achievement(
             "How about we tap the cookie now",
             "Make <b>1 duodecillion</b> cookies from clicking.<q>I heard the mobile version is out now.</q>",
-            [1, 5, "https://i.imgur.com/AWmeHiO.png"]
+            [1, 5, spritesheet]
         );
         Game.last.order = 1015;
         Achievement(
             "Cookie Destroyer",
             "Make <b>100 duodecillion</b> cookies from clicking.<q>Agent Johnson was here</q>",
-            [2, 5, "https://i.imgur.com/AWmeHiO.png"]
+            [2, 5, spritesheet]
         );
         Game.last.order = 1016;
-        Achievement("Give it a click", "Make <b>10 tredecillion</b> cookies from clicking.", [
-            3,
-            5,
-            "https://i.imgur.com/AWmeHiO.png",
-        ]);
+        Achievement("Give it a click", "Make <b>10 tredecillion</b> cookies from clicking.", [3, 5, spritesheet]);
         Game.last.order = 1017;
         Achievement("Clicking Frenzy: Our Lord and Saviour", "Make <b>1 quattuordecillion</b> cookies from clicking.", [
             4,
             5,
-            "https://i.imgur.com/AWmeHiO.png",
+            spritesheet,
         ]);
         Game.last.order = 1018;
         Achievement(
             "Hand-made cookies are still the best",
             "Make <b>100 quattuordecillion</b> cookies from clicking.",
-            [5, 5, "https://i.imgur.com/AWmeHiO.png"]
+            [5, 5, spritesheet]
         );
         Game.last.order = 1019;
         Achievement("My strange clicking addiction", "Make <b>10 quindecillion</b> cookies from clicking.", [
             6,
             5,
-            "https://i.imgur.com/AWmeHiO.png",
+            spritesheet,
         ]);
         Game.last.order = 1019;
     }
@@ -252,19 +227,11 @@ const createHook = () => {
     }
     // Buildings' level
     {
-        Achievement("Level 1 complete!", "Reach level <b>1</b> of every building.", [
-            0,
-            2,
-            "https://i.imgur.com/AWmeHiO.png",
-        ]);
+        Achievement("Level 1 complete!", "Reach level <b>1</b> of every building.", [0, 2, spritesheet]);
         Game.last.order = 5017;
-        Achievement("Five Hive", "Reach level <b>5</b> of every building.", [1, 2, "https://i.imgur.com/AWmeHiO.png"]);
+        Achievement("Five Hive", "Reach level <b>5</b> of every building.", [1, 2, spritesheet]);
         Game.last.order = 5018;
-        Achievement("This took forever", "Reach level <b>10</b> of every building.", [
-            2,
-            2,
-            "https://i.imgur.com/AWmeHiO.png",
-        ]);
+        Achievement("This took forever", "Reach level <b>10</b> of every building.", [2, 2, spritesheet]);
         Game.last.order = 5019;
     }
     // Shadow achievements
@@ -272,7 +239,7 @@ const createHook = () => {
         Achievement("Mod-God complex", "Name yourself <b>Darky</b>.<q>Ducky.</q>", [2, 12]);
         Game.last.order = 30201;
         Game.last.pool = "shadow";
-        Achievement("Golden Jackpot", "Click <b>77,777 golden cookies</b>.", [0, 3, "https://i.imgur.com/AWmeHiO.png"]);
+        Achievement("Golden Jackpot", "Click <b>77,777 golden cookies</b>.", [0, 3, spritesheet]);
         Game.last.order = 10001;
         Game.last.pool = "shadow";
     }
@@ -281,7 +248,7 @@ const createHook = () => {
         Achievement("All you had to do was ask", "Click this custom achievement's slot.<q>Here you go.</q>", [
             2,
             4,
-            "https://i.imgur.com/AWmeHiO.png",
+            spritesheet,
         ]);
         Game.last.order = 11001;
         Game.last.clickFunction = () => {
