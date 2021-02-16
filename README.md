@@ -1,10 +1,10 @@
 # Darky's Achievements and Upgrades Batch
 
-Hey there! My name is Darky and welcome to **Darky's Achievements and Upgrades Batch**, a *bundle* of 2 mods i made for the popular and Father of Idle Games: [Cookie Clicker](https://orteil.dashnet.org/cookieclicker/). Those 2 mods in question are: *Darky's Achievement Package* and *Darky's Armful Collection of Upgrades*.
+Hey there! My name is Darky and welcome to **Darky's Achievements and Upgrades Batch**, a _bundle_ of 2 mods i made for the popular and Father of Idle Games: [Cookie Clicker](https://orteil.dashnet.org/cookieclicker/). Those 2 mods in question are: _Darky's Achievement Package_ and _Darky's Armful Collection of Upgrades_.
 
 ## What is Darky's Achievements and Upgrades Batch?
 
-As already mentioned, *Darky's Achievements and Upgrades Batch* is a *bundle* mod containing *Darky's Achievement Package* and *Darky's Armful Collection of Upgrades* and when loaded into Cookie Clicker will give you a lot of new custom achievements and upgrades for the game! And yes, **those achievements add to your milk!**
+As already mentioned, _Darky's Achievements and Upgrades Batch_ is a _bundle_ mod containing _Darky's Achievement Package_ and _Darky's Armful Collection of Upgrades_ and when loaded into Cookie Clicker will give you a lot of new custom achievements and upgrades for the game! And yes, **those achievements add to your milk!**
 
 If you like to spoil yourself on all the new achievements and upgrades in this Batch, then go over to this little [wiki](https://github.com/DarkSoul1800/DarkysBatch/wiki).
 
@@ -18,37 +18,31 @@ There are a few ways to load these mods:
 
 ## Bookmarklet
 
-1. Copy this code and save it as a bookmark. 
-2. Paste it in the URL section. 
+1. Copy this code and save it as a bookmark.
+2. Paste it in the URL section.
 3. To activate, click the bookmark when the game's open.
 
 **Package:**
 
 ```javascript
-javascript: (function () {
-	Game.LoadMod('https://hyoretsu.github.io/DarkysBatch/dist/Darkys_Achievement_Package.js');
-}());
+javascript: Game.LoadMod('https://hyoretsu.github.io/DarkysBatch/dist/Darkys_Achievement_Package.js');
 ```
 
 **Collection:**
 
 ```javascript
-javascript: (function () {
-	Game.LoadMod('https://hyoretsu.github.io/DarkysBatch/dist/Darkys_Armful_Collection_of_Upgrades.js');
-}());
+javascript: Game.LoadMod('https://hyoretsu.github.io/DarkysBatch/dist/Darkys_Armful_Collection_of_Upgrades.js');
 ```
 
 **Batch:**
 
 ```javascript
-javascript: (function () {
-	Game.LoadMod('https://hyoretsu.github.io/DarkysBatch/dist/Darkys_Achievements_and_Upgrades_Batch.js');
-}());
+javascript: Game.LoadMod('https://hyoretsu.github.io/DarkysBatch/dist/Darkys_Achievements_and_Upgrades_Batch.js');
 ```
 
 ## Userscript
 
-Want the mods to be loaded automatically everytime you open the game? Well for that we have this following script for stuff like *Tampermonkey* or *Greasemonkey* that you can use:
+Want the mods to be loaded automatically everytime you open the game? Well for that we have this following script for stuff like _Tampermonkey_ or _Greasemonkey_ that you can use:
 
 **Package:**
 
@@ -64,18 +58,12 @@ Want the mods to be loaded automatically everytime you open the game? Well for t
 // @grant none
 // ==/UserScript==
 
-var code = "(" + (function() {
-    var checkReady = setInterval(function() {
-        if (typeof Game.ready !== 'undefined' && Game.ready) {
-            Game.LoadMod('https://hyoretsu.github.io/DarkysBatch/dist/Darkys_Achievement_Package.js');
-            clearInterval(checkReady);
-        }
-    }, 1000);
-}).toString() + ")()";
-
-window.eval(code);
+setInterval(() => {
+ if (Game.ready) {
+  Game.LoadMod('https://hyoretsu.github.io/DarkysBatch/dist/Darkys_Achievement_Package.js');
+ }
+}, 1000);
 ```
-
 
 **Collection:**
 
@@ -91,18 +79,12 @@ window.eval(code);
 // @grant none
 // ==/UserScript==
 
-var code = "(" + (function() {
-    var checkReady = setInterval(function() {
-        if (typeof Game.ready !== 'undefined' && Game.ready) {
-            Game.LoadMod('https://hyoretsu.github.io/DarkysBatch/dist/Darkys_Armful_Collection_of_Upgrades.js');
-            clearInterval(checkReady);
-        }
-    }, 1000);
-}).toString() + ")()";
-
-window.eval(code);
+setInterval(() => {
+ if (Game.ready) {
+  Game.LoadMod('https://hyoretsu.github.io/DarkysBatch/dist/Darkys_Armful_Collection_of_Upgrades.js');
+ }
+}, 1000);
 ```
-
 
 **Batch:**
 
@@ -118,16 +100,11 @@ window.eval(code);
 // @grant none
 // ==/UserScript==
 
-var code = "(" + (function() {
-    var checkReady = setInterval(function() {
-        if (typeof Game.ready !== 'undefined' && Game.ready) {
-            Game.LoadMod('https://hyoretsu.github.io/DarkysBatch/dist/Darkys_Achievements_and_Upgrades_Batch.js');
-            clearInterval(checkReady);
-        }
-    }, 1000);
-}).toString() + ")()";
-
-window.eval(code);
+setInterval(() => {
+ if (Game.ready) {
+  Game.LoadMod('https://hyoretsu.github.io/DarkysBatch/dist/Darkys_Achievements_and_Upgrades_Batch.js');
+ }
+}, 1000);
 ```
 
 # Bugs and suggestions

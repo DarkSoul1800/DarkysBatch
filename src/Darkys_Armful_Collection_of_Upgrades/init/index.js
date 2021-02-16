@@ -1,14 +1,14 @@
-import overrides from "./overrides";
-import checkHookContent from "./checkHook";
-import cpsHookContent from "./cpsHook";
-import createHook from "./createHook";
+import overrides from './overrides';
+import checkHookContent from './checkHook';
+import cpsHookContent from './cpsHook';
+import createHook from './createHook';
 
 const init = () => {
-    overrides();
+ overrides();
 
-    Game.registerHook("check", checkHookContent);
-    Game.registerHook("cps", cpsHookContent);
-    createHook();
+ Game.registerHook('check', checkHookContent);
+ Game.registerHook('cps', cpsHookContent);
+ createHook();
 };
 
 export default init;
