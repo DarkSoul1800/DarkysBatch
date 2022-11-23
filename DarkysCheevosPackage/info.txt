@@ -1,0 +1,13 @@
+{
+	"Name": "Darky's Achievement Package",
+	"ID": "darkys cheevos package",
+	"Author": "Darky",
+	"Description": "A mod that gives you a lot of new custom achievements for the game! And yes, those achievements add to your milk!",
+	"ModVersion": 1.7,
+	"GameVersion": 2.048,
+	"Date": "21/11/2022",
+	"Dependencies": [],
+	"AllowSteamAchievs": 1,
+	"Workshop": 2891747942,
+	"Disabled": 0
+}

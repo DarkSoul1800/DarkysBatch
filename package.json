@@ -1,37 +1,7 @@
 {
- "name": "darkys-achievement-package",
- "version": "1.7.5",
- "description": "Darky's Achievement Package is a mod that gives you a lot of new custom achievements for the game! And yes, those achievements add to your milk!",
- "keywords": [
-  "JavaScript",
-  "Dashnet",
-  "Orteil",
-  "Cookie Clicker",
-  "mod"
- ],
- "homepage": "https://github.com/hyoretsu/DarkysBatch",
- "bugs": {
-  "url": "https://github.com/hyoretsu/DarkysBatch/issues"
- },
- "repository": {
-  "type": "git",
-  "url": "https://github.com/hyoretsu/DarkysBatch"
- },
- "license": "MIT",
- "author": {
-  "name": "DarkSoul1800",
-  "email": "42319997+DarkSoul1800@users.noreply.github.com"
- },
- "contributors": [
-  {
-   "name": "Aran Leite",
-   "email": "hyoretsu@gmail.com",
-   "url": "https://www.linkedin.com/in/aranleite"
-  }
- ],
  "main": "./dist/DarkysAchievementPackage.js",
  "scripts": {
-  "build": "webpack",
+  "build": "node esbuild.js",
   "prepare": "husky install"
  },
  "lint-staged": {
@@ -40,23 +10,17 @@
   ]
  },
  "devDependencies": {
-  "@babel/core": "^7.16.5",
-  "@babel/preset-env": "^7.16.5",
-  "babel-loader": "^8.2.3",
+  "browserslist-to-esbuild": "^1.2.0",
+  "esbuild": "^0.15.15",
   "eslint": "^8.5.0",
   "eslint-config-airbnb-base": "^15.0.0",
   "eslint-config-prettier": "^8.3.0",
-  "eslint-import-resolver-webpack": "^0.13.2",
   "eslint-plugin-import": "^2.25.3",
-  "eslint-plugin-node": "^11.1.0",
+  "eslint-plugin-import-helpers": "^1.3.1",
   "eslint-plugin-prettier": "^4.0.0",
-  "eslint-plugin-promise": "^6.0.0",
   "husky": "^7.0.0",
-  "jest": "^27.4.5",
   "lint-staged": "^12.1.4",
-  "prettier": "^2.5.1",
-  "webpack": "^5.65.0",
-  "webpack-cli": "^4.9.1"
+  "prettier": "^2.5.1"
  },
  "ccrepo": {
   "icon": [

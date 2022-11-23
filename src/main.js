@@ -1,13 +1,13 @@
-import init from './init';
-import save from './save';
-import load from './load';
 import Achievement from './Achievement';
+import init from './init';
+import load from './load';
+import save from './save';
 
 const DarkysAchievementPackage = {
- init,
- save,
- load,
- Achievement,
+    init,
+    save,
+    load,
+    Achievement,
 };
 
 Game.registerMod('Darkys Achievement Package', DarkysAchievementPackage);
