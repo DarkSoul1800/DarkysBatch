@@ -1,33 +1,33 @@
 {
- "main": "./dist/DarkysAchievementPackage.js",
- "scripts": {
-  "build": "node esbuild.js",
-  "prepare": "husky install"
- },
- "lint-staged": {
-  "src/**/*.js": [
-   "eslint --fix"
-  ]
- },
- "devDependencies": {
-  "browserslist-to-esbuild": "^1.2.0",
-  "esbuild": "^0.15.15",
-  "eslint": "^8.5.0",
-  "eslint-config-airbnb-base": "^15.0.0",
-  "eslint-config-prettier": "^8.3.0",
-  "eslint-plugin-import": "^2.25.3",
-  "eslint-plugin-import-helpers": "^1.3.1",
-  "eslint-plugin-prettier": "^4.0.0",
-  "husky": "^7.0.0",
-  "lint-staged": "^12.1.4",
-  "prettier": "^2.5.1"
- },
- "ccrepo": {
-  "icon": [
-   17,
-   26,
-   "https://i.imgur.com/3jNJJNw.png"
-  ],
-  "name": "Darky's Achievement Package"
- }
+	"main": "./dist/main.js",
+	"scripts": {
+		"build": "node esbuild.js",
+		"prepare": "husky install"
+	},
+	"lint-staged": {
+		"src/**/*.js": [
+			"eslint --fix"
+		]
+	},
+	"devDependencies": {
+		"browserslist-to-esbuild": "^1.2.0",
+		"esbuild": "^0.15.15",
+		"eslint": "^8.5.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-import": "^2.25.3",
+		"eslint-plugin-import-helpers": "^1.3.1",
+		"eslint-plugin-prettier": "^4.0.0",
+		"husky": "^7.0.0",
+		"lint-staged": "^12.1.4",
+		"prettier": "^2.5.1"
+	},
+	"ccrepo": {
+		"icon": [
+			17,
+			26,
+			"https://i.imgur.com/3jNJJNw.png"
+		],
+		"name": "Darky's Achievement Package"
+	}
 }

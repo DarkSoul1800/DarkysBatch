@@ -12,7 +12,7 @@ try {
         external: ['./node_modules/*'],
         keepNames: true,
         minify: true,
-        outdir: 'DarkysCheevosPackage',
+        outdir: 'dist',
         platform: 'browser',
         sourcemap: true,
         target: browserslistToEsbuild(['> 1.5%', 'not dead']),

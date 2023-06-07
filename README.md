@@ -31,7 +31,7 @@ Courtesy of [Z](https://github.com/TheGLander), it's a new centralized way of po
 3. To activate, click the bookmark when the game's open.
 
 ```javascript
-javascript: Game.LoadMod('https://hyoretsu.github.io/DarkysCheevosPackage/dist/DarkysAchievementPackage.js');
+javascript: Game.LoadMod('https://hyoretsu.github.io/DarkysCheevosPackage/dist/main.js');
 ```
 
 ## Userscript
@@ -52,7 +52,7 @@ Want the mods to be loaded automatically everytime you open the game? Well for t
 
 setInterval(() => {
  if (Game.ready) {
-  Game.LoadMod('https://hyoretsu.github.io/DarkysCheevosPackage/dist/DarkysAchievementPackage.js');
+  Game.LoadMod('https://hyoretsu.github.io/DarkysCheevosPackage/dist/main.js');
  }
 }, 1000);
 ```
